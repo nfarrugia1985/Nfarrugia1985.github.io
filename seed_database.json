@@ -3,7 +3,7 @@
   "schemaVersion": 2,
   "createdFor": "",
   "meta": {
-    "appVersion": "2.0.0",
+    "appVersion": "2.1.0",
     "revision": 0,
     "lastModifiedAt": "2026-07-19T10:00:00.000Z",
     "lastCloudSyncAt": "",
@@ -46,7 +46,14 @@
       "Calf setup",
       "Ab wheel"
     ],
-    "restTimerDefaultSec": 120
+    "restTimerDefaultSec": 120,
+    "autoRestTimer": true,
+    "restTimerSound": true,
+    "autoAdvanceSets": true,
+    "weightIncrementKg": 2.5,
+    "smallWeightIncrementKg": 1,
+    "trainView": "workout",
+    "dumbbellWeightIncrementKg": 2
   },
   "programs": [
     {

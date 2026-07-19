@@ -1,8 +1,8 @@
 {
   "id": "./",
-  "name": "Lift & Cut \u2013 Home Gym Tracker",
+  "name": "Lift & Cut – Home Gym Tracker",
   "short_name": "Lift & Cut",
-  "description": "Local-first home-gym, nutrition, RFL phase and progress tracker with optional Google Sheets sync.",
+  "description": "Lift & Cut 2.1: local-first workout logging with progression guidance, nutrition, RFL phases and Google Sheets sync.",
   "start_url": "./?page=dashboard",
   "scope": "./",
   "display": "standalone",

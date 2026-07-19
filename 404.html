@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#0f766e">
   <meta name="color-scheme" content="light dark">
   <title>Lift & Cut</title>
-  <meta name="description" content="Local-first home-gym, nutrition and progress tracker with optional Google Sheets sync.">
+  <meta name="description" content="Lift & Cut 2.1: local-first workout logging, nutrition and progress tracking with optional Google Sheets sync.">
   <link rel="manifest" href="./manifest.webmanifest">
   <link rel="icon" href="./icons/icon-192.png" type="image/png">
   <link rel="apple-touch-icon" href="./icons/icon-192.png">
@@ -47,10 +47,11 @@
 
   <div id="restTimer" class="rest-timer" hidden>
     <div>
-      <div class="tiny muted">Rest timer</div>
+      <div id="restTimerLabel" class="tiny muted">Rest timer</div>
       <strong id="restTimerValue">02:00</strong>
     </div>
     <div class="button-row">
+      <button class="ghost compact" onclick="adjustRestTimer(-30)">−30s</button>
       <button class="secondary compact" onclick="adjustRestTimer(30)">+30s</button>
       <button class="ghost compact" onclick="stopRestTimer()">Stop</button>
     </div>
