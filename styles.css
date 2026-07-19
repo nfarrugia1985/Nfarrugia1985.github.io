@@ -456,3 +456,32 @@ details > summary { cursor:pointer; }
   .equipment-grid,.equipment-check-grid { grid-template-columns:1fr; }
   .equipment-program-panel { align-items:flex-start; flex-direction:column; }
 }
+
+
+/* Lift & Cut 2.3 — recipe import foundation */
+.recipe-toolbar { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:8px; align-items:end; }
+.recipe-card-row { position:relative; }
+.compact-notice { padding:7px 9px; font-size:11px; }
+.import-option-grid { display:grid; gap:10px; }
+.import-option { border:1px solid var(--line); border-radius:16px; background:var(--surface-2); padding:12px; display:grid; gap:10px; }
+.import-icon { width:42px; height:42px; border-radius:14px; display:grid; place-items:center; background:var(--primary); color:#fff; font-weight:900; letter-spacing:-.04em; }
+.file-button { width:100%; }
+.import-progress { min-height:190px; display:grid; place-items:center; align-content:center; gap:12px; text-align:center; color:var(--muted); }
+.spinner { width:42px; height:42px; border-radius:50%; border:4px solid var(--line); border-top-color:var(--primary); animation:lc-spin .8s linear infinite; }
+@keyframes lc-spin { to { transform:rotate(360deg); } }
+.import-source-card { overflow-wrap:anywhere; }
+.source-link { color:var(--primary-dark); overflow-wrap:anywhere; margin:4px 0; }
+.recipe-ingredient-row { gap:8px; }
+.source-ingredient-line { border-left:3px solid var(--primary); padding:7px 9px; border-radius:0 10px 10px 0; background:var(--surface-3); color:var(--muted); font-size:12px; }
+.macro-contribution { display:grid; grid-template-columns:repeat(4,1fr); gap:5px; }
+.macro-contribution span { text-align:center; padding:6px 4px; border-radius:9px; background:var(--surface-3); border:1px solid var(--line); font-size:11px; font-weight:800; }
+.food-match-card { width:100%; text-align:left; background:var(--surface); color:var(--text); border:1px solid var(--line); display:flex; justify-content:space-between; align-items:center; gap:10px; min-height:62px; }
+.food-match-card span:first-child { display:grid; gap:2px; min-width:0; }
+.food-match-card small { color:var(--muted); font-weight:600; overflow-wrap:anywhere; }
+.epub-review-list { display:grid; gap:7px; max-height:54vh; overflow:auto; padding-right:2px; }
+.epub-candidate { grid-template-columns:auto minmax(0,1fr) auto; align-items:start; gap:9px; padding:10px; border:1px solid var(--line); border-radius:14px; background:var(--surface); }
+.epub-candidate span:nth-child(2) { display:grid; gap:3px; min-width:0; }
+.epub-candidate small { color:var(--muted); font-weight:600; white-space:normal; overflow-wrap:anywhere; }
+.nutrition-summary-card { border-color:color-mix(in srgb,var(--primary) 30%,var(--line)); }
+@media (min-width:760px){ .import-option-grid { grid-template-columns:repeat(3,minmax(0,1fr)); } }
+@media (max-width:420px){ .recipe-toolbar { grid-template-columns:1fr; } .macro-contribution { grid-template-columns:repeat(2,1fr); } }
