@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0f766e">
+  <meta name="color-scheme" content="light dark">
+  <title>Lift & Cut</title>
+  <meta name="description" content="Local-first home-gym, nutrition and progress tracker with optional Google Sheets sync.">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./icons/icon-192.png" type="image/png">
+  <link rel="apple-touch-icon" href="./icons/icon-192.png">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="app-header">
+    <div class="topbar">
+      <button class="brand-button" type="button" onclick="setPage('dashboard')" aria-label="Home">
+        <span class="logo">LC</span>
+      </button>
+      <div class="brand-copy">
+        <h1>Lift & Cut</h1>
+        <div id="headerSubtitle" class="subtitle">Home gym · nutrition · progress</div>
+      </div>
+      <button id="syncStatusButton" class="icon-button" type="button" onclick="openSyncPanel()" aria-label="Cloud sync status">
+        <span id="syncDot" class="status-dot local"></span>
+        <span class="sr-only">Sync</span>
+        ☁
+      </button>
+    </div>
+  </header>
+
+  <main id="app" aria-live="polite"></main>
+
+  <button id="quickAddButton" class="fab" type="button" onclick="openQuickAdd()" aria-label="Quick add">＋</button>
+
+  <nav class="tabbar" aria-label="Main navigation">
+    <button data-page="dashboard" onclick="setPage('dashboard')"><span>⌂</span><small>Home</small></button>
+    <button data-page="program" onclick="setPage('program')"><span>▤</span><small>Program</small></button>
+    <button data-page="train" onclick="setPage('train')"><span>◉</span><small>Train</small></button>
+    <button data-page="diet" onclick="setPage('diet')"><span>◌</span><small>Diet</small></button>
+    <button data-page="progress" onclick="setPage('progress')"><span>↗</span><small>Progress</small></button>
+    <button data-page="settings" onclick="setPage('settings')"><span>⚙</span><small>More</small></button>
+  </nav>
+
+  <div id="toast" class="toast" role="status"></div>
+
+  <div id="restTimer" class="rest-timer" hidden>
+    <div>
+      <div class="tiny muted">Rest timer</div>
+      <strong id="restTimerValue">02:00</strong>
+    </div>
+    <div class="button-row">
+      <button class="secondary compact" onclick="adjustRestTimer(30)">+30s</button>
+      <button class="ghost compact" onclick="stopRestTimer()">Stop</button>
+    </div>
+  </div>
+
+  <div id="modalBackdrop" class="modal-backdrop" onclick="backdropClose(event)">
+    <section id="modal" class="modal" role="dialog" aria-modal="true"></section>
+  </div>
+
+  <noscript>This app requires JavaScript.</noscript>
+  <script src="./app.js" defer></script>
+</body>
+</html>
