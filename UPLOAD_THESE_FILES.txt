@@ -1,0 +1,16 @@
+Lift & Cut 2.1.1 train-screen fix
+
+Upload the seven other files in this folder to the ROOT of your existing
+Nfarrugia1985.github.io repository and commit them to main.
+
+Do not upload this ZIP itself and do not delete your icons folder.
+
+After GitHub Pages deploys:
+1. Open https://nfarrugia1985.github.io in Chrome.
+2. Refresh once.
+3. Fully close and reopen the installed home-screen app.
+4. Check More > Appearance and app info: version 2.1.1.
+
+The Train tab now opens a workout chooser. A draft and timer begin only after
+you tap Start workout for a specific session. Existing data and Sheets sync
+settings are preserved.

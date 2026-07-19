@@ -417,3 +417,15 @@ details > summary { cursor:pointer; }
   .workout-set-row .set-done { width:44px; }
   .previous-cell { font-size:11px; }
 }
+
+/* 2.1.1 explicit workout-start screen */
+.workout-landing { padding-bottom:18px; }
+.workout-launch-card { display:grid; gap:11px; }
+.workout-launch-card.recommended { border-color:color-mix(in srgb,var(--success) 42%,var(--line)); }
+.workout-launch-card > button { width:100%; }
+.workout-launch-metrics { display:flex; flex-wrap:wrap; gap:7px; }
+.workout-launch-metrics span {
+  padding:5px 8px; border:1px solid var(--line); border-radius:999px;
+  background:var(--surface-2); color:var(--muted); font-size:10px; font-weight:750;
+}
+.workout-launch-exercises { line-height:1.5; }
