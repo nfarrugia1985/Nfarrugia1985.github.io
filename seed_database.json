@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "schemaVersion": 2,
+  "schemaVersion": 3,
   "createdFor": "",
   "meta": {
-    "appVersion": "2.1.1",
+    "appVersion": "2.2.0",
     "revision": 0,
-    "lastModifiedAt": "2026-07-19T10:00:00.000Z",
+    "lastModifiedAt": "2026-07-19T15:45:00.000Z",
     "lastCloudSyncAt": "",
     "lastCloudRevision": 0,
     "clientId": ""
@@ -37,13 +37,17 @@
     "syncUrl": "",
     "syncKey": "",
     "availableEquipment": [
-      "Power rack",
-      "Barbell",
+      "Bodyweight / floor space",
+      "Power rack / squat stands",
+      "Barbell + plates",
       "Adjustable bench",
-      "Dumbbells",
-      "Cable station",
-      "Chin-up bar / rings",
-      "Calf setup",
+      "Adjustable dumbbells",
+      "Cable station / functional trainer",
+      "Pull-up bar",
+      "Gymnastic rings / suspension trainer",
+      "Calf raise platform / machine",
+      "Ankle strap",
+      "Rope cable attachment",
       "Ab wheel"
     ],
     "restTimerDefaultSec": 120,
@@ -53,7 +57,9 @@
     "weightIncrementKg": 2.5,
     "smallWeightIncrementKg": 1,
     "trainView": "workout",
-    "dumbbellWeightIncrementKg": 2
+    "dumbbellWeightIncrementKg": 2,
+    "customEquipment": [],
+    "equipmentProfileName": "Custom home gym"
   },
   "programs": [
     {
@@ -134,9 +140,9 @@
               "rir": "2",
               "notes": "",
               "order": 6,
-              "exerciseId": "",
+              "exerciseId": "EX124",
               "restSec": 90,
-              "updatedAt": "2026-07-19T10:00:00.000Z"
+              "updatedAt": "2026-07-19T15:45:00.000Z"
             }
           ],
           "order": 1,
@@ -192,9 +198,9 @@
               "rir": "1-2",
               "notes": "",
               "order": 4,
-              "exerciseId": "",
+              "exerciseId": "EX125",
               "restSec": 90,
-              "updatedAt": "2026-07-19T10:00:00.000Z"
+              "updatedAt": "2026-07-19T15:45:00.000Z"
             },
             {
               "id": "ul4-upper-a-5",
@@ -228,9 +234,9 @@
               "rir": "1",
               "notes": "",
               "order": 7,
-              "exerciseId": "",
+              "exerciseId": "EX126",
               "restSec": 90,
-              "updatedAt": "2026-07-19T10:00:00.000Z"
+              "updatedAt": "2026-07-19T15:45:00.000Z"
             }
           ],
           "order": 2,
@@ -250,9 +256,9 @@
               "rir": "1-2",
               "notes": "Choose the squat pattern that feels best.",
               "order": 1,
-              "exerciseId": "",
+              "exerciseId": "EX127",
               "restSec": 150,
-              "updatedAt": "2026-07-19T10:00:00.000Z"
+              "updatedAt": "2026-07-19T15:45:00.000Z"
             },
             {
               "id": "ul4-lower-b-2",
@@ -310,9 +316,9 @@
               "rir": "1-2",
               "notes": "",
               "order": 6,
-              "exerciseId": "",
+              "exerciseId": "EX128",
               "restSec": 90,
-              "updatedAt": "2026-07-19T10:00:00.000Z"
+              "updatedAt": "2026-07-19T15:45:00.000Z"
             }
           ],
           "order": 3,
@@ -332,9 +338,9 @@
               "rir": "1-2",
               "notes": "",
               "order": 1,
-              "exerciseId": "",
+              "exerciseId": "EX129",
               "restSec": 150,
-              "updatedAt": "2026-07-19T10:00:00.000Z"
+              "updatedAt": "2026-07-19T15:45:00.000Z"
             },
             {
               "id": "ul4-upper-b-2",
@@ -368,9 +374,9 @@
               "rir": "1-2",
               "notes": "",
               "order": 4,
-              "exerciseId": "",
+              "exerciseId": "EX130",
               "restSec": 90,
-              "updatedAt": "2026-07-19T10:00:00.000Z"
+              "updatedAt": "2026-07-19T15:45:00.000Z"
             },
             {
               "id": "ul4-upper-b-5",
@@ -380,9 +386,9 @@
               "rir": "1",
               "notes": "",
               "order": 5,
-              "exerciseId": "",
+              "exerciseId": "EX131",
               "restSec": 90,
-              "updatedAt": "2026-07-19T10:00:00.000Z"
+              "updatedAt": "2026-07-19T15:45:00.000Z"
             },
             {
               "id": "ul4-upper-b-6",
@@ -484,9 +490,9 @@
               "rir": "2-3",
               "notes": "",
               "order": 4,
-              "exerciseId": "",
+              "exerciseId": "EX132",
               "restSec": 90,
-              "updatedAt": "2026-07-19T10:00:00.000Z"
+              "updatedAt": "2026-07-19T15:45:00.000Z"
             },
             {
               "id": "rfl2-rfl-full-body-a-5",
@@ -542,9 +548,9 @@
               "rir": "2-3",
               "notes": "",
               "order": 1,
-              "exerciseId": "",
+              "exerciseId": "EX133",
               "restSec": 90,
-              "updatedAt": "2026-07-19T10:00:00.000Z"
+              "updatedAt": "2026-07-19T15:45:00.000Z"
             },
             {
               "id": "rfl2-rfl-full-body-b-2",
@@ -566,9 +572,9 @@
               "rir": "2-3",
               "notes": "",
               "order": 3,
-              "exerciseId": "",
+              "exerciseId": "EX134",
               "restSec": 90,
-              "updatedAt": "2026-07-19T10:00:00.000Z"
+              "updatedAt": "2026-07-19T15:45:00.000Z"
             },
             {
               "id": "rfl2-rfl-full-body-b-4",
@@ -578,9 +584,9 @@
               "rir": "2-3",
               "notes": "",
               "order": 4,
-              "exerciseId": "",
+              "exerciseId": "EX135",
               "restSec": 90,
-              "updatedAt": "2026-07-19T10:00:00.000Z"
+              "updatedAt": "2026-07-19T15:45:00.000Z"
             },
             {
               "id": "rfl2-rfl-full-body-b-5",
@@ -602,9 +608,9 @@
               "rir": "2-3",
               "notes": "",
               "order": 6,
-              "exerciseId": "",
+              "exerciseId": "EX136",
               "restSec": 90,
-              "updatedAt": "2026-07-19T10:00:00.000Z"
+              "updatedAt": "2026-07-19T15:45:00.000Z"
             },
             {
               "id": "rfl2-rfl-full-body-b-7",
@@ -614,9 +620,9 @@
               "rir": "2-3",
               "notes": "",
               "order": 7,
-              "exerciseId": "",
+              "exerciseId": "EX137",
               "restSec": 90,
-              "updatedAt": "2026-07-19T10:00:00.000Z"
+              "updatedAt": "2026-07-19T15:45:00.000Z"
             }
           ],
           "order": 2,
@@ -715,104 +721,177 @@
       "name": "High-bar back squat",
       "muscle": "Quads / Glutes",
       "pattern": "Squat",
-      "equipment": "Power rack + barbell",
+      "equipment": "Power rack / squat stands + Barbell + plates",
       "primaryFor": "Squat",
       "difficulty": "Main lift",
       "notes": "Use if bracing and depth remain controlled.",
       "rflOk": "Yes",
       "favourite": false,
-      "updatedAt": "2026-07-19T10:00:00.000Z"
+      "updatedAt": "2026-07-19T10:00:00.000Z",
+      "equipmentOptions": [
+        [
+          "Power rack / squat stands",
+          "Barbell + plates"
+        ]
+      ],
+      "optionalEquipment": []
     },
     {
       "id": "EX002",
       "name": "Front squat",
       "muscle": "Quads / Core",
       "pattern": "Squat",
-      "equipment": "Power rack + barbell",
+      "equipment": "Power rack / squat stands + Barbell + plates",
       "primaryFor": "Squat",
       "difficulty": "Main lift",
       "notes": "Useful if it is more back-friendly than back squat.",
       "rflOk": "Yes",
       "favourite": false,
-      "updatedAt": "2026-07-19T10:00:00.000Z"
+      "updatedAt": "2026-07-19T10:00:00.000Z",
+      "equipmentOptions": [
+        [
+          "Power rack / squat stands",
+          "Barbell + plates"
+        ]
+      ],
+      "optionalEquipment": []
     },
     {
       "id": "EX003",
       "name": "Heels-elevated squat",
       "muscle": "Quads",
       "pattern": "Squat",
-      "equipment": "Barbell or dumbbells",
+      "equipment": "Power rack / squat stands + Barbell + plates OR Dumbbells",
       "primaryFor": "Squat",
       "difficulty": "Main lift",
       "notes": "More quad bias; use a small wedge or plates under heels.",
       "rflOk": "Yes",
       "favourite": false,
-      "updatedAt": "2026-07-19T10:00:00.000Z"
+      "updatedAt": "2026-07-19T10:00:00.000Z",
+      "equipmentOptions": [
+        [
+          "Power rack / squat stands",
+          "Barbell + plates"
+        ],
+        [
+          "Dumbbells"
+        ]
+      ],
+      "optionalEquipment": [
+        "Slant board / heel wedge"
+      ]
     },
     {
       "id": "EX004",
       "name": "Box squat",
       "muscle": "Quads / Glutes",
       "pattern": "Squat",
-      "equipment": "Power rack + box",
+      "equipment": "Power rack / squat stands + Barbell + plates + Bench or box",
       "primaryFor": "Squat",
       "difficulty": "Substitution",
       "notes": "Useful for controlled depth.",
       "rflOk": "Yes",
       "favourite": false,
-      "updatedAt": "2026-07-19T10:00:00.000Z"
+      "updatedAt": "2026-07-19T10:00:00.000Z",
+      "equipmentOptions": [
+        [
+          "Power rack / squat stands",
+          "Barbell + plates",
+          "Bench or box"
+        ]
+      ],
+      "optionalEquipment": []
     },
     {
       "id": "EX005",
       "name": "Goblet squat",
       "muscle": "Quads / Glutes",
       "pattern": "Squat",
-      "equipment": "Dumbbell",
+      "equipment": "Dumbbells OR Kettlebells",
       "primaryFor": "Squat",
       "difficulty": "Substitution",
       "notes": "Good warm-up or deload option.",
       "rflOk": "Yes",
       "favourite": false,
-      "updatedAt": "2026-07-19T10:00:00.000Z"
+      "updatedAt": "2026-07-19T10:00:00.000Z",
+      "equipmentOptions": [
+        [
+          "Dumbbells"
+        ],
+        [
+          "Kettlebells"
+        ]
+      ],
+      "optionalEquipment": [
+        "Slant board / heel wedge"
+      ]
     },
     {
       "id": "EX006",
       "name": "Bulgarian split squat",
       "muscle": "Quads / Glutes",
       "pattern": "Single-leg",
-      "equipment": "Dumbbells",
+      "equipment": "Bench or box",
       "primaryFor": "Squat",
       "difficulty": "Accessory",
       "notes": "High stimulus with lower spinal loading.",
       "rflOk": "Yes",
       "favourite": false,
-      "updatedAt": "2026-07-19T10:00:00.000Z"
+      "updatedAt": "2026-07-19T10:00:00.000Z",
+      "equipmentOptions": [
+        [
+          "Bench or box"
+        ]
+      ],
+      "optionalEquipment": [
+        "Dumbbells"
+      ]
     },
     {
       "id": "EX007",
       "name": "Reverse lunge",
       "muscle": "Quads / Glutes",
       "pattern": "Single-leg",
-      "equipment": "Dumbbells",
+      "equipment": "Bodyweight / floor space",
       "primaryFor": "Squat",
       "difficulty": "Accessory",
       "notes": "Usually knee-friendly if stride is controlled.",
       "rflOk": "Yes",
       "favourite": false,
-      "updatedAt": "2026-07-19T10:00:00.000Z"
+      "updatedAt": "2026-07-19T10:00:00.000Z",
+      "equipmentOptions": [
+        [
+          "Bodyweight / floor space"
+        ]
+      ],
+      "optionalEquipment": [
+        "Dumbbells"
+      ]
     },
     {
       "id": "EX008",
       "name": "Romanian deadlift",
       "muscle": "Hamstrings / Glutes",
       "pattern": "Hip hinge",
-      "equipment": "Barbell or dumbbells",
+      "equipment": "Barbell + plates OR Dumbbells OR Kettlebells",
       "primaryFor": "Hinge",
       "difficulty": "Main lift",
       "notes": "Only use if lower back is not the limiter.",
       "rflOk": "Yes",
       "favourite": false,
-      "updatedAt": "2026-07-19T10:00:00.000Z"
+      "updatedAt": "2026-07-19T10:00:00.000Z",
+      "equipmentOptions": [
+        [
+          "Barbell + plates"
+        ],
+        [
+          "Dumbbells"
+        ],
+        [
+          "Kettlebells"
+        ]
+      ],
+      "optionalEquipment": []
     },
     {
       "id": "EX009",
@@ -825,319 +904,508 @@
       "notes": "Easier to control than barbell for some lifters.",
       "rflOk": "Yes",
       "favourite": false,
-      "updatedAt": "2026-07-19T10:00:00.000Z"
+      "updatedAt": "2026-07-19T10:00:00.000Z",
+      "equipmentOptions": [
+        [
+          "Dumbbells"
+        ]
+      ],
+      "optionalEquipment": []
     },
     {
       "id": "EX010",
       "name": "Barbell hip thrust",
       "muscle": "Glutes / Hamstrings",
       "pattern": "Hip extension",
-      "equipment": "Barbell + bench",
+      "equipment": "Barbell + plates + Bench",
       "primaryFor": "Hinge",
       "difficulty": "Main lift",
       "notes": "Back-friendly hinge replacement.",
       "rflOk": "Yes",
       "favourite": false,
-      "updatedAt": "2026-07-19T10:00:00.000Z"
+      "updatedAt": "2026-07-19T10:00:00.000Z",
+      "equipmentOptions": [
+        [
+          "Barbell + plates",
+          "Bench"
+        ]
+      ],
+      "optionalEquipment": []
     },
     {
       "id": "EX011",
       "name": "Cable pull-through",
       "muscle": "Glutes / Hamstrings",
       "pattern": "Hip hinge",
-      "equipment": "Cable",
+      "equipment": "Cable station",
       "primaryFor": "Hinge",
       "difficulty": "Substitution",
       "notes": "Good replacement for RDL if back feels taxed.",
       "rflOk": "Yes",
       "favourite": false,
-      "updatedAt": "2026-07-19T10:00:00.000Z"
+      "updatedAt": "2026-07-19T10:00:00.000Z",
+      "equipmentOptions": [
+        [
+          "Cable station"
+        ]
+      ],
+      "optionalEquipment": []
     },
     {
       "id": "EX012",
       "name": "Cable leg curl",
       "muscle": "Hamstrings",
       "pattern": "Knee flexion",
-      "equipment": "Cable ankle strap",
+      "equipment": "Cable station + Ankle strap",
       "primaryFor": "Hamstrings",
       "difficulty": "Accessory",
       "notes": "Can use bench/prone setup with ankle strap.",
       "rflOk": "Yes",
       "favourite": false,
-      "updatedAt": "2026-07-19T10:00:00.000Z"
+      "updatedAt": "2026-07-19T10:00:00.000Z",
+      "equipmentOptions": [
+        [
+          "Cable station",
+          "Ankle strap"
+        ]
+      ],
+      "optionalEquipment": []
     },
     {
       "id": "EX013",
       "name": "Standing calf raise",
       "muscle": "Calves",
       "pattern": "Calf raise",
-      "equipment": "Barbell or dumbbells",
+      "equipment": "Bodyweight / floor space",
       "primaryFor": "Calves",
       "difficulty": "Accessory",
       "notes": "Pause in stretched and contracted positions.",
       "rflOk": "Yes",
       "favourite": false,
-      "updatedAt": "2026-07-19T10:00:00.000Z"
+      "updatedAt": "2026-07-19T10:00:00.000Z",
+      "equipmentOptions": [
+        [
+          "Bodyweight / floor space"
+        ]
+      ],
+      "optionalEquipment": [
+        "Dumbbells",
+        "Barbell + plates",
+        "Calf raise platform / machine"
+      ]
     },
     {
       "id": "EX014",
       "name": "Barbell bench press",
       "muscle": "Chest / Triceps",
       "pattern": "Horizontal press",
-      "equipment": "Power rack + barbell",
+      "equipment": "Power rack / squat stands + Barbell + plates + Bench",
       "primaryFor": "Press",
       "difficulty": "Main lift",
       "notes": "Use safeties in rack.",
       "rflOk": "Yes",
       "favourite": false,
-      "updatedAt": "2026-07-19T10:00:00.000Z"
+      "updatedAt": "2026-07-19T10:00:00.000Z",
+      "equipmentOptions": [
+        [
+          "Power rack / squat stands",
+          "Barbell + plates",
+          "Bench"
+        ]
+      ],
+      "optionalEquipment": []
     },
     {
       "id": "EX015",
       "name": "Dumbbell bench press",
       "muscle": "Chest / Triceps",
       "pattern": "Horizontal press",
-      "equipment": "Dumbbells + bench",
+      "equipment": "Dumbbells + Bench",
       "primaryFor": "Press",
       "difficulty": "Substitution",
       "notes": "Good shoulder-friendly press variation.",
       "rflOk": "Yes",
       "favourite": false,
-      "updatedAt": "2026-07-19T10:00:00.000Z"
+      "updatedAt": "2026-07-19T10:00:00.000Z",
+      "equipmentOptions": [
+        [
+          "Dumbbells",
+          "Bench"
+        ]
+      ],
+      "optionalEquipment": []
     },
     {
       "id": "EX016",
       "name": "Incline dumbbell press",
       "muscle": "Upper chest",
       "pattern": "Incline press",
-      "equipment": "Dumbbells + bench",
+      "equipment": "Dumbbells + Adjustable bench",
       "primaryFor": "Press",
       "difficulty": "Accessory",
       "notes": "Use controlled eccentric.",
       "rflOk": "Yes",
       "favourite": false,
-      "updatedAt": "2026-07-19T10:00:00.000Z"
+      "updatedAt": "2026-07-19T10:00:00.000Z",
+      "equipmentOptions": [
+        [
+          "Dumbbells",
+          "Adjustable bench"
+        ]
+      ],
+      "optionalEquipment": []
     },
     {
       "id": "EX017",
       "name": "Floor press",
       "muscle": "Chest / Triceps",
       "pattern": "Horizontal press",
-      "equipment": "Barbell or dumbbells",
+      "equipment": "Barbell + plates OR Dumbbells",
       "primaryFor": "Press",
       "difficulty": "Substitution",
       "notes": "Good if shoulder range is sensitive.",
       "rflOk": "Yes",
       "favourite": false,
-      "updatedAt": "2026-07-19T10:00:00.000Z"
+      "updatedAt": "2026-07-19T10:00:00.000Z",
+      "equipmentOptions": [
+        [
+          "Barbell + plates"
+        ],
+        [
+          "Dumbbells"
+        ]
+      ],
+      "optionalEquipment": [
+        "Power rack / squat stands"
+      ]
     },
     {
       "id": "EX018",
       "name": "Close-grip bench press",
       "muscle": "Triceps / Chest",
       "pattern": "Horizontal press",
-      "equipment": "Power rack + barbell",
+      "equipment": "Power rack / squat stands + Barbell + plates + Bench",
       "primaryFor": "Triceps",
       "difficulty": "Accessory",
       "notes": "Avoid painful wrist/elbow angles.",
       "rflOk": "Yes",
       "favourite": false,
-      "updatedAt": "2026-07-19T10:00:00.000Z"
+      "updatedAt": "2026-07-19T10:00:00.000Z",
+      "equipmentOptions": [
+        [
+          "Power rack / squat stands",
+          "Barbell + plates",
+          "Bench"
+        ]
+      ],
+      "optionalEquipment": []
     },
     {
       "id": "EX019",
       "name": "Weighted ring push-up",
       "muscle": "Chest / Triceps",
       "pattern": "Horizontal press",
-      "equipment": "Rings / straps",
+      "equipment": "Gymnastic rings / suspension trainer",
       "primaryFor": "Press",
       "difficulty": "Substitution",
       "notes": "Progress by adding load or elevating feet.",
       "rflOk": "Yes",
       "favourite": false,
-      "updatedAt": "2026-07-19T10:00:00.000Z"
+      "updatedAt": "2026-07-19T10:00:00.000Z",
+      "equipmentOptions": [
+        [
+          "Gymnastic rings / suspension trainer"
+        ]
+      ],
+      "optionalEquipment": [
+        "Weighted vest"
+      ]
     },
     {
       "id": "EX020",
       "name": "Seated dumbbell overhead press",
       "muscle": "Delts / Triceps",
       "pattern": "Vertical press",
-      "equipment": "Dumbbells + bench",
+      "equipment": "Dumbbells + Bench",
       "primaryFor": "Press",
       "difficulty": "Main lift",
       "notes": "More back-friendly than standing press.",
       "rflOk": "Yes",
       "favourite": false,
-      "updatedAt": "2026-07-19T10:00:00.000Z"
+      "updatedAt": "2026-07-19T10:00:00.000Z",
+      "equipmentOptions": [
+        [
+          "Dumbbells",
+          "Bench"
+        ]
+      ],
+      "optionalEquipment": []
     },
     {
       "id": "EX021",
       "name": "Standing overhead press",
       "muscle": "Delts / Triceps",
       "pattern": "Vertical press",
-      "equipment": "Barbell",
+      "equipment": "Barbell + plates",
       "primaryFor": "Press",
       "difficulty": "Substitution",
       "notes": "Use only if bracing is solid.",
       "rflOk": "Yes",
       "favourite": false,
-      "updatedAt": "2026-07-19T10:00:00.000Z"
+      "updatedAt": "2026-07-19T10:00:00.000Z",
+      "equipmentOptions": [
+        [
+          "Barbell + plates"
+        ]
+      ],
+      "optionalEquipment": []
     },
     {
       "id": "EX022",
       "name": "Incline dumbbell or seated dumbbell press",
       "muscle": "Chest / Delts",
       "pattern": "Incline or vertical press",
-      "equipment": "Dumbbells + bench",
+      "equipment": "Dumbbells + Adjustable bench",
       "primaryFor": "Press",
       "difficulty": "RFL combined slot",
       "notes": "Choose the one that feels strongest that day.",
       "rflOk": "Yes",
       "favourite": false,
-      "updatedAt": "2026-07-19T10:00:00.000Z"
+      "updatedAt": "2026-07-19T10:00:00.000Z",
+      "equipmentOptions": [
+        [
+          "Dumbbells",
+          "Adjustable bench"
+        ]
+      ],
+      "optionalEquipment": []
     },
     {
       "id": "EX023",
       "name": "Chest-supported dumbbell row",
       "muscle": "Upper back / Lats",
       "pattern": "Horizontal pull",
-      "equipment": "Dumbbells + incline bench",
+      "equipment": "Dumbbells + Adjustable bench",
       "primaryFor": "Row",
       "difficulty": "Main lift",
       "notes": "Preferred back-friendly row.",
       "rflOk": "Yes",
       "favourite": false,
-      "updatedAt": "2026-07-19T10:00:00.000Z"
+      "updatedAt": "2026-07-19T10:00:00.000Z",
+      "equipmentOptions": [
+        [
+          "Dumbbells",
+          "Adjustable bench"
+        ]
+      ],
+      "optionalEquipment": []
     },
     {
       "id": "EX024",
       "name": "One-arm cable row",
       "muscle": "Upper back / Lats",
       "pattern": "Horizontal pull",
-      "equipment": "Cable",
+      "equipment": "Cable station",
       "primaryFor": "Row",
       "difficulty": "Accessory",
       "notes": "Keep torso stable.",
       "rflOk": "Yes",
       "favourite": false,
-      "updatedAt": "2026-07-19T10:00:00.000Z"
+      "updatedAt": "2026-07-19T10:00:00.000Z",
+      "equipmentOptions": [
+        [
+          "Cable station"
+        ]
+      ],
+      "optionalEquipment": []
     },
     {
       "id": "EX025",
       "name": "Seated cable row",
       "muscle": "Upper back / Lats",
       "pattern": "Horizontal pull",
-      "equipment": "Cable",
+      "equipment": "Cable station OR Lat pulldown / low row machine",
       "primaryFor": "Row",
       "difficulty": "Substitution",
       "notes": "Good controlled row option.",
       "rflOk": "Yes",
       "favourite": false,
-      "updatedAt": "2026-07-19T10:00:00.000Z"
+      "updatedAt": "2026-07-19T10:00:00.000Z",
+      "equipmentOptions": [
+        [
+          "Cable station"
+        ],
+        [
+          "Lat pulldown / low row machine"
+        ]
+      ],
+      "optionalEquipment": []
     },
     {
       "id": "EX026",
       "name": "One-arm dumbbell row",
       "muscle": "Lats / Upper back",
       "pattern": "Horizontal pull",
-      "equipment": "Dumbbell + bench",
+      "equipment": "Dumbbells + Bench",
       "primaryFor": "Row",
       "difficulty": "Substitution",
       "notes": "Support torso on bench.",
       "rflOk": "Yes",
       "favourite": false,
-      "updatedAt": "2026-07-19T10:00:00.000Z"
+      "updatedAt": "2026-07-19T10:00:00.000Z",
+      "equipmentOptions": [
+        [
+          "Dumbbells",
+          "Bench"
+        ]
+      ],
+      "optionalEquipment": []
     },
     {
       "id": "EX027",
       "name": "Inverted row",
       "muscle": "Upper back",
       "pattern": "Horizontal pull",
-      "equipment": "Rings / bar in rack",
+      "equipment": "Gymnastic rings / suspension trainer OR Power rack / squat stands + Barbell + plates",
       "primaryFor": "Row",
       "difficulty": "Substitution",
       "notes": "Adjust body angle for difficulty.",
       "rflOk": "Yes",
       "favourite": false,
-      "updatedAt": "2026-07-19T10:00:00.000Z"
+      "updatedAt": "2026-07-19T10:00:00.000Z",
+      "equipmentOptions": [
+        [
+          "Gymnastic rings / suspension trainer"
+        ],
+        [
+          "Power rack / squat stands",
+          "Barbell + plates"
+        ]
+      ],
+      "optionalEquipment": [
+        "Weighted vest"
+      ]
     },
     {
       "id": "EX028",
       "name": "Barbell row",
       "muscle": "Upper back",
       "pattern": "Horizontal pull",
-      "equipment": "Barbell",
+      "equipment": "Barbell + plates",
       "primaryFor": "Row",
       "difficulty": "Caution",
       "notes": "Use only if lower back is not limiting.",
       "rflOk": "No during RFL if fatigued",
       "favourite": false,
-      "updatedAt": "2026-07-19T10:00:00.000Z"
+      "updatedAt": "2026-07-19T10:00:00.000Z",
+      "equipmentOptions": [
+        [
+          "Barbell + plates"
+        ]
+      ],
+      "optionalEquipment": []
     },
     {
       "id": "EX029",
       "name": "Cable lat pulldown",
       "muscle": "Lats",
       "pattern": "Vertical pull",
-      "equipment": "Cable",
+      "equipment": "Cable station OR Lat pulldown / low row machine",
       "primaryFor": "Vertical pull",
       "difficulty": "Main lift",
       "notes": "Use controlled stretch.",
       "rflOk": "Yes",
       "favourite": false,
-      "updatedAt": "2026-07-19T10:00:00.000Z"
+      "updatedAt": "2026-07-19T10:00:00.000Z",
+      "equipmentOptions": [
+        [
+          "Cable station"
+        ],
+        [
+          "Lat pulldown / low row machine"
+        ]
+      ],
+      "optionalEquipment": []
     },
     {
       "id": "EX030",
       "name": "Ring chin-up",
       "muscle": "Lats / Biceps",
       "pattern": "Vertical pull",
-      "equipment": "Rings / pull-up bar",
+      "equipment": "Gymnastic rings / suspension trainer",
       "primaryFor": "Vertical pull",
       "difficulty": "Substitution",
       "notes": "Use assistance if needed.",
       "rflOk": "Yes",
       "favourite": false,
-      "updatedAt": "2026-07-19T10:00:00.000Z"
+      "updatedAt": "2026-07-19T10:00:00.000Z",
+      "equipmentOptions": [
+        [
+          "Gymnastic rings / suspension trainer"
+        ]
+      ],
+      "optionalEquipment": [
+        "Resistance bands / tubes",
+        "Dip belt / loading belt"
+      ]
     },
     {
       "id": "EX031",
       "name": "Weighted chin-up",
       "muscle": "Lats / Biceps",
       "pattern": "Vertical pull",
-      "equipment": "Pull-up bar + belt",
+      "equipment": "Pull-up bar + Dip belt / loading belt",
       "primaryFor": "Vertical pull",
       "difficulty": "Main lift",
       "notes": "Only load when reps are clean.",
       "rflOk": "Yes",
       "favourite": false,
-      "updatedAt": "2026-07-19T10:00:00.000Z"
+      "updatedAt": "2026-07-19T10:00:00.000Z",
+      "equipmentOptions": [
+        [
+          "Pull-up bar",
+          "Dip belt / loading belt"
+        ]
+      ],
+      "optionalEquipment": []
     },
     {
       "id": "EX032",
       "name": "Straight-arm cable pulldown",
       "muscle": "Lats",
       "pattern": "Pullover",
-      "equipment": "Cable",
+      "equipment": "Cable station",
       "primaryFor": "Vertical pull",
       "difficulty": "Accessory",
       "notes": "Good lat isolation add-on.",
       "rflOk": "Yes",
       "favourite": false,
-      "updatedAt": "2026-07-19T10:00:00.000Z"
+      "updatedAt": "2026-07-19T10:00:00.000Z",
+      "equipmentOptions": [
+        [
+          "Cable station"
+        ]
+      ],
+      "optionalEquipment": []
     },
     {
       "id": "EX033",
       "name": "Cable lateral raise",
       "muscle": "Side delts",
       "pattern": "Lateral raise",
-      "equipment": "Cable",
+      "equipment": "Cable station",
       "primaryFor": "Delts",
       "difficulty": "GVS-style accessory",
       "notes": "High-control delt work.",
       "rflOk": "Yes",
       "favourite": false,
-      "updatedAt": "2026-07-19T10:00:00.000Z"
+      "updatedAt": "2026-07-19T10:00:00.000Z",
+      "equipmentOptions": [
+        [
+          "Cable station"
+        ]
+      ],
+      "optionalEquipment": []
     },
     {
       "id": "EX034",
@@ -1150,72 +1418,110 @@
       "notes": "Use strict reps; avoid swinging.",
       "rflOk": "Yes",
       "favourite": false,
-      "updatedAt": "2026-07-19T10:00:00.000Z"
+      "updatedAt": "2026-07-19T10:00:00.000Z",
+      "equipmentOptions": [
+        [
+          "Dumbbells"
+        ]
+      ],
+      "optionalEquipment": []
     },
     {
       "id": "EX035",
       "name": "Cable rear-delt fly",
       "muscle": "Rear delts",
       "pattern": "Rear delt",
-      "equipment": "Cable",
+      "equipment": "Cable station",
       "primaryFor": "Rear delts",
       "difficulty": "Accessory",
       "notes": "Lead with elbows, not hands.",
       "rflOk": "Yes",
       "favourite": false,
-      "updatedAt": "2026-07-19T10:00:00.000Z"
+      "updatedAt": "2026-07-19T10:00:00.000Z",
+      "equipmentOptions": [
+        [
+          "Cable station"
+        ]
+      ],
+      "optionalEquipment": []
     },
     {
       "id": "EX036",
       "name": "Face pull",
       "muscle": "Rear delts / Upper back",
       "pattern": "Rear delt / external rotation",
-      "equipment": "Cable",
+      "equipment": "Cable station + Rope cable attachment",
       "primaryFor": "Rear delts",
       "difficulty": "Substitution",
       "notes": "Good shoulder-health option.",
       "rflOk": "Yes",
       "favourite": false,
-      "updatedAt": "2026-07-19T10:00:00.000Z"
+      "updatedAt": "2026-07-19T10:00:00.000Z",
+      "equipmentOptions": [
+        [
+          "Cable station",
+          "Rope cable attachment"
+        ]
+      ],
+      "optionalEquipment": []
     },
     {
       "id": "EX037",
       "name": "Rear-delt cable fly",
       "muscle": "Rear delts",
       "pattern": "Rear delt",
-      "equipment": "Cable",
+      "equipment": "Cable station",
       "primaryFor": "Rear delts",
       "difficulty": "Accessory",
       "notes": "Same as cable rear-delt fly.",
       "rflOk": "Yes",
       "favourite": false,
-      "updatedAt": "2026-07-19T10:00:00.000Z"
+      "updatedAt": "2026-07-19T10:00:00.000Z",
+      "equipmentOptions": [
+        [
+          "Cable station"
+        ]
+      ],
+      "optionalEquipment": []
     },
     {
       "id": "EX038",
       "name": "Cable triceps pushdown",
       "muscle": "Triceps",
       "pattern": "Elbow extension",
-      "equipment": "Cable",
+      "equipment": "Cable station",
       "primaryFor": "Triceps",
       "difficulty": "Accessory",
       "notes": "Keep upper arm fixed.",
       "rflOk": "Yes",
       "favourite": false,
-      "updatedAt": "2026-07-19T10:00:00.000Z"
+      "updatedAt": "2026-07-19T10:00:00.000Z",
+      "equipmentOptions": [
+        [
+          "Cable station"
+        ]
+      ],
+      "optionalEquipment": []
     },
     {
       "id": "EX039",
       "name": "Overhead cable triceps extension",
       "muscle": "Triceps long head",
       "pattern": "Elbow extension",
-      "equipment": "Cable",
+      "equipment": "Cable station + Rope cable attachment",
       "primaryFor": "Triceps",
       "difficulty": "Accessory",
       "notes": "Use pain-free elbow path.",
       "rflOk": "Yes",
       "favourite": false,
-      "updatedAt": "2026-07-19T10:00:00.000Z"
+      "updatedAt": "2026-07-19T10:00:00.000Z",
+      "equipmentOptions": [
+        [
+          "Cable station",
+          "Rope cable attachment"
+        ]
+      ],
+      "optionalEquipment": []
     },
     {
       "id": "EX040",
@@ -1228,33 +1534,52 @@
       "notes": "Use light and controlled.",
       "rflOk": "Maybe",
       "favourite": false,
-      "updatedAt": "2026-07-19T10:00:00.000Z"
+      "updatedAt": "2026-07-19T10:00:00.000Z",
+      "equipmentOptions": [
+        [
+          "Dumbbells"
+        ]
+      ],
+      "optionalEquipment": []
     },
     {
       "id": "EX041",
       "name": "Cable curl",
       "muscle": "Biceps",
       "pattern": "Elbow flexion",
-      "equipment": "Cable",
+      "equipment": "Cable station",
       "primaryFor": "Biceps",
       "difficulty": "Accessory",
       "notes": "Constant tension curl.",
       "rflOk": "Yes",
       "favourite": false,
-      "updatedAt": "2026-07-19T10:00:00.000Z"
+      "updatedAt": "2026-07-19T10:00:00.000Z",
+      "equipmentOptions": [
+        [
+          "Cable station"
+        ]
+      ],
+      "optionalEquipment": []
     },
     {
       "id": "EX042",
       "name": "Incline dumbbell curl",
       "muscle": "Biceps",
       "pattern": "Elbow flexion",
-      "equipment": "Dumbbells + bench",
+      "equipment": "Dumbbells + Adjustable bench",
       "primaryFor": "Biceps",
       "difficulty": "Accessory",
       "notes": "Great long-head stretch; do not overextend shoulder.",
       "rflOk": "Yes",
       "favourite": false,
-      "updatedAt": "2026-07-19T10:00:00.000Z"
+      "updatedAt": "2026-07-19T10:00:00.000Z",
+      "equipmentOptions": [
+        [
+          "Dumbbells",
+          "Adjustable bench"
+        ]
+      ],
+      "optionalEquipment": []
     },
     {
       "id": "EX043",
@@ -1267,59 +1592,95 @@
       "notes": "Neutral-grip elbow-friendly curl.",
       "rflOk": "Yes",
       "favourite": false,
-      "updatedAt": "2026-07-19T10:00:00.000Z"
+      "updatedAt": "2026-07-19T10:00:00.000Z",
+      "equipmentOptions": [
+        [
+          "Dumbbells"
+        ]
+      ],
+      "optionalEquipment": []
     },
     {
       "id": "EX044",
       "name": "Ring curl",
       "muscle": "Biceps",
       "pattern": "Elbow flexion",
-      "equipment": "Rings / straps",
+      "equipment": "Gymnastic rings / suspension trainer",
       "primaryFor": "Biceps",
       "difficulty": "Substitution",
       "notes": "Adjust angle for difficulty.",
       "rflOk": "Yes",
       "favourite": false,
-      "updatedAt": "2026-07-19T10:00:00.000Z"
+      "updatedAt": "2026-07-19T10:00:00.000Z",
+      "equipmentOptions": [
+        [
+          "Gymnastic rings / suspension trainer"
+        ]
+      ],
+      "optionalEquipment": []
     },
     {
       "id": "EX045",
       "name": "Cable or ring curl",
       "muscle": "Biceps",
       "pattern": "Elbow flexion",
-      "equipment": "Cable or rings",
+      "equipment": "Cable station OR Gymnastic rings / suspension trainer",
       "primaryFor": "Biceps",
       "difficulty": "Optional slot",
       "notes": "Choose cable if elbows feel sensitive.",
       "rflOk": "Yes",
       "favourite": false,
-      "updatedAt": "2026-07-19T10:00:00.000Z"
+      "updatedAt": "2026-07-19T10:00:00.000Z",
+      "equipmentOptions": [
+        [
+          "Cable station"
+        ],
+        [
+          "Gymnastic rings / suspension trainer"
+        ]
+      ],
+      "optionalEquipment": []
     },
     {
       "id": "EX046",
       "name": "Dead bug",
       "muscle": "Core",
       "pattern": "Anti-extension",
-      "equipment": "Bodyweight",
+      "equipment": "Bodyweight / floor space",
       "primaryFor": "Core",
       "difficulty": "Accessory",
       "notes": "Control lower back position.",
       "rflOk": "Yes",
       "favourite": false,
-      "updatedAt": "2026-07-19T10:00:00.000Z"
+      "updatedAt": "2026-07-19T10:00:00.000Z",
+      "equipmentOptions": [
+        [
+          "Bodyweight / floor space"
+        ]
+      ],
+      "optionalEquipment": []
     },
     {
       "id": "EX047",
       "name": "Pallof press",
       "muscle": "Core",
       "pattern": "Anti-rotation",
-      "equipment": "Cable",
+      "equipment": "Cable station OR Resistance bands / tubes",
       "primaryFor": "Core",
       "difficulty": "Accessory",
       "notes": "Pause each rep.",
       "rflOk": "Yes",
       "favourite": false,
-      "updatedAt": "2026-07-19T10:00:00.000Z"
+      "updatedAt": "2026-07-19T10:00:00.000Z",
+      "equipmentOptions": [
+        [
+          "Cable station"
+        ],
+        [
+          "Resistance bands / tubes"
+        ]
+      ],
+      "optionalEquipment": []
     },
     {
       "id": "EX048",
@@ -1332,59 +1693,1894 @@
       "notes": "Use only if lower back stays neutral.",
       "rflOk": "No if fatigued",
       "favourite": false,
-      "updatedAt": "2026-07-19T10:00:00.000Z"
+      "updatedAt": "2026-07-19T10:00:00.000Z",
+      "equipmentOptions": [
+        [
+          "Ab wheel"
+        ]
+      ],
+      "optionalEquipment": []
     },
     {
       "id": "EX049",
       "name": "Cable crunch",
       "muscle": "Abs",
       "pattern": "Spinal flexion",
-      "equipment": "Cable",
+      "equipment": "Cable station",
       "primaryFor": "Core",
       "difficulty": "Substitution",
       "notes": "Controlled range; avoid yanking.",
       "rflOk": "Yes",
       "favourite": false,
-      "updatedAt": "2026-07-19T10:00:00.000Z"
+      "updatedAt": "2026-07-19T10:00:00.000Z",
+      "equipmentOptions": [
+        [
+          "Cable station"
+        ]
+      ],
+      "optionalEquipment": []
     },
     {
       "id": "EX050",
       "name": "Brisk walking",
       "muscle": "Cardio / Recovery",
       "pattern": "Aerobic",
-      "equipment": "Outdoor / treadmill",
+      "equipment": "Bodyweight / floor space OR Treadmill",
       "primaryFor": "Cardio",
       "difficulty": "Recovery",
       "notes": "Easy pace where you can speak in sentences.",
       "rflOk": "Yes",
       "favourite": false,
-      "updatedAt": "2026-07-19T10:00:00.000Z"
+      "updatedAt": "2026-07-19T10:00:00.000Z",
+      "equipmentOptions": [
+        [
+          "Bodyweight / floor space"
+        ],
+        [
+          "Treadmill"
+        ]
+      ],
+      "optionalEquipment": [
+        "Weighted vest"
+      ]
     },
     {
       "id": "EX051",
       "name": "Easy bike",
       "muscle": "Cardio / Recovery",
       "pattern": "Aerobic",
-      "equipment": "Stationary bike",
+      "equipment": "Exercise bike",
       "primaryFor": "Cardio",
       "difficulty": "Recovery",
       "notes": "Low impact option if available.",
       "rflOk": "Yes",
       "favourite": false,
-      "updatedAt": "2026-07-19T10:00:00.000Z"
+      "updatedAt": "2026-07-19T10:00:00.000Z",
+      "equipmentOptions": [
+        [
+          "Exercise bike"
+        ]
+      ],
+      "optionalEquipment": []
     },
     {
       "id": "EX052",
       "name": "Mobility flow",
       "muscle": "Recovery",
       "pattern": "Mobility",
-      "equipment": "Bodyweight",
+      "equipment": "Bodyweight / floor space",
       "primaryFor": "Recovery",
       "difficulty": "Recovery",
       "notes": "5-10 minutes hips, t-spine, ankles.",
       "rflOk": "Yes",
       "favourite": false,
-      "updatedAt": "2026-07-19T10:00:00.000Z"
+      "updatedAt": "2026-07-19T10:00:00.000Z",
+      "equipmentOptions": [
+        [
+          "Bodyweight / floor space"
+        ]
+      ],
+      "optionalEquipment": []
+    },
+    {
+      "id": "EX053",
+      "name": "Push-up",
+      "muscle": "Chest / Triceps",
+      "pattern": "Horizontal press",
+      "equipment": "Bodyweight / floor space",
+      "equipmentOptions": [
+        [
+          "Bodyweight / floor space"
+        ]
+      ],
+      "optionalEquipment": [
+        "Weighted vest",
+        "Resistance bands / tubes"
+      ],
+      "primaryFor": "Horizontal press",
+      "difficulty": "Substitution",
+      "notes": "Use handles or dumbbells as grips if wrists prefer neutral.",
+      "rflOk": "Yes",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX054",
+      "name": "Feet-elevated push-up",
+      "muscle": "Upper chest / Triceps",
+      "pattern": "Incline press",
+      "equipment": "Bodyweight / floor space + Bench or box",
+      "equipmentOptions": [
+        [
+          "Bodyweight / floor space",
+          "Bench or box"
+        ]
+      ],
+      "optionalEquipment": [
+        "Weighted vest"
+      ],
+      "primaryFor": "Incline press",
+      "difficulty": "Substitution",
+      "notes": "",
+      "rflOk": "Yes",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX055",
+      "name": "Pike push-up",
+      "muscle": "Delts / Triceps",
+      "pattern": "Vertical press",
+      "equipment": "Bodyweight / floor space",
+      "equipmentOptions": [
+        [
+          "Bodyweight / floor space"
+        ]
+      ],
+      "optionalEquipment": [
+        "Bench or box"
+      ],
+      "primaryFor": "Vertical press",
+      "difficulty": "Substitution",
+      "notes": "",
+      "rflOk": "Yes",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX056",
+      "name": "Parallel-bar dip",
+      "muscle": "Chest / Triceps",
+      "pattern": "Vertical dip",
+      "equipment": "Dip station / parallel bars",
+      "equipmentOptions": [
+        [
+          "Dip station / parallel bars"
+        ]
+      ],
+      "optionalEquipment": [
+        "Dip belt / loading belt",
+        "Resistance bands / tubes"
+      ],
+      "primaryFor": "Horizontal press",
+      "difficulty": "Substitution",
+      "notes": "",
+      "rflOk": "Yes",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX057",
+      "name": "Band-assisted dip",
+      "muscle": "Chest / Triceps",
+      "pattern": "Vertical dip",
+      "equipment": "Dip station / parallel bars + Resistance bands / tubes",
+      "equipmentOptions": [
+        [
+          "Dip station / parallel bars",
+          "Resistance bands / tubes"
+        ]
+      ],
+      "optionalEquipment": [],
+      "primaryFor": "Horizontal press",
+      "difficulty": "Substitution",
+      "notes": "",
+      "rflOk": "Yes",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX058",
+      "name": "Low-bar back squat",
+      "muscle": "Quads / Glutes",
+      "pattern": "Squat",
+      "equipment": "Power rack / squat stands + Barbell + plates",
+      "equipmentOptions": [
+        [
+          "Power rack / squat stands",
+          "Barbell + plates"
+        ]
+      ],
+      "optionalEquipment": [],
+      "primaryFor": "Squat",
+      "difficulty": "Main lift",
+      "notes": "Use only if shoulder position and technique are comfortable.",
+      "rflOk": "Yes",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX059",
+      "name": "Safety-bar squat",
+      "muscle": "Quads / Glutes",
+      "pattern": "Squat",
+      "equipment": "Power rack / squat stands + Safety squat bar",
+      "equipmentOptions": [
+        [
+          "Power rack / squat stands",
+          "Safety squat bar"
+        ]
+      ],
+      "optionalEquipment": [],
+      "primaryFor": "Squat",
+      "difficulty": "Main lift",
+      "notes": "Often easier on shoulders and upper back.",
+      "rflOk": "Yes",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX060",
+      "name": "Smith-machine squat",
+      "muscle": "Quads / Glutes",
+      "pattern": "Squat",
+      "equipment": "Smith machine",
+      "equipmentOptions": [
+        [
+          "Smith machine"
+        ]
+      ],
+      "optionalEquipment": [],
+      "primaryFor": "Squat",
+      "difficulty": "Main lift",
+      "notes": "Choose a foot position that keeps the movement comfortable.",
+      "rflOk": "Yes",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX061",
+      "name": "Landmine squat",
+      "muscle": "Quads / Glutes",
+      "pattern": "Squat",
+      "equipment": "Barbell + plates + Landmine attachment",
+      "equipmentOptions": [
+        [
+          "Barbell + plates",
+          "Landmine attachment"
+        ]
+      ],
+      "optionalEquipment": [],
+      "primaryFor": "Squat",
+      "difficulty": "Substitution",
+      "notes": "Stable front-loaded squat option.",
+      "rflOk": "Yes",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX062",
+      "name": "Leg press",
+      "muscle": "Quads / Glutes",
+      "pattern": "Squat",
+      "equipment": "Leg press / hack squat",
+      "equipmentOptions": [
+        [
+          "Leg press / hack squat"
+        ]
+      ],
+      "optionalEquipment": [],
+      "primaryFor": "Squat",
+      "difficulty": "Main lift",
+      "notes": "Use controlled depth and avoid pelvis rolling.",
+      "rflOk": "Yes",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX063",
+      "name": "Hack squat",
+      "muscle": "Quads / Glutes",
+      "pattern": "Squat",
+      "equipment": "Leg press / hack squat",
+      "equipmentOptions": [
+        [
+          "Leg press / hack squat"
+        ]
+      ],
+      "optionalEquipment": [],
+      "primaryFor": "Squat",
+      "difficulty": "Main lift",
+      "notes": "Quad-biased machine squat.",
+      "rflOk": "Yes",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX064",
+      "name": "Leg extension",
+      "muscle": "Quads",
+      "pattern": "Knee extension",
+      "equipment": "Leg extension machine",
+      "equipmentOptions": [
+        [
+          "Leg extension machine"
+        ]
+      ],
+      "optionalEquipment": [],
+      "primaryFor": "Quads",
+      "difficulty": "Isolation",
+      "notes": "Control the top and lower without bouncing.",
+      "rflOk": "Maybe",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX065",
+      "name": "Step-up",
+      "muscle": "Quads / Glutes",
+      "pattern": "Single-leg",
+      "equipment": "Bench or box",
+      "equipmentOptions": [
+        [
+          "Bench or box"
+        ]
+      ],
+      "optionalEquipment": [
+        "Dumbbells",
+        "Kettlebells"
+      ],
+      "primaryFor": "Single-leg",
+      "difficulty": "Substitution",
+      "notes": "",
+      "rflOk": "Yes",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX066",
+      "name": "Walking lunge",
+      "muscle": "Quads / Glutes",
+      "pattern": "Single-leg",
+      "equipment": "Bodyweight / floor space",
+      "equipmentOptions": [
+        [
+          "Bodyweight / floor space"
+        ]
+      ],
+      "optionalEquipment": [
+        "Dumbbells",
+        "Kettlebells",
+        "Weighted vest"
+      ],
+      "primaryFor": "Single-leg",
+      "difficulty": "Substitution",
+      "notes": "",
+      "rflOk": "Yes",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX067",
+      "name": "Bodyweight split squat",
+      "muscle": "Quads / Glutes",
+      "pattern": "Single-leg",
+      "equipment": "Bodyweight / floor space",
+      "equipmentOptions": [
+        [
+          "Bodyweight / floor space"
+        ]
+      ],
+      "optionalEquipment": [
+        "Dumbbells",
+        "Weighted vest"
+      ],
+      "primaryFor": "Single-leg",
+      "difficulty": "Substitution",
+      "notes": "",
+      "rflOk": "Yes",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX068",
+      "name": "Conventional deadlift",
+      "muscle": "Hamstrings / Glutes / Back",
+      "pattern": "Hip hinge",
+      "equipment": "Barbell + plates",
+      "equipmentOptions": [
+        [
+          "Barbell + plates"
+        ]
+      ],
+      "optionalEquipment": [],
+      "primaryFor": "Hip hinge",
+      "difficulty": "Main lift",
+      "notes": "Use only when technique and recovery support it.",
+      "rflOk": "Maybe",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX069",
+      "name": "Sumo deadlift",
+      "muscle": "Glutes / Hamstrings / Adductors",
+      "pattern": "Hip hinge",
+      "equipment": "Barbell + plates",
+      "equipmentOptions": [
+        [
+          "Barbell + plates"
+        ]
+      ],
+      "optionalEquipment": [],
+      "primaryFor": "Hip hinge",
+      "difficulty": "Main lift",
+      "notes": "Choose stance based on comfort and proportions.",
+      "rflOk": "Maybe",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX070",
+      "name": "Trap-bar deadlift",
+      "muscle": "Quads / Glutes / Hamstrings",
+      "pattern": "Hip hinge",
+      "equipment": "Trap / hex bar + Barbell plates",
+      "equipmentOptions": [
+        [
+          "Trap / hex bar",
+          "Barbell plates"
+        ]
+      ],
+      "optionalEquipment": [],
+      "primaryFor": "Hip hinge",
+      "difficulty": "Main lift",
+      "notes": "Often easier to keep the load close to the body.",
+      "rflOk": "Yes",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX071",
+      "name": "Rack pull",
+      "muscle": "Glutes / Back",
+      "pattern": "Hip hinge",
+      "equipment": "Power rack / squat stands + Barbell + plates",
+      "equipmentOptions": [
+        [
+          "Power rack / squat stands",
+          "Barbell + plates"
+        ]
+      ],
+      "optionalEquipment": [],
+      "primaryFor": "Hip hinge",
+      "difficulty": "Main lift",
+      "notes": "Use sparingly; high loading can be fatiguing.",
+      "rflOk": "Maybe",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX072",
+      "name": "Good morning",
+      "muscle": "Hamstrings / Glutes",
+      "pattern": "Hip hinge",
+      "equipment": "Power rack / squat stands + Barbell + plates",
+      "equipmentOptions": [
+        [
+          "Power rack / squat stands",
+          "Barbell + plates"
+        ]
+      ],
+      "optionalEquipment": [],
+      "primaryFor": "Hip hinge",
+      "difficulty": "Substitution",
+      "notes": "Light, controlled hinge; not a max-load movement.",
+      "rflOk": "Maybe",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX073",
+      "name": "Kettlebell Romanian deadlift",
+      "muscle": "Hamstrings / Glutes",
+      "pattern": "Hip hinge",
+      "equipment": "Kettlebells",
+      "equipmentOptions": [
+        [
+          "Kettlebells"
+        ]
+      ],
+      "optionalEquipment": [],
+      "primaryFor": "Hip hinge",
+      "difficulty": "Substitution",
+      "notes": "",
+      "rflOk": "Yes",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX074",
+      "name": "Kettlebell swing",
+      "muscle": "Glutes / Conditioning",
+      "pattern": "Ballistic hinge",
+      "equipment": "Kettlebells",
+      "equipmentOptions": [
+        [
+          "Kettlebells"
+        ]
+      ],
+      "optionalEquipment": [],
+      "primaryFor": "Conditioning",
+      "difficulty": "Conditioning",
+      "notes": "Use only with established hinge technique.",
+      "rflOk": "Maybe",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX075",
+      "name": "Dumbbell hip thrust",
+      "muscle": "Glutes / Hamstrings",
+      "pattern": "Hip extension",
+      "equipment": "Dumbbells + Bench",
+      "equipmentOptions": [
+        [
+          "Dumbbells",
+          "Bench"
+        ]
+      ],
+      "optionalEquipment": [],
+      "primaryFor": "Hip extension",
+      "difficulty": "Substitution",
+      "notes": "",
+      "rflOk": "Yes",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX076",
+      "name": "Glute bridge",
+      "muscle": "Glutes / Hamstrings",
+      "pattern": "Hip extension",
+      "equipment": "Bodyweight / floor space",
+      "equipmentOptions": [
+        [
+          "Bodyweight / floor space"
+        ]
+      ],
+      "optionalEquipment": [
+        "Dumbbells",
+        "Barbell + plates",
+        "Resistance bands / tubes"
+      ],
+      "primaryFor": "Hip extension",
+      "difficulty": "Substitution",
+      "notes": "",
+      "rflOk": "Yes",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX077",
+      "name": "Seated leg curl",
+      "muscle": "Hamstrings",
+      "pattern": "Knee flexion",
+      "equipment": "Leg curl machine",
+      "equipmentOptions": [
+        [
+          "Leg curl machine"
+        ]
+      ],
+      "optionalEquipment": [],
+      "primaryFor": "Knee flexion",
+      "difficulty": "Isolation",
+      "notes": "",
+      "rflOk": "Yes",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX078",
+      "name": "Lying leg curl",
+      "muscle": "Hamstrings",
+      "pattern": "Knee flexion",
+      "equipment": "Leg curl machine",
+      "equipmentOptions": [
+        [
+          "Leg curl machine"
+        ]
+      ],
+      "optionalEquipment": [],
+      "primaryFor": "Knee flexion",
+      "difficulty": "Isolation",
+      "notes": "",
+      "rflOk": "Yes",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX079",
+      "name": "Banded leg curl",
+      "muscle": "Hamstrings",
+      "pattern": "Knee flexion",
+      "equipment": "Resistance bands / tubes + Secure band anchor",
+      "equipmentOptions": [
+        [
+          "Resistance bands / tubes",
+          "Secure band anchor"
+        ]
+      ],
+      "optionalEquipment": [],
+      "primaryFor": "Knee flexion",
+      "difficulty": "Isolation",
+      "notes": "",
+      "rflOk": "Yes",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX080",
+      "name": "Stability-ball leg curl",
+      "muscle": "Hamstrings / Glutes",
+      "pattern": "Knee flexion",
+      "equipment": "Stability ball",
+      "equipmentOptions": [
+        [
+          "Stability ball"
+        ]
+      ],
+      "optionalEquipment": [],
+      "primaryFor": "Knee flexion",
+      "difficulty": "Substitution",
+      "notes": "",
+      "rflOk": "Yes",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX081",
+      "name": "Nordic hamstring curl",
+      "muscle": "Hamstrings",
+      "pattern": "Knee flexion",
+      "equipment": "Glute-ham developer / Nordic bench",
+      "equipmentOptions": [
+        [
+          "Glute-ham developer / Nordic bench"
+        ]
+      ],
+      "optionalEquipment": [],
+      "primaryFor": "Knee flexion",
+      "difficulty": "Advanced",
+      "notes": "Use assistance and a controlled eccentric.",
+      "rflOk": "Maybe",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX082",
+      "name": "Glute-ham raise",
+      "muscle": "Hamstrings / Glutes",
+      "pattern": "Knee flexion",
+      "equipment": "Glute-ham developer / Nordic bench",
+      "equipmentOptions": [
+        [
+          "Glute-ham developer / Nordic bench"
+        ]
+      ],
+      "optionalEquipment": [],
+      "primaryFor": "Knee flexion",
+      "difficulty": "Advanced",
+      "notes": "Scale range of motion as needed.",
+      "rflOk": "Maybe",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX083",
+      "name": "Seated calf raise",
+      "muscle": "Soleus / Calves",
+      "pattern": "Calf raise",
+      "equipment": "Calf raise platform / machine OR Bench + Dumbbells",
+      "equipmentOptions": [
+        [
+          "Calf raise platform / machine"
+        ],
+        [
+          "Bench",
+          "Dumbbells"
+        ]
+      ],
+      "optionalEquipment": [],
+      "primaryFor": "Calf raise",
+      "difficulty": "Isolation",
+      "notes": "",
+      "rflOk": "Yes",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX084",
+      "name": "Single-leg calf raise",
+      "muscle": "Calves",
+      "pattern": "Calf raise",
+      "equipment": "Bodyweight / floor space",
+      "equipmentOptions": [
+        [
+          "Bodyweight / floor space"
+        ]
+      ],
+      "optionalEquipment": [
+        "Dumbbells",
+        "Calf raise platform / machine"
+      ],
+      "primaryFor": "Calf raise",
+      "difficulty": "Isolation",
+      "notes": "",
+      "rflOk": "Yes",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX085",
+      "name": "Smith-machine bench press",
+      "muscle": "Chest / Triceps",
+      "pattern": "Horizontal press",
+      "equipment": "Smith machine + Bench",
+      "equipmentOptions": [
+        [
+          "Smith machine",
+          "Bench"
+        ]
+      ],
+      "optionalEquipment": [],
+      "primaryFor": "Horizontal press",
+      "difficulty": "Main lift",
+      "notes": "",
+      "rflOk": "Yes",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX086",
+      "name": "Chest press machine",
+      "muscle": "Chest / Triceps",
+      "pattern": "Horizontal press",
+      "equipment": "Chest press / pec deck machine",
+      "equipmentOptions": [
+        [
+          "Chest press / pec deck machine"
+        ]
+      ],
+      "optionalEquipment": [],
+      "primaryFor": "Horizontal press",
+      "difficulty": "Main lift",
+      "notes": "",
+      "rflOk": "Yes",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX087",
+      "name": "Dumbbell fly",
+      "muscle": "Chest",
+      "pattern": "Chest isolation",
+      "equipment": "Dumbbells + Bench",
+      "equipmentOptions": [
+        [
+          "Dumbbells",
+          "Bench"
+        ]
+      ],
+      "optionalEquipment": [],
+      "primaryFor": "Chest",
+      "difficulty": "Isolation",
+      "notes": "Use a comfortable range; avoid excessive stretch.",
+      "rflOk": "Maybe",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX088",
+      "name": "Pec deck fly",
+      "muscle": "Chest",
+      "pattern": "Chest isolation",
+      "equipment": "Chest press / pec deck machine",
+      "equipmentOptions": [
+        [
+          "Chest press / pec deck machine"
+        ]
+      ],
+      "optionalEquipment": [],
+      "primaryFor": "Chest",
+      "difficulty": "Isolation",
+      "notes": "",
+      "rflOk": "Maybe",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX089",
+      "name": "Landmine press",
+      "muscle": "Delts / Upper chest / Triceps",
+      "pattern": "Vertical press",
+      "equipment": "Barbell + plates + Landmine attachment",
+      "equipmentOptions": [
+        [
+          "Barbell + plates",
+          "Landmine attachment"
+        ]
+      ],
+      "optionalEquipment": [],
+      "primaryFor": "Vertical press",
+      "difficulty": "Substitution",
+      "notes": "",
+      "rflOk": "Yes",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX090",
+      "name": "Arnold press",
+      "muscle": "Delts / Triceps",
+      "pattern": "Vertical press",
+      "equipment": "Dumbbells + Bench",
+      "equipmentOptions": [
+        [
+          "Dumbbells",
+          "Bench"
+        ]
+      ],
+      "optionalEquipment": [],
+      "primaryFor": "Vertical press",
+      "difficulty": "Substitution",
+      "notes": "",
+      "rflOk": "Yes",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX091",
+      "name": "Dumbbell pullover",
+      "muscle": "Lats / Chest",
+      "pattern": "Pullover",
+      "equipment": "Dumbbells + Bench",
+      "equipmentOptions": [
+        [
+          "Dumbbells",
+          "Bench"
+        ]
+      ],
+      "optionalEquipment": [],
+      "primaryFor": "Pullover",
+      "difficulty": "Substitution",
+      "notes": "",
+      "rflOk": "Yes",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX092",
+      "name": "Landmine T-bar row",
+      "muscle": "Upper back / Lats",
+      "pattern": "Horizontal pull",
+      "equipment": "Barbell + plates + Landmine attachment",
+      "equipmentOptions": [
+        [
+          "Barbell + plates",
+          "Landmine attachment"
+        ]
+      ],
+      "optionalEquipment": [],
+      "primaryFor": "Horizontal pull",
+      "difficulty": "Main lift",
+      "notes": "",
+      "rflOk": "Yes",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX093",
+      "name": "Band row",
+      "muscle": "Upper back / Lats",
+      "pattern": "Horizontal pull",
+      "equipment": "Resistance bands / tubes + Secure band anchor",
+      "equipmentOptions": [
+        [
+          "Resistance bands / tubes",
+          "Secure band anchor"
+        ]
+      ],
+      "optionalEquipment": [],
+      "primaryFor": "Horizontal pull",
+      "difficulty": "Substitution",
+      "notes": "",
+      "rflOk": "Yes",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX094",
+      "name": "Band lat pulldown",
+      "muscle": "Lats",
+      "pattern": "Vertical pull",
+      "equipment": "Resistance bands / tubes + High band anchor",
+      "equipmentOptions": [
+        [
+          "Resistance bands / tubes",
+          "High band anchor"
+        ]
+      ],
+      "optionalEquipment": [],
+      "primaryFor": "Vertical pull",
+      "difficulty": "Substitution",
+      "notes": "",
+      "rflOk": "Yes",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX095",
+      "name": "Pull-up",
+      "muscle": "Lats / Biceps",
+      "pattern": "Vertical pull",
+      "equipment": "Pull-up bar",
+      "equipmentOptions": [
+        [
+          "Pull-up bar"
+        ]
+      ],
+      "optionalEquipment": [
+        "Resistance bands / tubes",
+        "Dip belt / loading belt"
+      ],
+      "primaryFor": "Vertical pull",
+      "difficulty": "Main lift",
+      "notes": "",
+      "rflOk": "Yes",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX096",
+      "name": "Band-assisted pull-up",
+      "muscle": "Lats / Biceps",
+      "pattern": "Vertical pull",
+      "equipment": "Pull-up bar + Resistance bands / tubes",
+      "equipmentOptions": [
+        [
+          "Pull-up bar",
+          "Resistance bands / tubes"
+        ]
+      ],
+      "optionalEquipment": [],
+      "primaryFor": "Vertical pull",
+      "difficulty": "Substitution",
+      "notes": "",
+      "rflOk": "Yes",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX097",
+      "name": "Dumbbell rear-delt fly",
+      "muscle": "Rear delts / Upper back",
+      "pattern": "Rear delt",
+      "equipment": "Dumbbells",
+      "equipmentOptions": [
+        [
+          "Dumbbells"
+        ]
+      ],
+      "optionalEquipment": [],
+      "primaryFor": "Rear delt",
+      "difficulty": "Isolation",
+      "notes": "",
+      "rflOk": "Yes",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX098",
+      "name": "Reverse pec deck",
+      "muscle": "Rear delts / Upper back",
+      "pattern": "Rear delt",
+      "equipment": "Chest press / pec deck machine",
+      "equipmentOptions": [
+        [
+          "Chest press / pec deck machine"
+        ]
+      ],
+      "optionalEquipment": [],
+      "primaryFor": "Rear delt",
+      "difficulty": "Isolation",
+      "notes": "",
+      "rflOk": "Yes",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX099",
+      "name": "Band face pull",
+      "muscle": "Rear delts / Upper back",
+      "pattern": "Rear delt / external rotation",
+      "equipment": "Resistance bands / tubes + High band anchor",
+      "equipmentOptions": [
+        [
+          "Resistance bands / tubes",
+          "High band anchor"
+        ]
+      ],
+      "optionalEquipment": [],
+      "primaryFor": "Rear delt",
+      "difficulty": "Isolation",
+      "notes": "",
+      "rflOk": "Yes",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX100",
+      "name": "Band lateral raise",
+      "muscle": "Side delts",
+      "pattern": "Lateral raise",
+      "equipment": "Resistance bands / tubes",
+      "equipmentOptions": [
+        [
+          "Resistance bands / tubes"
+        ]
+      ],
+      "optionalEquipment": [],
+      "primaryFor": "Lateral raise",
+      "difficulty": "Isolation",
+      "notes": "",
+      "rflOk": "Yes",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX101",
+      "name": "EZ-bar curl",
+      "muscle": "Biceps",
+      "pattern": "Elbow flexion",
+      "equipment": "EZ curl bar + Barbell plates",
+      "equipmentOptions": [
+        [
+          "EZ curl bar",
+          "Barbell plates"
+        ]
+      ],
+      "optionalEquipment": [],
+      "primaryFor": "Elbow flexion",
+      "difficulty": "Isolation",
+      "notes": "",
+      "rflOk": "Yes",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX102",
+      "name": "Preacher curl",
+      "muscle": "Biceps",
+      "pattern": "Elbow flexion",
+      "equipment": "Preacher curl bench + EZ curl bar + Barbell plates OR Preacher curl bench + Dumbbells",
+      "equipmentOptions": [
+        [
+          "Preacher curl bench",
+          "EZ curl bar",
+          "Barbell plates"
+        ],
+        [
+          "Preacher curl bench",
+          "Dumbbells"
+        ]
+      ],
+      "optionalEquipment": [],
+      "primaryFor": "Elbow flexion",
+      "difficulty": "Isolation",
+      "notes": "",
+      "rflOk": "Yes",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX103",
+      "name": "Band curl",
+      "muscle": "Biceps",
+      "pattern": "Elbow flexion",
+      "equipment": "Resistance bands / tubes",
+      "equipmentOptions": [
+        [
+          "Resistance bands / tubes"
+        ]
+      ],
+      "optionalEquipment": [],
+      "primaryFor": "Elbow flexion",
+      "difficulty": "Isolation",
+      "notes": "",
+      "rflOk": "Yes",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX104",
+      "name": "EZ-bar skull crusher",
+      "muscle": "Triceps",
+      "pattern": "Elbow extension",
+      "equipment": "EZ curl bar + Barbell plates + Bench",
+      "equipmentOptions": [
+        [
+          "EZ curl bar",
+          "Barbell plates",
+          "Bench"
+        ]
+      ],
+      "optionalEquipment": [],
+      "primaryFor": "Elbow extension",
+      "difficulty": "Isolation",
+      "notes": "",
+      "rflOk": "Yes",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX105",
+      "name": "Band triceps pushdown",
+      "muscle": "Triceps",
+      "pattern": "Elbow extension",
+      "equipment": "Resistance bands / tubes + High band anchor",
+      "equipmentOptions": [
+        [
+          "Resistance bands / tubes",
+          "High band anchor"
+        ]
+      ],
+      "optionalEquipment": [],
+      "primaryFor": "Elbow extension",
+      "difficulty": "Isolation",
+      "notes": "",
+      "rflOk": "Yes",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX106",
+      "name": "Close-grip push-up",
+      "muscle": "Triceps / Chest",
+      "pattern": "Horizontal press",
+      "equipment": "Bodyweight / floor space",
+      "equipmentOptions": [
+        [
+          "Bodyweight / floor space"
+        ]
+      ],
+      "optionalEquipment": [
+        "Resistance bands / tubes",
+        "Weighted vest"
+      ],
+      "primaryFor": "Horizontal press",
+      "difficulty": "Substitution",
+      "notes": "",
+      "rflOk": "Yes",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX107",
+      "name": "Stability-ball crunch",
+      "muscle": "Abs",
+      "pattern": "Spinal flexion",
+      "equipment": "Stability ball",
+      "equipmentOptions": [
+        [
+          "Stability ball"
+        ]
+      ],
+      "optionalEquipment": [],
+      "primaryFor": "Core",
+      "difficulty": "Isolation",
+      "notes": "",
+      "rflOk": "Yes",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX108",
+      "name": "Reverse crunch",
+      "muscle": "Abs",
+      "pattern": "Spinal flexion",
+      "equipment": "Bodyweight / floor space",
+      "equipmentOptions": [
+        [
+          "Bodyweight / floor space"
+        ]
+      ],
+      "optionalEquipment": [],
+      "primaryFor": "Core",
+      "difficulty": "Substitution",
+      "notes": "",
+      "rflOk": "Yes",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX109",
+      "name": "Side plank",
+      "muscle": "Obliques / Core",
+      "pattern": "Anti-lateral flexion",
+      "equipment": "Bodyweight / floor space",
+      "equipmentOptions": [
+        [
+          "Bodyweight / floor space"
+        ]
+      ],
+      "optionalEquipment": [],
+      "primaryFor": "Core",
+      "difficulty": "Substitution",
+      "notes": "",
+      "rflOk": "Yes",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX110",
+      "name": "Farmer carry",
+      "muscle": "Grip / Traps / Core",
+      "pattern": "Loaded carry",
+      "equipment": "Dumbbells OR Kettlebells",
+      "equipmentOptions": [
+        [
+          "Dumbbells"
+        ],
+        [
+          "Kettlebells"
+        ]
+      ],
+      "optionalEquipment": [],
+      "primaryFor": "Loaded carry",
+      "difficulty": "Substitution",
+      "notes": "",
+      "rflOk": "Maybe",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX111",
+      "name": "Suitcase carry",
+      "muscle": "Core / Grip",
+      "pattern": "Loaded carry",
+      "equipment": "Dumbbells OR Kettlebells",
+      "equipmentOptions": [
+        [
+          "Dumbbells"
+        ],
+        [
+          "Kettlebells"
+        ]
+      ],
+      "optionalEquipment": [],
+      "primaryFor": "Loaded carry",
+      "difficulty": "Substitution",
+      "notes": "",
+      "rflOk": "Maybe",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX112",
+      "name": "Trap-bar carry",
+      "muscle": "Grip / Traps / Core",
+      "pattern": "Loaded carry",
+      "equipment": "Trap / hex bar + Barbell plates",
+      "equipmentOptions": [
+        [
+          "Trap / hex bar",
+          "Barbell plates"
+        ]
+      ],
+      "optionalEquipment": [],
+      "primaryFor": "Loaded carry",
+      "difficulty": "Substitution",
+      "notes": "",
+      "rflOk": "Maybe",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX113",
+      "name": "Rowing machine",
+      "muscle": "Cardio / Recovery",
+      "pattern": "Aerobic",
+      "equipment": "Rowing machine",
+      "equipmentOptions": [
+        [
+          "Rowing machine"
+        ]
+      ],
+      "optionalEquipment": [],
+      "primaryFor": "Cardio",
+      "difficulty": "Conditioning",
+      "notes": "",
+      "rflOk": "Maybe",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX114",
+      "name": "Elliptical",
+      "muscle": "Cardio / Recovery",
+      "pattern": "Aerobic",
+      "equipment": "Elliptical / cross trainer",
+      "equipmentOptions": [
+        [
+          "Elliptical / cross trainer"
+        ]
+      ],
+      "optionalEquipment": [],
+      "primaryFor": "Cardio",
+      "difficulty": "Conditioning",
+      "notes": "",
+      "rflOk": "Yes",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX115",
+      "name": "Jump rope",
+      "muscle": "Cardio / Calves",
+      "pattern": "Conditioning",
+      "equipment": "Jump rope",
+      "equipmentOptions": [
+        [
+          "Jump rope"
+        ]
+      ],
+      "optionalEquipment": [],
+      "primaryFor": "Conditioning",
+      "difficulty": "Conditioning",
+      "notes": "",
+      "rflOk": "Maybe",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX116",
+      "name": "Sled push",
+      "muscle": "Quads / Conditioning",
+      "pattern": "Conditioning",
+      "equipment": "Weight sled / prowler",
+      "equipmentOptions": [
+        [
+          "Weight sled / prowler"
+        ]
+      ],
+      "optionalEquipment": [],
+      "primaryFor": "Conditioning",
+      "difficulty": "Conditioning",
+      "notes": "",
+      "rflOk": "Maybe",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX117",
+      "name": "Medicine-ball slam",
+      "muscle": "Full body / Conditioning",
+      "pattern": "Conditioning",
+      "equipment": "Medicine ball",
+      "equipmentOptions": [
+        [
+          "Medicine ball"
+        ]
+      ],
+      "optionalEquipment": [],
+      "primaryFor": "Conditioning",
+      "difficulty": "Conditioning",
+      "notes": "",
+      "rflOk": "Maybe",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX118",
+      "name": "Sandbag carry",
+      "muscle": "Full body / Grip",
+      "pattern": "Loaded carry",
+      "equipment": "Sandbag",
+      "equipmentOptions": [
+        [
+          "Sandbag"
+        ]
+      ],
+      "optionalEquipment": [],
+      "primaryFor": "Loaded carry",
+      "difficulty": "Conditioning",
+      "notes": "",
+      "rflOk": "Maybe",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX119",
+      "name": "Kettlebell goblet squat",
+      "muscle": "Quads / Glutes",
+      "pattern": "Squat",
+      "equipment": "Kettlebells",
+      "equipmentOptions": [
+        [
+          "Kettlebells"
+        ]
+      ],
+      "optionalEquipment": [],
+      "primaryFor": "Squat",
+      "difficulty": "Substitution",
+      "notes": "",
+      "rflOk": "Yes",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX120",
+      "name": "Slant-board squat",
+      "muscle": "Quads",
+      "pattern": "Squat",
+      "equipment": "Slant board / heel wedge",
+      "equipmentOptions": [
+        [
+          "Slant board / heel wedge"
+        ]
+      ],
+      "optionalEquipment": [
+        "Dumbbells",
+        "Kettlebells",
+        "Weighted vest"
+      ],
+      "primaryFor": "Squat",
+      "difficulty": "Substitution",
+      "notes": "",
+      "rflOk": "Yes",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX121",
+      "name": "Smith-machine hip thrust",
+      "muscle": "Glutes / Hamstrings",
+      "pattern": "Hip extension",
+      "equipment": "Smith machine + Bench",
+      "equipmentOptions": [
+        [
+          "Smith machine",
+          "Bench"
+        ]
+      ],
+      "optionalEquipment": [],
+      "primaryFor": "Hip extension",
+      "difficulty": "Main lift",
+      "notes": "",
+      "rflOk": "Yes",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX122",
+      "name": "Swiss-bar bench press",
+      "muscle": "Chest / Triceps",
+      "pattern": "Horizontal press",
+      "equipment": "Power rack / squat stands + Swiss / football bar + Barbell plates + Bench",
+      "equipmentOptions": [
+        [
+          "Power rack / squat stands",
+          "Swiss / football bar",
+          "Barbell plates",
+          "Bench"
+        ]
+      ],
+      "optionalEquipment": [],
+      "primaryFor": "Horizontal press",
+      "difficulty": "Main lift",
+      "notes": "Neutral grips may be shoulder friendly.",
+      "rflOk": "Yes",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX123",
+      "name": "Band Pallof press",
+      "muscle": "Core",
+      "pattern": "Anti-rotation",
+      "equipment": "Resistance bands / tubes + Secure band anchor",
+      "equipmentOptions": [
+        [
+          "Resistance bands / tubes",
+          "Secure band anchor"
+        ]
+      ],
+      "optionalEquipment": [],
+      "primaryFor": "Core",
+      "difficulty": "Substitution",
+      "notes": "",
+      "rflOk": "Yes",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX124",
+      "name": "Dead bug or Pallof press",
+      "muscle": "Core",
+      "pattern": "Anti-extension / anti-rotation",
+      "equipment": "Bodyweight / floor space OR Cable station OR Resistance bands / tubes + Secure band anchor",
+      "equipmentOptions": [
+        [
+          "Bodyweight / floor space"
+        ],
+        [
+          "Cable station"
+        ],
+        [
+          "Resistance bands / tubes",
+          "Secure band anchor"
+        ]
+      ],
+      "optionalEquipment": [],
+      "primaryFor": "Core",
+      "difficulty": "Substitution",
+      "notes": "",
+      "rflOk": "Yes",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX125",
+      "name": "Cable lat pulldown or ring chin-up",
+      "muscle": "Lats / Biceps",
+      "pattern": "Vertical pull",
+      "equipment": "Cable station OR Lat pulldown / low row machine OR Gymnastic rings / suspension trainer",
+      "equipmentOptions": [
+        [
+          "Cable station"
+        ],
+        [
+          "Lat pulldown / low row machine"
+        ],
+        [
+          "Gymnastic rings / suspension trainer"
+        ]
+      ],
+      "optionalEquipment": [],
+      "primaryFor": "Vertical pull",
+      "difficulty": "Substitution",
+      "notes": "",
+      "rflOk": "Yes",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX126",
+      "name": "Incline dumbbell or cable curl",
+      "muscle": "Biceps",
+      "pattern": "Elbow flexion",
+      "equipment": "Dumbbells + Adjustable bench OR Cable station",
+      "equipmentOptions": [
+        [
+          "Dumbbells",
+          "Adjustable bench"
+        ],
+        [
+          "Cable station"
+        ]
+      ],
+      "optionalEquipment": [],
+      "primaryFor": "Elbow flexion",
+      "difficulty": "Isolation",
+      "notes": "",
+      "rflOk": "Yes",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX127",
+      "name": "Front squat or heels-elevated squat",
+      "muscle": "Quads / Glutes",
+      "pattern": "Squat",
+      "equipment": "Power rack / squat stands + Barbell + plates OR Dumbbells",
+      "equipmentOptions": [
+        [
+          "Power rack / squat stands",
+          "Barbell + plates"
+        ],
+        [
+          "Dumbbells"
+        ]
+      ],
+      "optionalEquipment": [
+        "Slant board / heel wedge"
+      ],
+      "primaryFor": "Squat",
+      "difficulty": "Main lift",
+      "notes": "",
+      "rflOk": "Yes",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX128",
+      "name": "Ab wheel or cable crunch",
+      "muscle": "Abs / Core",
+      "pattern": "Core",
+      "equipment": "Ab wheel OR Cable station",
+      "equipmentOptions": [
+        [
+          "Ab wheel"
+        ],
+        [
+          "Cable station"
+        ]
+      ],
+      "optionalEquipment": [],
+      "primaryFor": "Core",
+      "difficulty": "Substitution",
+      "notes": "",
+      "rflOk": "Yes",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX129",
+      "name": "Weighted chin-up or heavy pulldown",
+      "muscle": "Lats / Biceps",
+      "pattern": "Vertical pull",
+      "equipment": "Pull-up bar + Dip belt / loading belt OR Cable station OR Lat pulldown / low row machine",
+      "equipmentOptions": [
+        [
+          "Pull-up bar",
+          "Dip belt / loading belt"
+        ],
+        [
+          "Cable station"
+        ],
+        [
+          "Lat pulldown / low row machine"
+        ]
+      ],
+      "optionalEquipment": [],
+      "primaryFor": "Vertical pull",
+      "difficulty": "Main lift",
+      "notes": "",
+      "rflOk": "Yes",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX130",
+      "name": "Close-grip bench press or weighted ring push-up",
+      "muscle": "Triceps / Chest",
+      "pattern": "Horizontal press",
+      "equipment": "Power rack / squat stands + Barbell + plates + Bench OR Gymnastic rings / suspension trainer",
+      "equipmentOptions": [
+        [
+          "Power rack / squat stands",
+          "Barbell + plates",
+          "Bench"
+        ],
+        [
+          "Gymnastic rings / suspension trainer"
+        ]
+      ],
+      "optionalEquipment": [],
+      "primaryFor": "Horizontal press",
+      "difficulty": "Substitution",
+      "notes": "",
+      "rflOk": "Yes",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX131",
+      "name": "Cable rear-delt fly or face pull",
+      "muscle": "Rear delts / Upper back",
+      "pattern": "Rear delt",
+      "equipment": "Cable station OR Cable station + Rope cable attachment",
+      "equipmentOptions": [
+        [
+          "Cable station"
+        ],
+        [
+          "Cable station",
+          "Rope cable attachment"
+        ]
+      ],
+      "optionalEquipment": [],
+      "primaryFor": "Rear delt",
+      "difficulty": "Isolation",
+      "notes": "",
+      "rflOk": "Yes",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX132",
+      "name": "Romanian deadlift or hip thrust",
+      "muscle": "Hamstrings / Glutes",
+      "pattern": "Hip hinge / extension",
+      "equipment": "Barbell + plates OR Dumbbells OR Kettlebells OR Barbell + plates + Bench OR Smith machine + Bench",
+      "equipmentOptions": [
+        [
+          "Barbell + plates"
+        ],
+        [
+          "Dumbbells"
+        ],
+        [
+          "Kettlebells"
+        ],
+        [
+          "Barbell + plates",
+          "Bench"
+        ],
+        [
+          "Smith machine",
+          "Bench"
+        ]
+      ],
+      "optionalEquipment": [],
+      "primaryFor": "Hip hinge",
+      "difficulty": "Main lift",
+      "notes": "",
+      "rflOk": "Yes",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX133",
+      "name": "Front squat or Bulgarian split squat",
+      "muscle": "Quads / Glutes",
+      "pattern": "Squat / single-leg",
+      "equipment": "Power rack / squat stands + Barbell + plates OR Bench or box",
+      "equipmentOptions": [
+        [
+          "Power rack / squat stands",
+          "Barbell + plates"
+        ],
+        [
+          "Bench or box"
+        ]
+      ],
+      "optionalEquipment": [
+        "Dumbbells"
+      ],
+      "primaryFor": "Squat",
+      "difficulty": "Main lift",
+      "notes": "",
+      "rflOk": "Yes",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX134",
+      "name": "Pulldown or chin-up",
+      "muscle": "Lats / Biceps",
+      "pattern": "Vertical pull",
+      "equipment": "Cable station OR Lat pulldown / low row machine OR Pull-up bar OR Gymnastic rings / suspension trainer",
+      "equipmentOptions": [
+        [
+          "Cable station"
+        ],
+        [
+          "Lat pulldown / low row machine"
+        ],
+        [
+          "Pull-up bar"
+        ],
+        [
+          "Gymnastic rings / suspension trainer"
+        ]
+      ],
+      "optionalEquipment": [],
+      "primaryFor": "Vertical pull",
+      "difficulty": "Substitution",
+      "notes": "",
+      "rflOk": "Yes",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX135",
+      "name": "Hip thrust or cable leg curl",
+      "muscle": "Glutes / Hamstrings",
+      "pattern": "Hip extension / knee flexion",
+      "equipment": "Barbell + plates + Bench OR Smith machine + Bench OR Cable station + Ankle strap OR Leg curl machine",
+      "equipmentOptions": [
+        [
+          "Barbell + plates",
+          "Bench"
+        ],
+        [
+          "Smith machine",
+          "Bench"
+        ],
+        [
+          "Cable station",
+          "Ankle strap"
+        ],
+        [
+          "Leg curl machine"
+        ]
+      ],
+      "optionalEquipment": [],
+      "primaryFor": "Hip extension",
+      "difficulty": "Substitution",
+      "notes": "",
+      "rflOk": "Yes",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX136",
+      "name": "Hammer curl",
+      "muscle": "Biceps / Brachialis",
+      "pattern": "Elbow flexion",
+      "equipment": "Dumbbells OR Cable station OR Resistance bands / tubes",
+      "equipmentOptions": [
+        [
+          "Dumbbells"
+        ],
+        [
+          "Cable station"
+        ],
+        [
+          "Resistance bands / tubes"
+        ]
+      ],
+      "optionalEquipment": [],
+      "primaryFor": "Elbow flexion",
+      "difficulty": "Isolation",
+      "notes": "",
+      "rflOk": "Yes",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "EX137",
+      "name": "Overhead triceps extension",
+      "muscle": "Triceps long head",
+      "pattern": "Elbow extension",
+      "equipment": "Cable station + Rope cable attachment OR Dumbbells OR EZ curl bar + Barbell plates + Bench OR Resistance bands / tubes + High band anchor",
+      "equipmentOptions": [
+        [
+          "Cable station",
+          "Rope cable attachment"
+        ],
+        [
+          "Dumbbells"
+        ],
+        [
+          "EZ curl bar",
+          "Barbell plates",
+          "Bench"
+        ],
+        [
+          "Resistance bands / tubes",
+          "High band anchor"
+        ]
+      ],
+      "optionalEquipment": [],
+      "primaryFor": "Elbow extension",
+      "difficulty": "Isolation",
+      "notes": "",
+      "rflOk": "Yes",
+      "favourite": false,
+      "updatedAt": "2026-07-19T15:45:00.000Z"
     }
   ],
   "alternatives": [
@@ -1739,6 +3935,942 @@
       "notes": "Lowest-risk option.",
       "id": "ALT044",
       "updatedAt": "2026-07-19T10:00:00.000Z"
+    },
+    {
+      "id": "ALT045",
+      "defaultExercise": "High-bar back squat",
+      "alternative": "Safety-bar squat",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT046",
+      "defaultExercise": "High-bar back squat",
+      "alternative": "Smith-machine squat",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT047",
+      "defaultExercise": "High-bar back squat",
+      "alternative": "Landmine squat",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT048",
+      "defaultExercise": "High-bar back squat",
+      "alternative": "Leg press",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT049",
+      "defaultExercise": "High-bar back squat",
+      "alternative": "Hack squat",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT050",
+      "defaultExercise": "High-bar back squat",
+      "alternative": "Kettlebell goblet squat",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT051",
+      "defaultExercise": "High-bar back squat",
+      "alternative": "Bodyweight split squat",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT052",
+      "defaultExercise": "Front squat or heels-elevated squat",
+      "alternative": "Front squat",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT053",
+      "defaultExercise": "Front squat or heels-elevated squat",
+      "alternative": "Goblet squat",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT054",
+      "defaultExercise": "Front squat or heels-elevated squat",
+      "alternative": "Landmine squat",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT055",
+      "defaultExercise": "Front squat or heels-elevated squat",
+      "alternative": "Leg press",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT056",
+      "defaultExercise": "Front squat or heels-elevated squat",
+      "alternative": "Hack squat",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT057",
+      "defaultExercise": "Front squat or heels-elevated squat",
+      "alternative": "Smith-machine squat",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT058",
+      "defaultExercise": "Front squat or heels-elevated squat",
+      "alternative": "Slant-board squat",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT059",
+      "defaultExercise": "Front squat or Bulgarian split squat",
+      "alternative": "Front squat",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT060",
+      "defaultExercise": "Front squat or Bulgarian split squat",
+      "alternative": "Bulgarian split squat",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT061",
+      "defaultExercise": "Front squat or Bulgarian split squat",
+      "alternative": "Goblet squat",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT062",
+      "defaultExercise": "Front squat or Bulgarian split squat",
+      "alternative": "Leg press",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT063",
+      "defaultExercise": "Front squat or Bulgarian split squat",
+      "alternative": "Hack squat",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT064",
+      "defaultExercise": "Front squat or Bulgarian split squat",
+      "alternative": "Bodyweight split squat",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT065",
+      "defaultExercise": "Romanian deadlift",
+      "alternative": "Kettlebell Romanian deadlift",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT066",
+      "defaultExercise": "Romanian deadlift",
+      "alternative": "Trap-bar deadlift",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT067",
+      "defaultExercise": "Romanian deadlift",
+      "alternative": "Stability-ball leg curl",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT068",
+      "defaultExercise": "Romanian deadlift or hip thrust",
+      "alternative": "Romanian deadlift",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT069",
+      "defaultExercise": "Romanian deadlift or hip thrust",
+      "alternative": "Dumbbell Romanian deadlift",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT070",
+      "defaultExercise": "Romanian deadlift or hip thrust",
+      "alternative": "Dumbbell hip thrust",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT071",
+      "defaultExercise": "Romanian deadlift or hip thrust",
+      "alternative": "Smith-machine hip thrust",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT072",
+      "defaultExercise": "Romanian deadlift or hip thrust",
+      "alternative": "Glute bridge",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT073",
+      "defaultExercise": "Barbell hip thrust",
+      "alternative": "Dumbbell hip thrust",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT074",
+      "defaultExercise": "Barbell hip thrust",
+      "alternative": "Smith-machine hip thrust",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT075",
+      "defaultExercise": "Barbell hip thrust",
+      "alternative": "Glute bridge",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT076",
+      "defaultExercise": "Hip thrust or cable leg curl",
+      "alternative": "Barbell hip thrust",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT077",
+      "defaultExercise": "Hip thrust or cable leg curl",
+      "alternative": "Dumbbell hip thrust",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT078",
+      "defaultExercise": "Hip thrust or cable leg curl",
+      "alternative": "Smith-machine hip thrust",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT079",
+      "defaultExercise": "Hip thrust or cable leg curl",
+      "alternative": "Cable leg curl",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT080",
+      "defaultExercise": "Hip thrust or cable leg curl",
+      "alternative": "Seated leg curl",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT081",
+      "defaultExercise": "Hip thrust or cable leg curl",
+      "alternative": "Lying leg curl",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT082",
+      "defaultExercise": "Hip thrust or cable leg curl",
+      "alternative": "Banded leg curl",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT083",
+      "defaultExercise": "Hip thrust or cable leg curl",
+      "alternative": "Stability-ball leg curl",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT084",
+      "defaultExercise": "Bulgarian split squat",
+      "alternative": "Reverse lunge",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT085",
+      "defaultExercise": "Bulgarian split squat",
+      "alternative": "Step-up",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT086",
+      "defaultExercise": "Bulgarian split squat",
+      "alternative": "Walking lunge",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT087",
+      "defaultExercise": "Bulgarian split squat",
+      "alternative": "Bodyweight split squat",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT088",
+      "defaultExercise": "Bulgarian split squat",
+      "alternative": "Leg press",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT089",
+      "defaultExercise": "Cable leg curl",
+      "alternative": "Seated leg curl",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT090",
+      "defaultExercise": "Cable leg curl",
+      "alternative": "Lying leg curl",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT091",
+      "defaultExercise": "Cable leg curl",
+      "alternative": "Banded leg curl",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT092",
+      "defaultExercise": "Cable leg curl",
+      "alternative": "Stability-ball leg curl",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT093",
+      "defaultExercise": "Cable leg curl",
+      "alternative": "Nordic hamstring curl",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT094",
+      "defaultExercise": "Standing calf raise",
+      "alternative": "Single-leg calf raise",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT095",
+      "defaultExercise": "Standing calf raise",
+      "alternative": "Seated calf raise",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT096",
+      "defaultExercise": "Barbell bench press",
+      "alternative": "Push-up",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT097",
+      "defaultExercise": "Barbell bench press",
+      "alternative": "Smith-machine bench press",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT098",
+      "defaultExercise": "Barbell bench press",
+      "alternative": "Chest press machine",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT099",
+      "defaultExercise": "Barbell bench press",
+      "alternative": "Swiss-bar bench press",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT100",
+      "defaultExercise": "Incline dumbbell press",
+      "alternative": "Feet-elevated push-up",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT101",
+      "defaultExercise": "Incline dumbbell press",
+      "alternative": "Landmine press",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT102",
+      "defaultExercise": "Incline dumbbell press",
+      "alternative": "Chest press machine",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT103",
+      "defaultExercise": "Cable lat pulldown or ring chin-up",
+      "alternative": "Pull-up",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT104",
+      "defaultExercise": "Cable lat pulldown or ring chin-up",
+      "alternative": "Band-assisted pull-up",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT105",
+      "defaultExercise": "Cable lat pulldown or ring chin-up",
+      "alternative": "Band lat pulldown",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT106",
+      "defaultExercise": "Pulldown or chin-up",
+      "alternative": "Pull-up",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT107",
+      "defaultExercise": "Pulldown or chin-up",
+      "alternative": "Band-assisted pull-up",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT108",
+      "defaultExercise": "Pulldown or chin-up",
+      "alternative": "Band lat pulldown",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT109",
+      "defaultExercise": "Weighted chin-up or heavy pulldown",
+      "alternative": "Pull-up",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT110",
+      "defaultExercise": "Weighted chin-up or heavy pulldown",
+      "alternative": "Ring chin-up",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT111",
+      "defaultExercise": "Weighted chin-up or heavy pulldown",
+      "alternative": "Band lat pulldown",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT112",
+      "defaultExercise": "Chest-supported dumbbell row",
+      "alternative": "One-arm dumbbell row",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT113",
+      "defaultExercise": "Chest-supported dumbbell row",
+      "alternative": "Band row",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT114",
+      "defaultExercise": "Chest-supported dumbbell row",
+      "alternative": "Landmine T-bar row",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT115",
+      "defaultExercise": "One-arm cable row",
+      "alternative": "One-arm dumbbell row",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT116",
+      "defaultExercise": "One-arm cable row",
+      "alternative": "Band row",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT117",
+      "defaultExercise": "One-arm cable row",
+      "alternative": "Landmine T-bar row",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT118",
+      "defaultExercise": "Seated dumbbell overhead press",
+      "alternative": "Arnold press",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT119",
+      "defaultExercise": "Seated dumbbell overhead press",
+      "alternative": "Landmine press",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT120",
+      "defaultExercise": "Seated dumbbell overhead press",
+      "alternative": "Pike push-up",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT121",
+      "defaultExercise": "Close-grip bench press or weighted ring push-up",
+      "alternative": "Close-grip bench press",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT122",
+      "defaultExercise": "Close-grip bench press or weighted ring push-up",
+      "alternative": "Weighted ring push-up",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT123",
+      "defaultExercise": "Close-grip bench press or weighted ring push-up",
+      "alternative": "Parallel-bar dip",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT124",
+      "defaultExercise": "Close-grip bench press or weighted ring push-up",
+      "alternative": "Close-grip push-up",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT125",
+      "defaultExercise": "Close-grip bench press or weighted ring push-up",
+      "alternative": "Band-assisted dip",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT126",
+      "defaultExercise": "Cable lateral raise",
+      "alternative": "Band lateral raise",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT127",
+      "defaultExercise": "Cable rear-delt fly or face pull",
+      "alternative": "Dumbbell rear-delt fly",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT128",
+      "defaultExercise": "Cable rear-delt fly or face pull",
+      "alternative": "Reverse pec deck",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT129",
+      "defaultExercise": "Cable rear-delt fly or face pull",
+      "alternative": "Band face pull",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT130",
+      "defaultExercise": "Rear-delt cable fly",
+      "alternative": "Dumbbell rear-delt fly",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT131",
+      "defaultExercise": "Rear-delt cable fly",
+      "alternative": "Reverse pec deck",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT132",
+      "defaultExercise": "Rear-delt cable fly",
+      "alternative": "Band face pull",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT133",
+      "defaultExercise": "Cable triceps pushdown",
+      "alternative": "Band triceps pushdown",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT134",
+      "defaultExercise": "Cable triceps pushdown",
+      "alternative": "Dumbbell skull crusher",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT135",
+      "defaultExercise": "Cable triceps pushdown",
+      "alternative": "EZ-bar skull crusher",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT136",
+      "defaultExercise": "Cable triceps pushdown",
+      "alternative": "Close-grip push-up",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT137",
+      "defaultExercise": "Overhead cable triceps extension",
+      "alternative": "Dumbbell skull crusher",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT138",
+      "defaultExercise": "Overhead cable triceps extension",
+      "alternative": "EZ-bar skull crusher",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT139",
+      "defaultExercise": "Overhead cable triceps extension",
+      "alternative": "Band triceps pushdown",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT140",
+      "defaultExercise": "Overhead triceps extension",
+      "alternative": "Overhead cable triceps extension",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT141",
+      "defaultExercise": "Overhead triceps extension",
+      "alternative": "Dumbbell skull crusher",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT142",
+      "defaultExercise": "Overhead triceps extension",
+      "alternative": "EZ-bar skull crusher",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT143",
+      "defaultExercise": "Overhead triceps extension",
+      "alternative": "Band triceps pushdown",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT144",
+      "defaultExercise": "Incline dumbbell or cable curl",
+      "alternative": "EZ-bar curl",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT145",
+      "defaultExercise": "Incline dumbbell or cable curl",
+      "alternative": "Band curl",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT146",
+      "defaultExercise": "Incline dumbbell or cable curl",
+      "alternative": "Preacher curl",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT147",
+      "defaultExercise": "Cable curl",
+      "alternative": "Incline dumbbell curl",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT148",
+      "defaultExercise": "Cable curl",
+      "alternative": "Dumbbell hammer curl",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT149",
+      "defaultExercise": "Cable curl",
+      "alternative": "EZ-bar curl",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT150",
+      "defaultExercise": "Cable curl",
+      "alternative": "Band curl",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT151",
+      "defaultExercise": "Cable curl",
+      "alternative": "Preacher curl",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT152",
+      "defaultExercise": "Dumbbell hammer curl",
+      "alternative": "EZ-bar curl",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT153",
+      "defaultExercise": "Dumbbell hammer curl",
+      "alternative": "Band curl",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT154",
+      "defaultExercise": "Hammer curl",
+      "alternative": "Dumbbell hammer curl",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT155",
+      "defaultExercise": "Hammer curl",
+      "alternative": "Cable curl",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT156",
+      "defaultExercise": "Hammer curl",
+      "alternative": "Band curl",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT157",
+      "defaultExercise": "Dead bug or Pallof press",
+      "alternative": "Band Pallof press",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT158",
+      "defaultExercise": "Dead bug or Pallof press",
+      "alternative": "Side plank",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT159",
+      "defaultExercise": "Ab wheel or cable crunch",
+      "alternative": "Ab wheel",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT160",
+      "defaultExercise": "Ab wheel or cable crunch",
+      "alternative": "Reverse crunch",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
+    },
+    {
+      "id": "ALT161",
+      "defaultExercise": "Ab wheel or cable crunch",
+      "alternative": "Stability-ball crunch",
+      "reason": "Equipment match",
+      "notes": "Equipment-compatible option.",
+      "updatedAt": "2026-07-19T15:45:00.000Z"
     }
   ],
   "ingredientCache": [

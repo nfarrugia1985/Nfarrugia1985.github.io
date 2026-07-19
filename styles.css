@@ -429,3 +429,30 @@ details > summary { cursor:pointer; }
   background:var(--surface-2); color:var(--muted); font-size:10px; font-weight:750;
 }
 .workout-launch-exercises { line-height:1.5; }
+
+
+/* v2.2 equipment profiles */
+.equipment-program-panel { margin-top:10px; display:flex; align-items:center; justify-content:space-between; gap:10px; padding:11px; border:1px solid var(--line); border-radius:15px; background:var(--surface-2); }
+.equipment-program-panel.ready { border-color:color-mix(in srgb,var(--success) 35%,var(--line)); }
+.equipment-program-panel.needs-kit { border-color:color-mix(in srgb,var(--accent) 45%,var(--line)); }
+.exercise-row.equipment-missing { border-color:color-mix(in srgb,var(--accent) 55%,var(--line)); background:color-mix(in srgb,#fff7ed 65%,var(--surface)); }
+.equipment-summary { padding:11px; border:1px solid var(--line); border-radius:15px; background:var(--surface-2); margin-bottom:10px; }
+.equipment-summary > div:first-child { display:flex; justify-content:space-between; gap:8px; font-size:12px; }
+.preset-row { display:flex; gap:7px; overflow-x:auto; padding-bottom:8px; margin-bottom:5px; }
+.preset-row button { white-space:nowrap; }
+.equipment-manager-list { display:grid; gap:9px; margin:10px 0; }
+.equipment-group { border:1px solid var(--line); border-radius:15px; padding:9px; background:var(--surface-2); }
+.equipment-group > summary, .equipment-select-group > summary { display:flex; justify-content:space-between; align-items:center; gap:8px; cursor:pointer; list-style:none; }
+.equipment-group > summary::-webkit-details-marker, .equipment-select-group > summary::-webkit-details-marker { display:none; }
+.equipment-grid, .equipment-check-grid { display:grid; gap:7px; margin-top:9px; grid-template-columns:repeat(2,minmax(0,1fr)); }
+.equipment-option, .equipment-choice { display:flex; align-items:flex-start; gap:8px; min-height:58px; padding:9px; border:1px solid var(--line); border-radius:13px; background:var(--surface); font-size:12px; }
+.equipment-option.selected { border-color:color-mix(in srgb,var(--primary) 45%,var(--line)); background:var(--primary-soft); }
+.equipment-option input, .equipment-choice input { flex:0 0 auto; margin-top:2px; }
+.equipment-option span, .equipment-choice span { min-width:0; display:grid; gap:2px; }
+.equipment-option small, .equipment-choice small { color:var(--muted); font-size:10px; line-height:1.25; }
+.equipment-editor { border:1px solid var(--line); border-radius:15px; padding:10px; background:var(--surface-2); }
+.equipment-editor > summary { display:flex; justify-content:space-between; align-items:center; cursor:pointer; }
+@media (max-width:560px) {
+  .equipment-grid,.equipment-check-grid { grid-template-columns:1fr; }
+  .equipment-program-panel { align-items:flex-start; flex-direction:column; }
+}

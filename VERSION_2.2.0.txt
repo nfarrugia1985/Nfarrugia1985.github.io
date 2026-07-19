@@ -1,0 +1,2 @@
+Lift & Cut 2.2.0
+Equipment profiles and equipment-aware exercise selection
