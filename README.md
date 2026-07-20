@@ -1,4 +1,4 @@
-# Lift & Cut v2.3.3
+# Lift & Cut v2.3.4
 
 Mobile-first home-gym, nutrition and progress PWA with optional Google Sheets sync.
 

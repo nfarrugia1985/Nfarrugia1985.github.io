@@ -1,0 +1,17 @@
+Lift & Cut v2.3.4 validation report
+Date: 2026-07-20
+
+Checks completed
+- app.js passed Node.js syntax validation.
+- manifest.webmanifest and seed_database.json parsed successfully as JSON.
+- Ingredient search normalisation tests passed:
+  - “finely chopped fresh parsley” -> parsley
+  - “freshly cracked black pepper” -> black pepper
+  - “freshly squeezed lemon juice” -> lemon juice
+  - “4 Persian cucumbers, thinly sliced” -> cucumber
+- Alternative ingredient detection passed:
+  - “Greek yogurt or sour cream” -> two explicit choices
+  - “Greek yoghurt/sour cream” -> two explicit choices
+- Local food matching tests passed for black pepper, coriander, Persian cucumber and Greek yoghurt spelling variants.
+- Recipe-editor return-position test passed: selecting/backing out of ingredient matching restored the original modal scroll position.
+- Existing data schema remains version 4; no Google Sheet or Apps Script migration is required.
