@@ -3,9 +3,9 @@
   "schemaVersion": 4,
   "createdFor": "",
   "meta": {
-    "appVersion": "2.3.0",
+    "appVersion": "2.3.2",
     "revision": 0,
-    "lastModifiedAt": "2026-07-19T20:55:00.000Z",
+    "lastModifiedAt": "2026-07-20T00:00:00.000Z",
     "lastCloudSyncAt": "",
     "lastCloudRevision": 0,
     "clientId": ""
@@ -5154,7 +5154,7 @@
       "servingDescription": "100 g",
       "baseAmount": 100,
       "baseUnit": "g",
-      "densityGPerMl": "",
+      "densityGPerMl": 0.91,
       "kcal": 884,
       "protein": 0,
       "carbs": 0,
@@ -5163,11 +5163,14 @@
       "sodiumMg": 0,
       "aliases": [
         "extra virgin olive oil",
-        "evoo"
+        "evoo",
+        "EVOO",
+        "oil"
       ],
       "commonMeasures": {
         "tbsp": 13.5,
-        "tsp": 4.5
+        "tsp": 4.5,
+        "cup": 216
       },
       "source": "Generic reference – verify",
       "sourceId": "",
@@ -5227,7 +5230,8 @@
       "sodiumMg": 17,
       "aliases": [
         "garlic",
-        "garlic clove"
+        "garlic clove",
+        "clove of garlic"
       ],
       "commonMeasures": {
         "clove": 3,
@@ -5976,7 +5980,8 @@
       "aliases": [
         "sugar",
         "white sugar",
-        "caster sugar"
+        "caster sugar",
+        "granulated sugar"
       ],
       "commonMeasures": {
         "cup": 200,
@@ -5998,7 +6003,7 @@
       "servingDescription": "100 ml",
       "baseAmount": 100,
       "baseUnit": "ml",
-      "densityGPerMl": 1,
+      "densityGPerMl": 1.0,
       "kcal": 53,
       "protein": 8.1,
       "carbs": 4.9,
@@ -6007,11 +6012,16 @@
       "sodiumMg": 5493,
       "aliases": [
         "soy sauce",
-        "light soy sauce"
+        "light soy sauce",
+        "low sodium soy sauce",
+        "low-sodium soy sauce",
+        "tamari",
+        "shoyu"
       ],
       "commonMeasures": {
         "tbsp": 15,
-        "tsp": 5
+        "tsp": 5,
+        "cup": 240
       },
       "source": "Generic reference – verify",
       "sourceId": "",
@@ -6042,7 +6052,9 @@
       "commonMeasures": {
         "tbsp": 15,
         "tsp": 5,
-        "lemon": 48
+        "lemon": 48,
+        "cup": 240,
+        "each": 48
       },
       "source": "Generic reference – verify",
       "sourceId": "",
@@ -6317,6 +6329,444 @@
       "confirmed": false,
       "notes": "Starting reference value. Confirm against a package label or reference record before relying on it.",
       "updatedAt": "2026-07-19T20:55:00.000Z"
+    },
+    {
+      "id": "ING051",
+      "name": "Cucumber, raw",
+      "brand": "",
+      "foodState": "raw",
+      "servingDescription": "100 g",
+      "baseAmount": 100,
+      "baseUnit": "g",
+      "densityGPerMl": "",
+      "kcal": 15,
+      "protein": 0.7,
+      "carbs": 3.6,
+      "fat": 0.1,
+      "fibre": 0.5,
+      "sodiumMg": 2,
+      "aliases": [
+        "cucumber",
+        "Persian cucumber",
+        "Persian cucumbers",
+        "mini cucumber",
+        "Lebanese cucumber",
+        "English cucumber",
+        "seedless cucumber"
+      ],
+      "commonMeasures": {
+        "each": 100,
+        "medium": 200,
+        "small": 100,
+        "large": 300,
+        "cup": 104
+      },
+      "source": "Generic reference – verify",
+      "sourceId": "",
+      "sourceUrl": "",
+      "confirmed": false,
+      "notes": "Persian cucumber weight varies; weigh when practical. Starter estimate is 100 g each.",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "ING052",
+      "name": "Salt",
+      "brand": "",
+      "foodState": "dry",
+      "servingDescription": "100 g",
+      "baseAmount": 100,
+      "baseUnit": "g",
+      "densityGPerMl": "",
+      "kcal": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
+      "fibre": 0,
+      "sodiumMg": 39300,
+      "aliases": [
+        "salt",
+        "kosher salt",
+        "sea salt",
+        "table salt",
+        "fine salt",
+        "coarse salt"
+      ],
+      "commonMeasures": {
+        "tsp": 5,
+        "tbsp": 15,
+        "pinch": 0.4
+      },
+      "source": "Generic reference – verify",
+      "sourceId": "",
+      "sourceUrl": "",
+      "confirmed": false,
+      "notes": "Kosher salt crystal size varies substantially by brand. Prefer grams or the package label.",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "ING053",
+      "name": "Rice vinegar, seasoned",
+      "brand": "",
+      "foodState": "liquid",
+      "servingDescription": "100 ml",
+      "baseAmount": 100,
+      "baseUnit": "ml",
+      "densityGPerMl": 1.0,
+      "kcal": 50,
+      "protein": 0,
+      "carbs": 12.5,
+      "fat": 0,
+      "fibre": 0,
+      "sodiumMg": 700,
+      "aliases": [
+        "seasoned rice vinegar",
+        "rice vinegar",
+        "rice wine vinegar"
+      ],
+      "commonMeasures": {
+        "cup": 240,
+        "tbsp": 15,
+        "tsp": 5
+      },
+      "source": "Generic reference – verify",
+      "sourceId": "",
+      "sourceUrl": "",
+      "confirmed": false,
+      "notes": "Seasoned products vary in sugar and sodium; verify the bottle label.",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "ING054",
+      "name": "Sesame oil",
+      "brand": "",
+      "foodState": "liquid",
+      "servingDescription": "100 g",
+      "baseAmount": 100,
+      "baseUnit": "g",
+      "densityGPerMl": 0.92,
+      "kcal": 884,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 100,
+      "fibre": 0,
+      "sodiumMg": 0,
+      "aliases": [
+        "sesame oil",
+        "toasted sesame oil",
+        "dark sesame oil"
+      ],
+      "commonMeasures": {
+        "cup": 220,
+        "tbsp": 13.6,
+        "tsp": 4.5
+      },
+      "source": "Generic reference – verify",
+      "sourceId": "",
+      "sourceUrl": "",
+      "confirmed": false,
+      "notes": "Use the package label where available.",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "ING055",
+      "name": "Chilli paste",
+      "brand": "",
+      "foodState": "prepared",
+      "servingDescription": "100 g",
+      "baseAmount": 100,
+      "baseUnit": "g",
+      "densityGPerMl": "",
+      "kcal": 90,
+      "protein": 2,
+      "carbs": 16,
+      "fat": 2,
+      "fibre": 2,
+      "sodiumMg": 1800,
+      "aliases": [
+        "chili paste",
+        "chilli paste",
+        "sambal oelek",
+        "gochujang",
+        "chilli sauce"
+      ],
+      "commonMeasures": {
+        "tbsp": 16,
+        "tsp": 5.3
+      },
+      "source": "Generic reference – verify",
+      "sourceId": "",
+      "sourceUrl": "",
+      "confirmed": false,
+      "notes": "Products differ widely; use the jar label.",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "ING056",
+      "name": "Brown sugar",
+      "brand": "",
+      "foodState": "dry",
+      "servingDescription": "100 g",
+      "baseAmount": 100,
+      "baseUnit": "g",
+      "densityGPerMl": "",
+      "kcal": 380,
+      "protein": 0,
+      "carbs": 98,
+      "fat": 0,
+      "fibre": 0,
+      "sodiumMg": 28,
+      "aliases": [
+        "brown sugar",
+        "light brown sugar",
+        "dark brown sugar",
+        "muscovado sugar"
+      ],
+      "commonMeasures": {
+        "cup": 200,
+        "tbsp": 12.5,
+        "tsp": 4.2
+      },
+      "source": "Generic reference – verify",
+      "sourceId": "",
+      "sourceUrl": "",
+      "confirmed": false,
+      "notes": "Starter reference value.",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "ING057",
+      "name": "Lime juice",
+      "brand": "",
+      "foodState": "liquid",
+      "servingDescription": "100 g",
+      "baseAmount": 100,
+      "baseUnit": "g",
+      "densityGPerMl": 1.0,
+      "kcal": 25,
+      "protein": 0.4,
+      "carbs": 8.4,
+      "fat": 0.1,
+      "fibre": 0.4,
+      "sodiumMg": 2,
+      "aliases": [
+        "lime juice",
+        "juice of lime",
+        "fresh lime juice",
+        "lime"
+      ],
+      "commonMeasures": {
+        "cup": 240,
+        "tbsp": 15,
+        "tsp": 5,
+        "lime": 30,
+        "each": 30
+      },
+      "source": "Generic reference – verify",
+      "sourceId": "",
+      "sourceUrl": "",
+      "confirmed": false,
+      "notes": "One lime commonly yields about 30 g juice; actual yield varies.",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "ING058",
+      "name": "Sesame seeds",
+      "brand": "",
+      "foodState": "dry",
+      "servingDescription": "100 g",
+      "baseAmount": 100,
+      "baseUnit": "g",
+      "densityGPerMl": "",
+      "kcal": 573,
+      "protein": 17.7,
+      "carbs": 23.4,
+      "fat": 49.7,
+      "fibre": 11.8,
+      "sodiumMg": 11,
+      "aliases": [
+        "sesame seeds",
+        "black sesame seeds",
+        "white sesame seeds",
+        "toasted sesame seeds"
+      ],
+      "commonMeasures": {
+        "tbsp": 9,
+        "tsp": 3,
+        "cup": 144
+      },
+      "source": "Generic reference – verify",
+      "sourceId": "",
+      "sourceUrl": "",
+      "confirmed": false,
+      "notes": "Starter reference value.",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "ING059",
+      "name": "Black pepper",
+      "brand": "",
+      "foodState": "dry",
+      "servingDescription": "100 g",
+      "baseAmount": 100,
+      "baseUnit": "g",
+      "densityGPerMl": "",
+      "kcal": 251,
+      "protein": 10.4,
+      "carbs": 64,
+      "fat": 3.3,
+      "fibre": 25.3,
+      "sodiumMg": 20,
+      "aliases": [
+        "black pepper",
+        "ground pepper",
+        "pepper"
+      ],
+      "commonMeasures": {
+        "tsp": 2.3,
+        "tbsp": 6.9,
+        "pinch": 0.2
+      },
+      "source": "Generic reference – verify",
+      "sourceId": "",
+      "sourceUrl": "",
+      "confirmed": false,
+      "notes": "Small culinary quantities contribute few calories.",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "ING060",
+      "name": "Water",
+      "brand": "",
+      "foodState": "liquid",
+      "servingDescription": "100 ml",
+      "baseAmount": 100,
+      "baseUnit": "ml",
+      "densityGPerMl": 1.0,
+      "kcal": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
+      "fibre": 0,
+      "sodiumMg": 0,
+      "aliases": [
+        "water",
+        "cold water",
+        "warm water",
+        "boiling water"
+      ],
+      "commonMeasures": {
+        "cup": 240,
+        "tbsp": 15,
+        "tsp": 5
+      },
+      "source": "Standard value",
+      "sourceId": "",
+      "sourceUrl": "",
+      "confirmed": true,
+      "notes": "Zero-calorie water.",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "ING061",
+      "name": "Ginger, raw",
+      "brand": "",
+      "foodState": "raw",
+      "servingDescription": "100 g",
+      "baseAmount": 100,
+      "baseUnit": "g",
+      "densityGPerMl": "",
+      "kcal": 80,
+      "protein": 1.8,
+      "carbs": 17.8,
+      "fat": 0.8,
+      "fibre": 2,
+      "sodiumMg": 13,
+      "aliases": [
+        "ginger",
+        "fresh ginger",
+        "ginger root",
+        "grated ginger"
+      ],
+      "commonMeasures": {
+        "tbsp": 6,
+        "tsp": 2,
+        "inch": 11
+      },
+      "source": "Generic reference – verify",
+      "sourceId": "",
+      "sourceUrl": "",
+      "confirmed": false,
+      "notes": "Starter reference value.",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "ING062",
+      "name": "Spring onion, raw",
+      "brand": "",
+      "foodState": "raw",
+      "servingDescription": "100 g",
+      "baseAmount": 100,
+      "baseUnit": "g",
+      "densityGPerMl": "",
+      "kcal": 32,
+      "protein": 1.8,
+      "carbs": 7.3,
+      "fat": 0.2,
+      "fibre": 2.6,
+      "sodiumMg": 16,
+      "aliases": [
+        "spring onion",
+        "spring onions",
+        "green onion",
+        "green onions",
+        "scallion",
+        "scallions"
+      ],
+      "commonMeasures": {
+        "each": 15,
+        "bunch": 100,
+        "cup": 100
+      },
+      "source": "Generic reference – verify",
+      "sourceId": "",
+      "sourceUrl": "",
+      "confirmed": false,
+      "notes": "Starter reference value.",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "ING063",
+      "name": "Coriander leaves, raw",
+      "brand": "",
+      "foodState": "raw",
+      "servingDescription": "100 g",
+      "baseAmount": 100,
+      "baseUnit": "g",
+      "densityGPerMl": "",
+      "kcal": 23,
+      "protein": 2.1,
+      "carbs": 3.7,
+      "fat": 0.5,
+      "fibre": 2.8,
+      "sodiumMg": 46,
+      "aliases": [
+        "coriander",
+        "coriander leaves",
+        "cilantro",
+        "fresh coriander"
+      ],
+      "commonMeasures": {
+        "cup": 16,
+        "tbsp": 1,
+        "bunch": 50,
+        "handful": 15
+      },
+      "source": "Generic reference – verify",
+      "sourceId": "",
+      "sourceUrl": "",
+      "confirmed": false,
+      "notes": "Starter reference value.",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
     }
   ],
   "recipes": [
