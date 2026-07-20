@@ -479,9 +479,43 @@ details > summary { cursor:pointer; }
 .food-match-card span:first-child { display:grid; gap:2px; min-width:0; }
 .food-match-card small { color:var(--muted); font-weight:600; overflow-wrap:anywhere; }
 .epub-review-list { display:grid; gap:7px; max-height:54vh; overflow:auto; padding-right:2px; }
-.epub-candidate { grid-template-columns:auto minmax(0,1fr) auto; align-items:start; gap:9px; padding:10px; border:1px solid var(--line); border-radius:14px; background:var(--surface); }
+.epub-candidate { display:grid; grid-template-columns:auto minmax(0,1fr) auto; align-items:start; gap:9px; padding:10px; border:1px solid var(--line); border-radius:14px; background:var(--surface); }
 .epub-candidate span:nth-child(2) { display:grid; gap:3px; min-width:0; }
 .epub-candidate small { color:var(--muted); font-weight:600; white-space:normal; overflow-wrap:anywhere; }
 .nutrition-summary-card { border-color:color-mix(in srgb,var(--primary) 30%,var(--line)); }
 @media (min-width:760px){ .import-option-grid { grid-template-columns:repeat(3,minmax(0,1fr)); } }
 @media (max-width:420px){ .recipe-toolbar { grid-template-columns:1fr; } .macro-contribution { grid-template-columns:repeat(2,1fr); } }
+
+
+/* Lift & Cut 2.3.3 — recipe reader and cooking mode */
+.recipe-reader-modal { width:min(760px,100%); height:min(94dvh,980px); max-height:94dvh; padding:0; overflow:hidden; }
+.recipe-reader { height:100%; display:flex; flex-direction:column; background:var(--surface); }
+.recipe-reader-header { position:sticky; top:0; z-index:4; display:grid; grid-template-columns:auto minmax(0,1fr) auto; align-items:center; gap:9px; padding:12px; border-bottom:1px solid var(--line); background:color-mix(in srgb,var(--surface) 94%,transparent); backdrop-filter:blur(16px); }
+.recipe-reader-header > div { min-width:0; text-align:center; }
+.recipe-reader-header h2 { margin:1px 0 0; font-size:18px; line-height:1.2; overflow-wrap:anywhere; }
+.recipe-reader-body { overflow:auto; padding:12px; display:grid; gap:10px; overscroll-behavior:contain; }
+.recipe-reader-image { width:100%; max-height:260px; object-fit:cover; border-radius:16px; border:1px solid var(--line); }
+.recipe-overview { border-color:color-mix(in srgb,var(--primary) 36%,var(--line)); }
+.recipe-meta-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:7px; }
+.recipe-meta-grid > div { min-width:0; display:grid; gap:2px; padding:8px; border:1px solid var(--line); border-radius:12px; background:var(--surface-2); }
+.recipe-meta-grid span { color:var(--muted); font-size:9px; font-weight:850; text-transform:uppercase; letter-spacing:.04em; }
+.recipe-meta-grid strong { font-size:13px; overflow-wrap:anywhere; }
+.cooking-progress-card .progress { height:11px; margin-top:8px; }
+.cook-checklist,.cook-steps { display:grid; gap:8px; }
+.cook-check { display:grid; grid-template-columns:auto minmax(0,1fr); align-items:start; gap:10px; min-height:48px; padding:11px; border:1px solid var(--line); border-radius:13px; background:var(--surface-2); font-size:13px; line-height:1.4; }
+.cook-check input,.cook-step input { width:21px; height:21px; margin-top:0; accent-color:var(--success); }
+.cook-check.done,.cook-step.done { border-color:color-mix(in srgb,var(--success) 42%,var(--line)); background:color-mix(in srgb,var(--surface) 91%,var(--success) 9%); }
+.cook-check.done span,.cook-step.done .step-copy { text-decoration:line-through; color:var(--muted); }
+.cook-step { display:grid; gap:9px; padding:12px; border:1px solid var(--line); border-radius:15px; background:var(--surface-2); }
+.cook-step > label { display:grid; grid-template-columns:auto 32px minmax(0,1fr); gap:9px; align-items:start; cursor:pointer; }
+.step-number { width:30px; height:30px; display:grid; place-items:center; border-radius:10px; background:var(--primary-soft); color:var(--primary-dark); font-weight:900; }
+.step-copy { font-size:14px; line-height:1.55; padding-top:3px; }
+.step-timers { display:flex; flex-wrap:wrap; gap:6px; padding-left:62px; }
+.recipe-notes-read { white-space:normal; line-height:1.55; font-size:13px; }
+.epub-name-input { min-height:38px; padding:7px 8px; font-weight:800; }
+@media (max-width:560px){
+  .recipe-reader-modal { width:100%; height:100dvh; max-height:100dvh; border-radius:0; }
+  .recipe-meta-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .step-timers { padding-left:0; }
+  .recipe-reader-body { padding-bottom:calc(88px + var(--safe-bottom)); }
+}

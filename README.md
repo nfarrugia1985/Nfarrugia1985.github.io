@@ -1,7 +1,7 @@
-# Lift & Cut 2.3.2
+# Lift & Cut v2.3.3
 
-A local-first mobile fitness and nutrition PWA with optional Google Sheets sync.
+Mobile-first home-gym, nutrition and progress PWA with optional Google Sheets sync.
 
-Version 2.3.2 improves recipe reliability: existing users receive the expanded ingredient cache, household quantities convert correctly, common food aliases match automatically, online searches use simplified terms, and DRM-free text EPUBs no longer require structured recipe metadata.
+This release adds a read-only recipe reader and cooking mode, step and ingredient checklists, optional cooking timers, and stronger EPUB recipe-title extraction.
 
-Only generic public website files belong in GitHub. Personal backups, sync keys, API keys and populated databases must remain private.
+Upload these files to the root of a GitHub Pages repository. User records remain in the browser and optional private Google Sheet; this public package contains no populated sync credentials.

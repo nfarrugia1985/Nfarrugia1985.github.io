@@ -1,0 +1,2 @@
+Lift & Cut v2.3.3
+Recipe reader, cooking checklists, timers and improved EPUB titles.
