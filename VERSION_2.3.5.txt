@@ -1,0 +1,2 @@
+Lift & Cut v2.3.5
+Recipe reader layout and touch-interaction fix.

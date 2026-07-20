@@ -1,0 +1,18 @@
+Lift & Cut 2.3.5 validation report
+
+PASS — app version
+PASS — reader tabs function
+PASS — ingredients panel
+PASS — steps panel
+PASS — fullscreen scroll fix
+PASS — card clipping override
+PASS — large tap targets
+PASS — cache-busted css
+PASS — cache-busted js
+PASS — service worker cache
+
+Node syntax validation: PASS
+Manifest JSON validation: PASS
+Seed JSON validation: PASS
+
+The layout fix was derived from the supplied phone screenshot and the identified flex/grid clipping rule. A physical Android-device test still needs to be confirmed after deployment.
