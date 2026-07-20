@@ -1,0 +1,17 @@
+Lift & Cut 2.3.6 validation report
+Date: 2026-07-20
+
+Passed:
+- JavaScript syntax validation with Node.js.
+- Manifest and seed database JSON parsing.
+- Ingredient parsing for malformed parentheses, cutting dimensions and punctuation.
+- Alternative detection for “Greek yogurt or sour cream” and slash-separated options.
+- Singular/plural and synonym normalization for shrimp/shrimps/prawn and capsicum/bell pepper.
+- Bulk ingredient-review rendering with editable names, amounts and units.
+- Return from individual ingredient search to the bulk review screen.
+- Mobile-width overflow checks at 320, 360 and 390 pixels.
+- Runtime interaction test with no page errors.
+- ZIP integrity validation.
+
+Behaviour note:
+Generic one-word matches such as “pepper” are no longer accepted as a strong match for “bell pepper”; unresolved ingredients remain available for reference-database search.

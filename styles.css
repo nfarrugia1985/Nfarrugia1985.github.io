@@ -589,3 +589,30 @@ details > summary { cursor:pointer; }
   .recipe-reader-panel { padding:13px 11px; }
   .recipe-meta-grid > div { padding:9px; }
 }
+
+
+/* Lift & Cut 2.3.6 — bulk ingredient review and resilient search cleaning */
+.bulk-review-header { display:flex; align-items:flex-start; justify-content:space-between; gap:12px; margin-bottom:10px; }
+.bulk-review-header h2 { margin:2px 0 0; font-size:20px; line-height:1.2; overflow-wrap:anywhere; }
+.eyebrow { color:var(--primary-dark); font-size:10px; font-weight:900; text-transform:uppercase; letter-spacing:.08em; }
+.bulk-review-toolbar { display:flex; flex-wrap:wrap; gap:7px; margin:10px 0; position:sticky; top:-1px; z-index:3; padding:8px 0; background:color-mix(in srgb,var(--surface) 96%,transparent); backdrop-filter:blur(12px); }
+.ingredient-review-list { display:grid; gap:10px; }
+.ingredient-review-row { display:grid; gap:8px; padding:12px; border:1px solid var(--line); border-radius:16px; background:var(--surface-2); scroll-margin:88px; }
+.ingredient-review-row label { margin:0; }
+.ingredient-review-row .source-ingredient-line { display:grid; gap:2px; }
+.ingredient-review-row .source-ingredient-line span { color:var(--muted); font-size:9px; font-weight:900; text-transform:uppercase; letter-spacing:.06em; }
+.compact-fields { gap:7px; }
+.ingredient-linked-summary,.ingredient-suggestion { display:flex; align-items:center; justify-content:space-between; gap:10px; padding:9px 10px; border:1px solid var(--line); border-radius:12px; background:var(--surface); }
+.ingredient-linked-summary > div:first-child,.ingredient-suggestion > div:first-child { min-width:0; display:grid; gap:2px; }
+.ingredient-linked-summary strong,.ingredient-suggestion strong { overflow-wrap:anywhere; }
+.ingredient-linked-summary small,.ingredient-suggestion small { color:var(--muted); overflow-wrap:anywhere; }
+.compact-empty { padding:11px; min-height:auto; }
+.ingredient-section-heading { padding:8px 3px 2px; color:var(--primary-dark); font-weight:900; text-transform:uppercase; letter-spacing:.05em; font-size:11px; }
+@media (max-width:480px){
+  .bulk-review-header { align-items:center; }
+  .bulk-review-toolbar { display:grid; grid-template-columns:1fr 1fr; }
+  .bulk-review-toolbar button:last-child { grid-column:1/-1; }
+  .ingredient-linked-summary,.ingredient-suggestion { align-items:flex-start; flex-direction:column; }
+  .ingredient-linked-summary .button-row,.ingredient-suggestion .button-row { width:100%; }
+  .ingredient-linked-summary .button-row button,.ingredient-suggestion .button-row button { flex:1; }
+}
