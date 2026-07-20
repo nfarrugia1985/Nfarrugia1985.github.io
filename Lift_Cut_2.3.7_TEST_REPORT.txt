@@ -1,0 +1,17 @@
+PASS: App version is 2.3.7
+PASS: Expanded starter cache contains 81 foods
+PASS: Legacy 63-food state migrates to 81 foods
+PASS: Package weight after unit is parsed
+PASS: Vegetable oil tablespoon resolves
+PASS: Medium potatoes resolve
+PASS: Garlic cloves resolve
+PASS: Medium onion resolves
+PASS: Cherry tomatoes resolve
+PASS: Bell peppers resolve
+PASS: Chicken thighs resolve
+PASS: Estimated conversion includes an explanation
+PASS: Saved common measure remains non-estimated
+PASS: Estimated measures prevent High confidence
+PASS: Stored recipe ingredients upgrade automatically
+
+RESULT: 15 passed, 0 failed

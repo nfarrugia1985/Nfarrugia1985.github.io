@@ -1,3 +1,3 @@
-# Lift & Cut 2.3.6
+# Lift & Cut 2.3.7
 
-Mobile-first home-gym, nutrition and progress tracker. Version 2.3.6 adds a bulk ingredient review workflow and more resilient recipe ingredient search cleaning.
+Mobile-first home-gym, nutrition and progress tracker. Version 2.3.7 automatically resolves common household recipe units using saved measures, related foods and clearly labelled standard estimates.

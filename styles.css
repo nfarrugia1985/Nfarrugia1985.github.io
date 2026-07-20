@@ -591,7 +591,7 @@ details > summary { cursor:pointer; }
 }
 
 
-/* Lift & Cut 2.3.6 — bulk ingredient review and resilient search cleaning */
+/* Lift & Cut 2.3.7 — bulk ingredient review and resilient search cleaning */
 .bulk-review-header { display:flex; align-items:flex-start; justify-content:space-between; gap:12px; margin-bottom:10px; }
 .bulk-review-header h2 { margin:2px 0 0; font-size:20px; line-height:1.2; overflow-wrap:anywhere; }
 .eyebrow { color:var(--primary-dark); font-size:10px; font-weight:900; text-transform:uppercase; letter-spacing:.08em; }
