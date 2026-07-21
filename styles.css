@@ -616,3 +616,10 @@ details > summary { cursor:pointer; }
   .ingredient-linked-summary .button-row,.ingredient-suggestion .button-row { width:100%; }
   .ingredient-linked-summary .button-row button,.ingredient-suggestion .button-row button { flex:1; }
 }
+
+/* Lift & Cut 2.3.8 — EPUB audit and batch review */
+.epub-review-summary{display:flex;flex-wrap:wrap;gap:7px;margin:10px 0}.epub-filter{display:grid;gap:5px;margin:8px 0}.epub-review-toolbar{position:sticky;top:0;z-index:2;padding:7px 0;background:var(--surface)}.epub-candidate input[type="checkbox"]{width:24px;height:24px;margin-top:7px}.epub-candidate .epub-name-input{font-weight:850}.epub-candidate small+small{margin-top:2px}.epub-review-list{scroll-behavior:smooth}
+@media (max-width:520px){
+  .epub-candidate{grid-template-columns:auto minmax(0,1fr);}
+  .epub-candidate>.pill{grid-column:2;justify-self:start;}
+}

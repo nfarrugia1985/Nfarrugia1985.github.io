@@ -1,0 +1,87 @@
+LIFT & CUT v2.3.8 — VALIDATION REPORT
+Date: 20 July 2026
+
+RESULT: PASS
+
+APPLICATION AND DATA
+PASS: JavaScript syntax validation for app.js
+PASS: JavaScript syntax validation for recipe-import-v238.js
+PASS: seed_database.json parses successfully
+PASS: App reports version 2.3.8
+PASS: Service-worker cache and asset references use v2.3.8
+PASS: Generic starter cache contains 224 foods
+
+PINCH OF YUM FORMAT AUDIT
+Tested recipe ingredient formats from:
+- Smashed Olives with Burrata
+- Easy Strawberry Pie
+- The Best Soft Chocolate Chip Cookies
+- Spicy Shrimp with Peach Salad
+- Spicy Shrimp Tacos
+
+PASS: 69 imported ingredient rows processed
+PASS: 66 rows automatically linked to a credible local food
+PASS: 60 rows directly calculable after unit conversion
+PASS: 1 genuine recipe alternative retained for user choice
+PASS: 2 rows intentionally left unresolved: unspecified generic oil and quantity-free lime wedges
+PASS: Mixed numbers, Unicode fractions, ranges, package weights, “half an item”, shared quantities, juice/zest and parenthetical equivalents parsed
+PASS: No browser runtime errors during the five-recipe test
+
+ATTACHED EPUB AUDIT — I QUIT SUGAR: SIMPLICIOUS
+PASS: 184 EPUB spine chapters scanned
+PASS: 165 chapters contained readable text
+PASS: 273 recipe candidates detected
+PASS: 218 candidates classified Ready
+PASS: 36 candidates classified Review
+PASS: 19 candidates classified Method only
+PASS: 0 candidates used the cookbook title as a placeholder recipe name
+PASS: 0 duplicate normalized recipe titles remained after same-page/index deduplication
+PASS: 0 detected method paragraphs leaked into the final ingredient lists under the method-text audit
+PASS: EPUB 2 NCX, EPUB 3 navigation, index anchors and in-chapter titles were evaluated
+PASS: Candidate names remain editable before import
+
+EPUB INGREDIENT/NUTRITION REVIEW
+PASS: 1,402 extracted ingredient rows reviewed
+PASS: 934 rows linked automatically
+PASS: 795 rows directly calculable
+PASS: 206 rows retained as explicit alternative choices
+PASS: 251 rows remained unresolved rather than receiving unsafe guesses
+PASS: 0 rows remained in the legacy Needs unit conversion state
+NOTE: Unresolved rows include genuine sub-recipes, generic terms such as milk/flour/mince, and quantity-free ingredients. These are expected review cases rather than parser failures.
+
+PARSER REGRESSION TESTS
+PASS: “800 g–1 kg carrots” converts to an estimated 900 g midpoint
+PASS: “4–5 cups” and “1/8 to 1/4 teaspoon” use labelled midpoints
+PASS: “half an English cucumber” is retained as half an item
+PASS: “2 teaspoons each chilli powder and cumin” splits into two ingredients
+PASS: juice plus zest and water mixed with salt split into separate ingredients
+PASS: qualitative measures remain estimated rather than receiving invented precision
+PASS: malformed closing brackets do not remain at the start of food names
+PASS: full cooking-method paragraphs containing incidental measurements are rejected as ingredients
+
+MIGRATION
+PASS: A v2.3.7 state migrated to v2.3.8
+PASS: 224 generic seed foods merged without overwriting a confirmed user food
+PASS: A custom ingredient remained present
+PASS: A custom recipe remained present
+PASS: Workout history remained present
+PASS: Google Sheets URL, private key and auto-sync preference remained present
+
+MOBILE UI
+PASS: EPUB review rendered at 390 × 844 pixels
+PASS: 273 candidate cards were accessible in the review list
+PASS: Search, editable titles, status pills and selection controls were visible
+PASS: Body and modal had no horizontal overflow
+PASS: No page errors were recorded
+
+SPREADSHEET
+PASS: Downloadable workbook reports v2.3.8
+PASS: Ingredient_Cache contains 224 records plus its header
+PASS: Existing workbook formulas remain present
+PASS: No literal #REF!, #DIV/0!, #VALUE!, #NAME? or #N/A errors found in stored cell values
+PASS: Existing database schema remains version 4
+
+PRIVACY AND PACKAGING
+PASS: Public website files contain no populated profile name, sync URL or private sync key
+PASS: The supplied EPUB and its contents are not included in the public packages
+PASS: ZIP archives pass integrity testing
