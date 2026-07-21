@@ -1,0 +1,66 @@
+LIFT & CUT 2.4.0 — VALIDATION REPORT
+Date: 2026-07-21
+
+SCOPE
+- Adaptive weight-loss coaching engine
+- Existing-data migration and clean-install state
+- Responsive phone interface
+- Weekly review persistence
+- Applied target adjustment persistence
+- RFL safeguard
+- Low-data safeguard
+- Google Sheets schema and workbook
+
+STATIC VALIDATION
+PASS  app.js JavaScript syntax
+PASS  coaching-engine-v240.js JavaScript syntax
+PASS  recipe-import-v238.js JavaScript syntax
+PASS  sw.js JavaScript syntax
+PASS  Google Apps Script V8 syntax
+PASS  seed_database.json and manifest.webmanifest parsing
+PASS  embedded DEFAULT_STATE is identical to seed_database.json
+PASS  embedded state reports app version 2.4.0 and schema 5
+PASS  no formula errors detected in the spreadsheet's inspected ranges
+
+BROWSER SCENARIO
+A 35-day deterministic validation dataset was loaded with:
+- 35 weigh-ins
+- 35 nutrition-day statuses
+- 35 logged intake days, including deliberately partial days
+- 20 completed workouts and 240 work sets
+- one active normal-cut phase
+
+Observed output:
+- Trend weight: approximately 98.66 kg
+- Weekly rate: approximately 0.31% loss/week
+- Estimated expenditure: 2,625 kcal/day
+- Expenditure confidence: High, score 97
+- Initial target recommendation: 2,400 to 2,250 kcal
+- Adjustment cap respected: -150 kcal
+
+FUNCTIONAL TESTS
+PASS  Coach page rendered trend, rate, expenditure and goal estimate
+PASS  Weekly review snapshot saved with all 25 normalized fields
+PASS  Recommendation required explicit confirmation before applying
+PASS  Applied target adjustment saved to history
+PASS  Seven-day cooldown blocked a second same-day adjustment
+PASS  RFL produced monitoring-only/manual recommendation
+PASS  Sparse-data scenario withheld rate, expenditure and calorie changes
+PASS  390 px viewport had no horizontal overflow
+PASS  320 px viewport had no horizontal overflow
+PASS  no runtime exception was observed in the browser scenario
+
+SPREADSHEET VALIDATION
+PASS  v2.4.0 / schema 5 shown in Sync_Config
+PASS  Diet_Phases expanded to 18 columns
+PASS  Nutrition_Days created with validation and completeness data bars
+PASS  Target_Adjustments created with confidence validation
+PASS  Coaching_Reviews created with 25 fields and confidence formatting
+PASS  Coaching_Dashboard rendered with KPI blocks, history tables, source links and trend chart
+PASS  App_State contains the complete v2.4.0 starter state in eight chunks
+
+BOUNDARIES
+- Expenditure and goal-date values are estimates, not direct physiological measurements.
+- The stored-energy conversion uses approximately 7,700 kcal/kg for short-term estimation.
+- RFL targets remain user-entered and are not automatically prescribed or changed.
+- Lift & Cut is independently implemented and is not affiliated with MacroFactor.

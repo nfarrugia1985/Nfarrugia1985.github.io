@@ -1,8 +1,8 @@
 {
   "id": "./",
-  "name": "Lift & Cut \u2013 Home Gym Tracker",
+  "name": "Lift & Cut – Home Gym Tracker",
   "short_name": "Lift & Cut",
-  "description": "Lift & Cut 2.3.8: equipment-aware training, recipe imports, cooking checklists, ingredient-based nutrition and Google Sheets sync.",
+  "description": "Lift & Cut 2.4.0: adaptive trend-weight coaching, energy-expenditure estimates, calorie recommendations, training, recipes and Google Sheets sync.",
   "start_url": "./?page=dashboard",
   "scope": "./",
   "display": "standalone",
