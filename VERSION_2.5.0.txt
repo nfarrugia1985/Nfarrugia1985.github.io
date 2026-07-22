@@ -1,0 +1,3 @@
+Lift & Cut 2.5.0
+Schema version: 6
+Release: Guided RFL mode and custom-program deletion

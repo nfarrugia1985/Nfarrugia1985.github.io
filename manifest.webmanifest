@@ -1,8 +1,8 @@
 {
   "id": "./",
-  "name": "Lift & Cut – Home Gym Tracker",
+  "name": "Lift & Cut \u2013 Home Gym Tracker",
   "short_name": "Lift & Cut",
-  "description": "Lift & Cut 2.4.0: adaptive trend-weight coaching, energy-expenditure estimates, calorie recommendations, training, recipes and Google Sheets sync.",
+  "description": "Lift & Cut 2.5.0: adaptive trend-weight coaching, guided RFL monitoring, training, recipes and optional Google Sheets sync.",
   "start_url": "./?page=dashboard",
   "scope": "./",
   "display": "standalone",
@@ -51,6 +51,18 @@
       "name": "Log food",
       "short_name": "Food",
       "url": "./?page=diet",
+      "icons": [
+        {
+          "src": "./icons/icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "RFL mode",
+      "short_name": "RFL",
+      "url": "./?page=diet&rfl=1",
       "icons": [
         {
           "src": "./icons/icon-192.png",

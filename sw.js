@@ -1,6 +1,6 @@
-const CACHE_NAME = 'lift-cut-v2.4.0';
+const CACHE_NAME = 'lift-cut-v2.5.0';
 const CORE = [
-  './','./index.html','./styles.css?v=2.4.0','./jszip.min.js','./coaching-engine-v240.js?v=2.4.0','./app.js?v=2.4.0','./recipe-import-v238.js?v=2.4.0','./seed_database.json',
+  './','./index.html','./styles.css?v=2.5.0','./jszip.min.js','./coaching-engine-v240.js?v=2.5.0','./app.js?v=2.5.0','./recipe-import-v238.js?v=2.5.0','./rfl-mode-v250.js?v=2.5.0','./seed_database.json',
   './manifest.webmanifest','./icons/icon-192.png','./icons/icon-512.png',
   './icons/icon-maskable-512.png','./Fitness_Database_Template.xlsx'
 ];

@@ -1,0 +1,114 @@
+LIFT & CUT 2.5.0 - VALIDATION REPORT
+Date: 2026-07-22
+
+SCOPE
+- Guided RFL / PSMF setup and monitoring workspace
+- Category, protein-factor, duration and break-schedule logic
+- RFL training-program integration
+- Daily RFL check-in, symptoms and event tracking
+- End-of-block transition workflow
+- Custom-program deletion and built-in protection
+- Existing-data migration from schema 5 to schema 6
+- Google Sheets schema and workbook
+- Mobile interface at phone widths
+
+SOURCE-LOGIC CHECKS
+PASS  Male category bands: Cat 1 <=15%, Cat 2 16-25%, Cat 3 >=26%
+PASS  Female category bands: Cat 1 <=24%, Cat 2 25-34%, Cat 3 >=35%
+PASS  Category 1 protein factors by activity: 1.0-1.25 / 1.25-1.5 / 1.5-2.0 g per lb lean mass
+PASS  Category 2 protein factors by activity: 0.9 / 1.1 / 1.25 g per lb lean mass
+PASS  Category 3 protein factors by activity: 0.8 / 0.9 / 1.0 g per lb lean mass
+PASS  Duration ranges: Cat 1 11-12 days; Cat 2 2-6 weeks; Cat 3 6-12 weeks
+PASS  Category schedules: Cat 1 end refeed; Cat 2 one free meal + weekly short refeed; Cat 3 two free meals
+PASS  RFL training uses two low-volume full-body sessions with preservation-oriented RIR targets
+PASS  Medication, stimulant, electrolyte and supplement dosing are deliberately absent
+
+STATIC VALIDATION
+PASS  app.js JavaScript syntax
+PASS  rfl-mode-v250.js JavaScript syntax
+PASS  coaching-engine-v240.js JavaScript syntax
+PASS  recipe-import-v238.js JavaScript syntax
+PASS  sw.js JavaScript syntax
+PASS  Google Apps Script V8 syntax
+PASS  seed_database.json and manifest.webmanifest parsing
+PASS  app version 2.5.0 and schema 6 in clean starter state
+PASS  built-in metadata present for UL4, RFL2 and GVS_EXTRA
+PASS  service-worker cache updated to lift-cut-v2.5.0
+
+RFL FUNCTIONAL SCENARIO
+A deterministic Category 3 scenario was entered with:
+- body weight: 100 kg
+- body fat: 30%
+- activity: weight training
+- planned duration: 56 days
+
+Observed output:
+- calculated lean body mass: approximately 70 kg / 154.3 lb
+- category: 3
+- protein factor: 1.0 g/lb lean mass
+- suggested protein target: approximately 154 g/day
+- RFL2 selected as the active program
+- 17 planned events generated for the phase
+
+PASS  Setup preview recalculated category, lean mass and protein range
+PASS  Saving setup created a diet phase and RFL profile
+PASS  Category-duration validation displayed when outside the source range
+PASS  Daily check-in modal opened and persisted RFL fields
+PASS  Planned events rendered and completion state persisted
+PASS  Serious symptoms generated prominent stop/assessment messaging
+PASS  RFL-friendly recipes rendered without modifying recipe records
+PASS  End / transition closed the RFL phase
+PASS  End / transition created a maintenance/transition phase
+PASS  Previous UL4 program was restored after ending the phase
+PASS  Adaptive calorie recommendations remained monitoring-only during RFL
+
+CUSTOM-PROGRAM DELETION
+PASS  Delete program appeared for a synthetic custom program
+PASS  Confirmation distinguished program deletion from historical workout deletion
+PASS  Custom program was removed after confirmation
+PASS  Historical completed workout remained present
+PASS  Active program fell back to RFL2 during an active RFL phase
+PASS  Built-in UL4 deletion was blocked
+PASS  Program references used for post-RFL restoration were repaired
+
+MIGRATION AND DATA SAFETY
+PASS  Schema-5 state migrated to schema 6
+PASS  Existing workouts, recipes, food logs, measurements and coaching records were retained
+PASS  Existing custom-program records were classified without altering their sessions
+PASS  New RFL collections defaulted safely when absent
+PASS  JSON backup and CSV export included RFL collections
+
+SPREADSHEET VALIDATION
+PASS  Workbook exported as Lift_Cut_Fitness_Database_Template_v2.5.0.xlsx
+PASS  Programs expanded with BuiltIn and SourceType
+PASS  Diet_Phases expanded with PlannedDays and RFLCategory
+PASS  RFL_Profiles created with 26 fields
+PASS  RFL_Daily_Log created with symptoms and daily-plan fields
+PASS  RFL_Events created with planned/completed event fields
+PASS  RFL_Dashboard created with KPI formulas and upcoming-event section
+PASS  Settings, Sync_Config and App_State updated to v2.5.0 / schema 6
+PASS  Existing source and safety notes included
+PASS  No formula errors found in the inspected workbook ranges
+PASS  Key sheets rendered and visually reviewed
+
+MOBILE UI VALIDATION
+PASS  Dashboard RFL status card rendered
+PASS  Inactive RFL page rendered with setup action
+PASS  Guided setup modal rendered and scrolled
+PASS  Active RFL dashboard rendered at mobile width
+PASS  Custom-program Delete control rendered on program page
+PASS  No global horizontal overflow observed in the tested phone viewport
+PASS  No runtime exception was observed in the browser scenarios
+
+PACKAGE VALIDATION
+PASS  All four release ZIP files passed integrity testing
+PASS  GitHub update contains root-level files only and requires no icon-folder upload
+PASS  Complete clean site contains the required icon folder
+PASS  Public package contains no personal name, email, phone, company, deployed Apps Script URL or generated sync key
+PASS  Clean seed state has blank sync URL, sync key, client ID and profile owner
+
+BOUNDARIES
+- Browser tests used deterministic local data and did not call a live personal Google deployment.
+- Apps Script syntax, schema transformations and workbook structures were validated locally; Google authorization remains an account-level action.
+- Body-fat estimates, lean mass, protein targets and weight trends remain estimates.
+- The app does not decide whether an extreme diet is appropriate and is not a substitute for medical assessment or supervision.
