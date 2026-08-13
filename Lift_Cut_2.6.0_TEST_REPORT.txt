@@ -1,0 +1,57 @@
+Lift & Cut 2.6.0 — validation report
+Date: 2026-08-13
+
+STATIC VALIDATION
+- app.js: JavaScript syntax passed.
+- nutrition-v260.js: JavaScript syntax passed.
+- stability-v260.js: JavaScript syntax passed.
+- coaching, recipe-import, RFL and service-worker scripts: syntax passed.
+- seed_database.json and manifest.webmanifest: JSON parsing passed.
+- Version references aligned to 2.6.0.
+- App schema aligned to 7.
+
+NUTRITION ENGINE TESTS
+- Schema-6 state migrated to schema 7 with savedFoods and mealTemplates arrays.
+- Diet screen rendered using a schema-7 default state.
+- Fast food logger opened from the Diet screen.
+- Local search returned ingredient-cache and recipe results without a network request.
+- Quick calories/macros entry saved into the diary.
+- Meal-grouped diary rendered after saving.
+- Logger navigation between Recent, Library, Barcode and Quick Macros completed without a runtime error.
+
+REFERENCE LOOKUP TESTS
+- USDA and Open Food Facts combined search returned normalised results using mocked official responses.
+- Search-both path issued one UrlFetchApp.fetchAll batch.
+- Repeated identical search returned from the Apps Script cache.
+- Repeated barcode lookup returned from the barcode cache.
+- Direct barcode result retained product name, brand, barcode and per-100-g nutrients.
+- Online results remained separate from local records until explicitly saved.
+
+DATA AND SYNC TESTS
+- Sync collection list includes savedFoods and mealTemplates.
+- Schema migration report includes 6 → 7.
+- Existing protected sync, tombstone and backup collections remain present.
+- Backend read/write mappings verified for Saved_Foods, Meal_Templates and expanded Food_Log rows.
+- Apps Script V8 syntax passed with mocked Spreadsheet, CacheService, UrlFetchApp and Utilities services.
+
+SPREADSHEET TESTS
+- Workbook exported with artifact_tool.
+- 35 worksheets present after adding Saved_Foods and Meal_Templates.
+- Food_Log expanded to the schema-7 columns.
+- Ingredient_Cache expanded without losing the 224 starter records.
+- Dashboard nutrition formulas updated to the new Food_Log columns.
+- Blank App_State and App_State_Backup prepared for a fresh user template.
+- Formula-error scan returned no #REF!, #DIV/0!, #VALUE!, #NAME? or #N/A matches.
+- Start_Here sheet rendered and visually reviewed.
+
+MOBILE VISUAL TEST
+- Mobile nutrition preview generated at phone width.
+- Macro summary, meal cards, add-food action and logger layout remained readable.
+
+PACKAGING AND PRIVACY
+- Public website package contains no populated Apps Script URL, private key or personal profile.
+- ZIP integrity checked after packaging.
+- SHA-256 checksums generated for final deliverables.
+
+LIMITATION
+- The private live Google Sheet and deployed Apps Script endpoint cannot be invoked from the build environment. The final account-level validation is: update the existing deployment, Test, Pull & merge, add a saved food/template, Push, and verify the corresponding worksheets.
