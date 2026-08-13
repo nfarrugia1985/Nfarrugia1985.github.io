@@ -1,0 +1,46 @@
+Lift & Cut 2.6.3 — validation report
+
+Build target
+- Direct upgrade from v2.6.0
+- Schema remains 7
+- No Apps Script schema change
+
+Static validation
+PASS app.js JavaScript syntax
+PASS nutrition-v260.js JavaScript syntax
+PASS stability-v260.js JavaScript syntax
+PASS usda-local-v262.js JavaScript syntax
+PASS remaining website JavaScript syntax
+PASS manifest JSON
+PASS seed database JSON
+PASS local USDA JSON
+PASS local USDA record count = 13,578
+
+Local USDA matching regression tests
+PASS small shrimp -> Shrimp, NFS
+PASS 1 pound medium-sized shrimp, peeled and deveined -> Shrimp, NFS
+PASS jumbo raw shrimp peeled -> raw shrimp record
+PASS cooked shrimp -> cooked shrimp record
+PASS large Persian cucumber -> cucumber
+PASS organic low sodium soy sauce -> reduced-sodium soy sauce
+PASS fresh flat leaf parsley finely chopped -> fresh parsley
+PASS skinless chicken breast -> chicken breast
+PASS freshly cracked black pepper -> black pepper
+PASS small red bell pepper -> red bell pepper
+PASS Greek yogurt -> Greek yogurt
+PASS low fat cottage cheese -> low-fat cottage cheese
+PASS extra virgin olive oil -> olive oil
+PASS smoked paprika powder -> paprika
+PASS baby spinach leaves washed -> baby spinach
+PASS canned tuna drained -> canned/drained tuna
+
+Matching behavior
+PASS full/specific matches rank ahead of one-word fallbacks
+PASS raw/cooked and other useful food-state terms are preserved when a matching USDA record exists
+PASS size/preparation wording can be ignored when necessary
+PASS generic ingredient searches penalize prepared dishes that merely contain the ingredient
+PASS broader fallback results carry match-mode metadata for transparent UI labeling
+
+Limitations
+- The live user's Google Apps Script deployment was not invoked during local build validation.
+- USDA search ranking is heuristic; users should still choose the food state/entry that corresponds to what was weighed or eaten.

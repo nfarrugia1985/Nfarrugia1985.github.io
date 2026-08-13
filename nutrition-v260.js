@@ -1,12 +1,12 @@
 'use strict';
 
-/* Lift & Cut 2.6.0 — fast meal and nutrition logging.
+/* Lift & Cut 2.6.3 — fast meal and nutrition logging.
  * Everyday search is local-first. USDA FoodData Central and Open Food Facts
  * are optional fallbacks and successful results are saved for instant reuse.
  */
 
 const LC_NUTRITION_V260 = Object.freeze({
-  VERSION:'2.6.0',
+  VERSION:'2.6.3',
   SCHEMA:7,
   CACHE_KEY:'liftCut.foodSearchCache.v260',
   CACHE_MAX:100,
@@ -129,10 +129,11 @@ function n260LoggerCard(item){
   return `<div class="food-search-card"><div class="food-search-card-main"><div><strong>${esc(item.name)}</strong><div class="small muted">${esc(item.subtitle||'')}</div><div class="tiny">${n260MacroText(item)}</div></div>${fav?`<button class="ghost compact favourite-button" onclick="n260ToggleFavourite('${esc(item.kind)}','${esc(item.id)}')">${fav.favourite?'★':'☆'}</button>`:''}</div><div class="button-row">${actions}</div></div>`;
 }
 function n260RenderLoggerResults(){
-  const holder=document.getElementById('foodLocalResults');if(!holder)return;const rows=n260LocalResults(foodLogger260.query,foodLogger260.tab);
-  holder.innerHTML=`<div class="card-title fast-result-heading"><span>${foodLogger260.query?'Local matches':'Your library'}</span><span class="pill gray">${rows.length}</span></div><div class="fast-food-result-list">${rows.length?rows.map(n260LoggerCard).join(''):'<div class="empty">No local match. Add a quick entry or use a reference search.</div>'}</div>`;
-  const area=document.getElementById('foodOnlineArea'),q=foodLogger260.query.trim();if(!area)return;
-  area.innerHTML=q.length>=2?`<details class="online-food-search" ${rows.length?'':'open'}><summary><span>Reference databases</span><span class="small muted">Optional fallback</span></summary><div class="notice">Local foods are instant. Search an online source only when the food is not already saved; results are cached for reuse.</div><div class="button-row"><button class="secondary compact" onclick="n260SearchOnline('usda')">USDA general foods</button><button class="secondary compact" onclick="n260SearchOnline('openfoodfacts')">Open Food Facts brands</button><button class="ghost compact" onclick="n260SearchOnline('all')">Search both</button></div><div id="onlineFoodResults"></div></details>`:'';
+  const holder=document.getElementById('foodLocalResults');if(!holder)return;const rows=n260LocalResults(foodLogger260.query,foodLogger260.tab),q=foodLogger260.query.trim();
+  const usda=q.length>=2&&typeof lcUsda262RenderFast==='function'?lcUsda262RenderFast(q):'';
+  holder.innerHTML=`<div class="card-title fast-result-heading"><span>${foodLogger260.query?'Your saved matches':'Your library'}</span><span class="pill gray">${rows.length}</span></div><div class="fast-food-result-list">${rows.length?rows.map(n260LoggerCard).join(''):(q?'<div class="empty">No saved match yet. The local USDA library is searched below.</div>':'<div class="empty">Your recent foods will appear here.</div>')}</div>${usda}`;
+  const area=document.getElementById('foodOnlineArea');if(!area)return;
+  area.innerHTML=q.length>=2?`<details class="online-food-search"><summary><span>Online fallback</span><span class="small muted">Usually unnecessary</span></summary><div class="notice">The bundled USDA library works offline. Use live USDA only for a newer record, or Open Food Facts for a branded/barcode product.</div><div class="button-row"><button class="secondary compact" onclick="n260SearchOnline('usda')">Live USDA</button><button class="secondary compact" onclick="n260SearchOnline('openfoodfacts')">Open Food Facts</button><button class="ghost compact" onclick="n260SearchOnline('all')">Search both online</button></div><div id="onlineFoodResults"></div></details>`:'';
 }
 function n260EnsureLoggerContext(){if(!foodLogger260.date)foodLogger260.date=selectedDietDate||localDateISO();if(!foodLogger260.meal)foodLogger260.meal=state.settings.defaultMeal||n260GuessMeal();if(!foodLogger260.tab)foodLogger260.tab=state.settings.nutritionLoggerTab||'recent';}
 function n260ReturnToLogger(){n260EnsureLoggerContext();showModal(n260LoggerShell());document.getElementById('modal')?.classList.add('nutrition-logger-modal');n260RenderLoggerResults();}
@@ -238,3 +239,159 @@ const n260BaseQuickAdd=openQuickAdd;openQuickAdd=function(){showModal(`<div clas
 const n260BaseCloseModal=closeModal;closeModal=function(){n260StopBarcodeCamera();n260BaseCloseModal();};
 
 Object.assign(window,{openFastFoodLogger260,n260SetLoggerTab,n260UpdateLoggerQuery,n260RenderLoggerResults,n260ToggleFavourite,n260OpenPortion,n260UpdatePortion,n260CommitPortion,n260ReturnToLogger,n260RepeatRecent,n260OneTap,n260OpenQuickMacros,n260CommitQuickMacros,n260EditEntry,n260SaveEntry,n260DuplicateEntry,n260DeleteEntry,n260OpenMealLogger,n260CopyMeal,n260SaveMealTemplate,n260CommitMealTemplate,n260LogTemplate,n260EditTemplate,n260RemoveTemplateItem,n260SaveTemplateEdit,n260DeleteTemplate,n260SearchOnline,n260SaveOnline,n260OpenBarcode,n260LookupBarcode,n260StartBarcodeCamera,n260OpenLibrary,n260OpenSavedFood,n260SaveSavedFood,n260DeleteSavedFood,foodLogger260,foodPortion260});
+
+/* Lift & Cut 2.6.3 — nutrition reliability + local USDA compatibility.
+ * - repairs starter-food libraries on upgraded phones
+ * - prevents one slow reference source from blocking the other
+ * - reports Apps Script reachability separately from source timeouts
+ */
+const LC_NUTRITION_V261 = Object.freeze({
+  VERSION:'2.6.3',
+  SOURCE_TIMEOUT:16000,
+  HEALTH_TIMEOUT:6500
+});
+
+function n261FoodKeys(row){
+  return n260Unique([row?.name,...(row?.aliases||[])]).map(n260Norm).filter(Boolean);
+}
+function n261RepairStarterIngredients(next=state){
+  if(!next||!Array.isArray(next.ingredientCache)||!Array.isArray(DEFAULT_STATE.ingredientCache))return 0;
+  let added=0;
+  const idSet=new Set(next.ingredientCache.map(x=>String(x?.id||'')));
+  const rows=()=>next.ingredientCache.map(row=>({row,keys:new Set(n261FoodKeys(row))}));
+  let indexed=rows();
+  for(const seed of DEFAULT_STATE.ingredientCache){
+    const seedKeys=n261FoodKeys(seed);
+    let match=indexed.find(x=>seedKeys.some(k=>x.keys.has(k)))?.row;
+    if(!match){
+      const copy=n260Clone(seed);
+      if(idSet.has(String(copy.id||''))) copy.id=`${copy.id||'ING'}-seed261-${Math.random().toString(36).slice(2,7)}`;
+      next.ingredientCache.push(copy);idSet.add(String(copy.id||''));added++;
+      indexed.push({row:copy,keys:new Set(n261FoodKeys(copy))});
+      continue;
+    }
+    match.aliases=n260Unique([...(seed.aliases||[]),...(match.aliases||[])]);
+    match.commonMeasures={...(seed.commonMeasures||{}),...(match.commonMeasures||{})};
+    if((match.densityGPerMl===''||match.densityGPerMl===undefined||match.densityGPerMl===null)&&seed.densityGPerMl!=='')match.densityGPerMl=seed.densityGPerMl;
+    const generic=!match.confirmed && /generic reference/i.test(String(match.source||''));
+    if(generic){for(const key of ['baseAmount','baseUnit','servingDescription','kcal','protein','carbs','fat','fibre','sodiumMg'])if(seed[key]!==undefined&&seed[key]!==null&&seed[key]!=='')match[key]=seed[key];}
+  }
+  return added;
+}
+
+const n261BaseEnsureState=n260EnsureState;
+n260EnsureState=function(next){
+  next=n261BaseEnsureState(next);
+  const added=n261RepairStarterIngredients(next);
+  if(added&&next?.meta)next.meta.starterFoodRepair261=added;
+  next.meta=next.meta||{};next.meta.appVersion=LC_NUTRITION_V261.VERSION;
+  return next;
+};
+
+const n261BaseLocalFoodMatches=localFoodMatches;
+localFoodMatches=function(query,limit=8){
+  let hits=n261BaseLocalFoodMatches(query,limit);
+  if(!hits.length){
+    const added=n261RepairStarterIngredients(state);
+    if(added){try{saveState({touch:false,autoSync:false});}catch{}hits=n261BaseLocalFoodMatches(query,limit);}
+  }
+  return hits;
+};
+
+function n261DedupeFoods(rows){
+  const seen=new Set(),out=[];
+  for(const row of rows||[]){
+    const key=`${n260Norm(row?.source)}|${String(row?.sourceId||row?.barcode||'')}|${n260Norm(row?.name)}|${n260Norm(row?.brand)}`;
+    if(!row?.name||seen.has(key))continue;seen.add(key);out.push(row);
+  }
+  return out;
+}
+function n261FriendlySource(source){return source==='usda'?'USDA':'Open Food Facts';}
+async function n261SourceRequest(q,source,timeout=LC_NUTRITION_V261.SOURCE_TIMEOUT){
+  const cached=n260GetCached(q,source);
+  if(cached?.foods?.length)return {source,ok:true,foods:cached.foods,cached:true};
+  try{
+    const result=await jsonpRequest({action:'food-search',key:state.settings.syncKey,q,source},timeout);
+    if(!result?.ok)throw new Error(result?.error||`${n261FriendlySource(source)} search failed`);
+    const foods=(result.foods||[]).map(x=>({...x,kcal:toNum(x.kcal),protein:toNum(x.protein),carbs:toNum(x.carbs),fat:toNum(x.fat),fibre:toNum(x.fibre),sodiumMg:toNum(x.sodiumMg)}));
+    n260PutCached(q,source,foods);
+    return {source,ok:true,foods,cached:Boolean(result.cached)};
+  }catch(error){
+    const message=String(error?.message||error||'Search failed').replace(/^Sync timed out$/i,`${n261FriendlySource(source)} search timed out`).replace(/^Could not reach Apps Script$/i,'Apps Script could not be reached');
+    return {source,ok:false,foods:[],error:message};
+  }
+}
+async function n261BackendHealth(){
+  try{const r=await jsonpRequest({action:'health'},LC_NUTRITION_V261.HEALTH_TIMEOUT);return {ok:Boolean(r?.ok),version:r?.appVersion||'',error:r?.ok?'':'Health check rejected'};}
+  catch(error){return {ok:false,version:'',error:String(error?.message||error||'Apps Script unavailable')};}
+}
+async function n261ProgressiveReferenceSearch(q,sources=['usda','openfoodfacts'],onUpdate=()=>{}){
+  const results=[],errors=[];let completed=0;
+  const tasks=sources.map(source=>n261SourceRequest(q,source).then(res=>{
+    completed++;
+    if(res.ok)results.push(...res.foods);else errors.push(res);
+    onUpdate(n261DedupeFoods(results),{completed,total:sources.length,last:res,errors:[...errors]});
+    return res;
+  }));
+  await Promise.all(tasks);
+  const foods=n261DedupeFoods(results);
+  let health=null;if(!foods.length&&errors.length===sources.length)health=await n261BackendHealth();
+  return {foods,errors,health};
+}
+function n261FailureMessage(result){
+  if(result?.health&&!result.health.ok)return `Apps Script endpoint is not reachable. Cloud sync will also fail until the deployment is reachable. (${result.health.error})`;
+  if(result?.health?.ok)return `Apps Script is reachable${result.health.version?` (${result.health.version})`:''}, but the external food source request timed out or failed. Local foods still work.`;
+  const errors=(result?.errors||[]).map(x=>x.error).filter(Boolean);return errors.join(' · ')||'Reference search failed.';
+}
+function n261ReferenceResultHtml(rows,index=null){
+  return `<div class="card-title" style="margin-top:14px"><span>Reference results</span><span class="pill gray">${rows.length}</span></div><div class="list">${rows.length?rows.map((item,i)=>`<button class="food-match-card" onclick="${index===null?`saveStandaloneReferenceFood(${i})`:`selectReferenceFood(${index},${i})`}"><span><strong>${esc(item.name)}</strong>${item.brand?`<small>${esc(item.brand)}</small>`:''}<small>${round(item.kcal,0)} kcal · ${round(item.protein,1)}P · ${round(item.carbs,1)}C · ${round(item.fat,1)}F per 100 g</small><small>${esc(item.source)}</small></span><span class="pill gray">Use</span></button>`).join(''):'<div class="empty">No results. Try a simpler name or add it manually.</div>'}</div>`;
+}
+
+n260SearchOnline=async function(source='all'){
+  const q=(document.getElementById('fastFoodSearch')?.value||foodLogger260.query||'').trim();if(q.length<2)return showToast('Type at least two characters');
+  if(!state.settings.syncUrl||!state.settings.syncKey)return showToast('Connect Google Sheets first');
+  if(onlineBusy260)return;const box=document.getElementById('onlineFoodResults');onlineBusy260=true;onlineFoods260=[];
+  const sources=source==='all'?['usda','openfoodfacts']:[source];
+  if(box)box.innerHTML=`<div class="empty">Searching ${sources.map(n261FriendlySource).join(' + ')} separately…</div>`;
+  try{
+    const result=await n261ProgressiveReferenceSearch(q,sources,(foods,meta)=>{onlineFoods260=foods;if(box&&foods.length)n260RenderOnline({cached:false});if(box&&!foods.length&&meta.completed<meta.total)box.innerHTML=`<div class="empty">${n261FriendlySource(meta.last.source)} finished. Waiting for the other source…</div>`;});
+    onlineFoods260=result.foods;
+    if(onlineFoods260.length)n260RenderOnline({cached:false});else if(box)box.innerHTML=`<div class="notice warn">${esc(n261FailureMessage(result))}<br><span class="small">Try USDA alone for generic foods or Open Food Facts alone for branded products.</span></div>`;
+  }finally{onlineBusy260=false;}
+};
+
+searchReferenceFoods=async function(index){
+  const entered=(document.getElementById('foodMatchQuery')?.value||'').trim(),q=referenceFoodQuery(entered),box=document.getElementById('foodSearchResults');if(q.length<2)return showToast('Enter at least two characters');
+  if(!state.settings.syncUrl||!state.settings.syncKey)return showToast('Live USDA fallback needs the Google Sheets backend',4500);
+  if(box)box.innerHTML='<div class="empty">Searching live USDA…</div>';
+  const res=await n261SourceRequest(q,'usda',16000);foodSearchResults=res.foods||[];
+  if(foodSearchResults.length){if(box)box.innerHTML=n261ReferenceResultHtml(foodSearchResults,index);}
+  else {const health=await n261BackendHealth();if(box)box.innerHTML=`<div class="notice warn">${esc(n261FailureMessage({foods:[],errors:[res],health}))}</div>`;}
+};
+
+
+searchStandaloneReferenceFoods=async function(){
+  const q=(document.getElementById('standaloneFoodQuery')?.value||'').trim(),box=document.getElementById('standaloneFoodResults');if(q.length<2)return showToast('Enter a food name');
+  if(typeof lcUsda262Ready==='function'&&lcUsda262Ready()&&typeof lcUsda262Search==='function'){
+    foodSearchResults=lcUsda262Search(q,18);if(foodSearchResults.length){if(box)box.innerHTML=n261ReferenceResultHtml(foodSearchResults,null);return;}
+  }
+  if(!state.settings.syncUrl||!state.settings.syncKey){if(box)box.innerHTML='<div class="notice warn">No local USDA match. Connect the Google Sheets backend only if you want a live reference fallback.</div>';return;}
+  if(box)box.innerHTML='<div class="empty">No local match. Searching live USDA and Open Food Facts…</div>';
+  const result=await n261ProgressiveReferenceSearch(q,['usda','openfoodfacts'],foods=>{foodSearchResults=foods;if(box&&foods.length)box.innerHTML=n261ReferenceResultHtml(foods,null);});
+  foodSearchResults=result.foods;if(foodSearchResults.length){if(box)box.innerHTML=n261ReferenceResultHtml(foodSearchResults,null);}else if(box)box.innerHTML=`<div class="notice warn">${esc(n261FailureMessage(result))}</div>`;
+};
+
+
+findUnmatchedIngredientsOnline=async function(){
+  if(!recipeDraft)return;const targets=recipeDraft.ingredients.map((ing,index)=>({ing,index})).filter(x=>!x.ing.ingredientId&&x.ing.notes!=='Section heading'&&!(ingredientChoiceOptions(x.ing).length>1&&!x.ing.selectedAlternative));
+  if(!targets.length)return showToast('All ingredients already have a match');if(!state.settings.syncUrl||!state.settings.syncKey)return showToast('Online food matching needs the Google Sheets backend',4500);if(recipeImportBusy)return;
+  recipeImportBusy=true;let matched=0;const batch=targets.slice(0,15),queue=[...batch];
+  try{
+    const worker=async()=>{while(queue.length){const {ing}=queue.shift();const q=referenceFoodQuery(ingredientMatchQuery(ing));let res=await n261SourceRequest(q,'usda',14000);if(!res.foods.length)res=await n261SourceRequest(q,'openfoodfacts',14000);if(!res.foods.length)continue;const ranked=res.foods.map(food=>({food,score:Math.max(foodMatchScore(q,{name:food.name,aliases:[]}),foodMatchScore(ing.name,{name:food.name,aliases:[]}))})).sort((a,b)=>b.score-a.score);if(!ranked[0]||ranked[0].score<64)continue;const r=ranked[0].food,item={id:uid('ingredient'),name:r.name,brand:r.brand||'',foodState:r.foodState||'',servingDescription:'100 g',baseAmount:100,baseUnit:'g',densityGPerMl:'',kcal:toNum(r.kcal),protein:toNum(r.protein),carbs:toNum(r.carbs),fat:toNum(r.fat),fibre:toNum(r.fibre),sodiumMg:toNum(r.sodiumMg),aliases:[q,ing.name].filter(Boolean),commonMeasures:{},source:r.source||'Reference database',sourceId:r.sourceId||'',sourceUrl:r.sourceUrl||'',confirmed:false,notes:'Automatically matched from reference search; review before relying on it.',updatedAt:nowISO()};state.ingredientCache.push(item);applyIngredientMatch(ing,item,'likely',ranked[0].score);matched++;}};
+    await Promise.all([worker(),worker(),worker()]);saveState();openBulkIngredientReview();showToast(`${matched} online match${matched===1?'':'es'} applied · review before saving`,4500);
+  }finally{recipeImportBusy=false;}
+};
+
+try{if(typeof state==='object'&&state){const added=n261RepairStarterIngredients(state);if(added){state.meta=state.meta||{};state.meta.appVersion=LC_NUTRITION_V261.VERSION;saveState({touch:false,autoSync:false});}}}catch(error){console.warn('Starter food repair deferred',error);}
+
+Object.assign(window,{n261RepairStarterIngredients,n261BackendHealth});

@@ -1,11 +1,11 @@
 'use strict';
 
-/* Lift & Cut 2.6.0 — stability, migration, sync and data protection.
+/* Lift & Cut 2.6.3 — stability, migration, sync and data protection.
  * Loaded after the v2.5 feature modules and before boot().
  */
 
 const LC_V251 = Object.freeze({
-  VERSION:'2.6.0',
+  VERSION:'2.6.3',
   SCHEMA:7,
   DB_NAME:'liftCut.safety.v1',
   DB_VERSION:1,
@@ -163,7 +163,7 @@ loadState=async function(){
   if(!audit.ok){bootNotice=`Loaded with ${audit.errors.length} integrity issue${audit.errors.length===1?'':'s'}. Open More → Safety centre.`;}
   try{localStorage.setItem(STORAGE_KEY,JSON.stringify(next));next.meta.lastSuccessfulLocalSaveAt=nowISO();localSaveError='';}catch(error){localSaveError=String(error.message||error);console.error('Primary save failed',error);}
   try{const mirror=await LiftCutSafety.putMirror(next);next.meta.lastMirrorSaveAt=mirror.savedAt;}catch(error){console.warn('Initial mirror save failed',error);}
-  if(source==='starter'&&!bootNotice)bootNotice='Lift & Cut 2.6.0 data protection is active.';
+  if(source==='starter'&&!bootNotice)bootNotice='Lift & Cut 2.6.3 data protection is active.';
   return next;
 };
 

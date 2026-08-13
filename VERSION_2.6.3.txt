@@ -1,0 +1,3 @@
+Lift & Cut 2.6.3
+Schema 7
+Local USDA descriptive-word and keyword fallback matching

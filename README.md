@@ -1,18 +1,7 @@
-# Lift & Cut 2.6.0
+# Lift & Cut 2.6.3
 
-A mobile-first, local-first training and nutrition app with optional Google Sheets backup and analysis.
+Lift & Cut 2.6.3 is a consolidated update for users on 2.6.0. It includes the 2.6.1 nutrition reliability fixes, the 2.6.2 bundled local USDA FoodData Central library, and improved descriptive-word / keyword fallback matching.
 
-Version 2.6.0 rebuilds daily nutrition logging around:
+The bundled USDA library contains 13,578 generic/reference foods derived from the user-supplied official Foundation Foods, SR Legacy and Survey/FNDDS JSON downloads. Only foods you actually choose are copied into private synced data.
 
-- Immediate local search across recent diary items, favourites, saved foods, recipes and the ingredient cache.
-- One-tap reuse of the last logged portion.
-- Saved package-label foods.
-- Meal templates and copy-previous-meal actions.
-- Recipe logging by serving, grams or percentage of the whole recipe.
-- Quick calories and macros.
-- Diary editing, duplication and deletion.
-- Optional USDA and Open Food Facts lookup.
-- Manual or camera-assisted barcode lookup where the browser supports it.
-- Multi-layer caching so online searches do not need to be repeated.
-
-Read `UPDATE_TO_2.6.0.md` before updating an existing installation.
+See `UPDATE_TO_2.6.3.md` and `CHANGELOG_2.6.3.md`.
