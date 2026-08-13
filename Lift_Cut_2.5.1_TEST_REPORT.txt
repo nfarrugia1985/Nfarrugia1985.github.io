@@ -1,0 +1,125 @@
+LIFT & CUT 2.5.1 — VALIDATION REPORT
+Generated: 2026-07-24
+Release type: Stability, migration, sync and data protection
+Schema: 6
+
+1. WEBSITE SOURCE VALIDATION
+PASS  app.js syntax (Node.js)
+PASS  coaching-engine-v240.js syntax
+PASS  recipe-import-v238.js syntax
+PASS  rfl-mode-v250.js syntax
+PASS  stability-v251.js syntax
+PASS  sw.js syntax
+PASS  manifest.webmanifest JSON validation
+PASS  seed_database.json JSON validation
+PASS  app version updated to 2.5.1
+PASS  service-worker cache updated to lift-cut-v2.5.1
+PASS  stability module loaded last, after app, recipe and RFL modules
+PASS  asynchronous boot regression fixed: RFL no longer writes an undefined state before protected load
+
+2. BROWSER RUNTIME AND MOBILE LAYOUT
+Test environment: headless Chromium, mobile viewport harness.
+PASS  application booted without JavaScript runtime errors
+PASS  dashboard rendered
+PASS  program page rendered
+PASS  train page rendered
+PASS  diet page rendered
+PASS  progress page rendered
+PASS  settings page rendered
+PASS  Data Safety centre opened and rendered
+PASS  integrity audit displayed 100/100 on clean starter state
+PASS  no horizontal overflow at 320 px
+PASS  no horizontal overflow at 360 px
+PASS  no horizontal overflow at 390 px
+PASS  modal content fit its viewport at all tested widths
+
+3. MIGRATION VALIDATION
+PASS  deterministic schema-2 state migrated to schema 6
+PASS  migration report listed 2→3, 3→4, 4→5 and 5→6 steps
+PASS  custom program preserved
+PASS  completed workout history preserved
+PASS  body metric preserved
+PASS  coaching and RFL collections initialised
+PASS  deletedRecords collection initialised
+PASS  active-program fallback repaired when necessary
+
+4. CUSTOM PROGRAM DELETION
+PASS  user-created program deleted
+PASS  built-in fallback selected
+PASS  completed historical workout retained
+PASS  program tombstone recorded
+PASS  custom program remains absent after merging an older cloud copy
+
+5. RECORD-LEVEL MERGE AND DELETION SAFETY
+PASS  independent phone-only record retained
+PASS  independent cloud-only record retained
+PASS  older cloud record did not resurrect a tombstoned local deletion
+PASS  a genuinely newer post-deletion remote record could be retained
+PASS  duplicate-ID integrity fault detected
+PASS  RFL schedule regeneration recorded tombstones for replaced schedule events
+PASS  user-created RFL plan event retained after schedule regeneration
+
+6. SYNC REVISION SEMANTICS
+PASS  status check did not change the last merged cloud revision
+PASS  local dirty + newer cloud produced Conflict
+PASS  clean local + newer cloud produced Cloud newer
+PASS  equal cloud/base revision returned Synced
+PASS  successful protected push advanced both base and observed revision
+PASS  successful protected push stored returned cloud-state hash
+PASS  force-push path requires typed confirmation in the interface
+PASS  cloud replacement path requires typed confirmation and creates a rollback snapshot
+
+7. BACKUP AND LOCAL DATA PROTECTION
+PASS  full-backup state excludes Apps Script URL
+PASS  full-backup state excludes private sync key
+PASS  full-backup state excludes client ID
+PASS  checksum changes when protected state content changes
+PASS  backup import validates structure before restore
+PASS  checksum-bearing backup is verified before restore
+PASS  restore preview compares current and incoming record counts
+PASS  replace operation creates a rollback snapshot first
+PASS  exported rollback snapshot excludes cloud credentials
+PASS  diagnostic export excludes private key and user record content
+
+8. APPS SCRIPT STATIC AND UNIT VALIDATION
+PASS  Apps Script v2.5.1 V8 syntax validation
+PASS  SHA-256 helper matched Node.js SHA-256 for a deterministic state payload
+PASS  state chunk rows contain 12 integrity/status columns
+PASS  App_State_Backup table definition present
+PASS  Deleted_Records table definition present
+PASS  Sync_Audit table definition present
+PASS  empty cloud state includes deletedRecords and protected sync metadata
+PASS  payload checksum verification present
+PASS  atomic write verification and rollback path present
+PASS  previous cloud snapshot restore menu action present
+PASS  sync-audit cap set to latest 500 operations
+
+9. SPREADSHEET VALIDATION
+Tool: artifact_tool
+PASS  workbook imported successfully
+PASS  33 worksheets present
+PASS  Start_Here updated to Lift & Cut 2.5.1
+PASS  Sync_Config updated to app 2.5.1 / schema 6
+PASS  App_State contains SHA-256, character-count, version and warning columns
+PASS  App_State_Backup worksheet present
+PASS  Deleted_Records worksheet present
+PASS  Sync_Audit worksheet present
+PASS  formula error scan returned zero #REF!, #DIV/0!, #VALUE!, #NAME?, or #N/A matches
+PASS  populated template app-state hash and character count present
+
+10. PACKAGE, INTEGRITY AND PRIVACY VALIDATION
+PASS  GitHub stability-update ZIP integrity
+PASS  complete clean-site ZIP integrity
+PASS  Google Sheets/App Script update ZIP integrity
+PASS  website update contains 20 root-level replacement files and no nested icon folder
+PASS  clean-site package includes all three required icon files
+PASS  public website package contains no personal name, work contact details, deployed Apps Script URL or populated private sync key
+PASS  public website package contains no private Google Sheet identifier
+
+11. LIMITATIONS OF AUTOMATED TESTING
+- The user's live Google Apps Script deployment and private Google Sheet were not modified or invoked by this build environment.
+- Service-worker installation was syntax/cache-list validated but not installed against the user's live GitHub Pages origin.
+- IndexedDB recovery was implemented and structurally tested; the browser harness used an opaque test origin, so the live redundant-mirror write must be confirmed after deployment by opening the Data Safety centre.
+- The user should complete the post-upgrade Test connection, Pull & merge, test push and spreadsheet integrity check described in the guides.
+
+RESULT: PASS — ready for deployment subject to the account-level GitHub and Google Apps Script update steps.

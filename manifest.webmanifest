@@ -1,8 +1,8 @@
 {
   "id": "./",
-  "name": "Lift & Cut \u2013 Home Gym Tracker",
+  "name": "Lift & Cut – Home Gym Tracker",
   "short_name": "Lift & Cut",
-  "description": "Lift & Cut 2.5.0: adaptive trend-weight coaching, guided RFL monitoring, training, recipes and optional Google Sheets sync.",
+  "description": "Lift & Cut 2.5.1: adaptive trend-weight coaching, guided RFL monitoring, training, recipes and optional Google Sheets sync.",
   "start_url": "./?page=dashboard",
   "scope": "./",
   "display": "standalone",

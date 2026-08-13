@@ -1,0 +1,3 @@
+Lift & Cut v2.5.1
+Schema v6
+Stability, migration, sync and data protection release.

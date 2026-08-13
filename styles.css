@@ -796,3 +796,22 @@ details > summary { cursor:pointer; }
   .rfl-symptom-grid { grid-template-columns:1fr; }
   .rfl-hero .button-row > button { flex:1 1 46%; }
 }
+
+
+/* Lift & Cut 2.5.1 — data safety and protected sync */
+.status-dot.dirty{background:#f59e0b;box-shadow:0 0 0 4px rgba(245,158,11,.17)}
+.status-dot.conflict{background:#dc2626;box-shadow:0 0 0 4px rgba(220,38,38,.16)}
+.warn-text{color:#a16207}.danger-text{color:var(--danger,#b91c1c)}
+.notice.danger{background:color-mix(in srgb,var(--danger,#b91c1c) 10%,var(--card,#fff));border-color:color-mix(in srgb,var(--danger,#b91c1c) 35%,transparent);color:var(--text,#10201e)}
+.compare-grid,.safety-status-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:12px 0}
+.safety-status-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.safety-tile{border:1px solid var(--border,#d7e2df);border-radius:16px;padding:12px;background:var(--soft,#f2f8f6);min-width:0}
+.safety-tile strong{display:block;font-size:1.05rem;margin-top:4px;overflow-wrap:anywhere}
+.snapshot-list{display:grid;gap:8px;margin-top:8px}
+.snapshot-row{align-items:flex-start;gap:10px;flex-wrap:wrap}
+.snapshot-row>div:first-child{min-width:0;flex:1 1 220px}
+.snapshot-row .button-row{flex:0 1 auto;justify-content:flex-end}
+.sync-protection-list{display:grid;gap:6px;margin:8px 0 0;padding:0;list-style:none}
+.sync-protection-list li{display:flex;gap:8px;align-items:flex-start}
+.sync-protection-list li::before{content:'✓';font-weight:800;color:var(--accent,#0f766e)}
+@media(max-width:520px){.compare-grid,.safety-status-grid{grid-template-columns:1fr}.snapshot-row .button-row{width:100%;justify-content:flex-start}.snapshot-row .button-row button{flex:1 1 auto}}

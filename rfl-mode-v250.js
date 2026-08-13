@@ -1,6 +1,6 @@
 'use strict';
 
-/* Lift & Cut 2.5.0 – RFL mode
+/* Lift & Cut 2.5.1 – RFL mode
  * A user-controlled planning and monitoring workspace based on the category,
  * protein, training-volume and break schedules in the supplied first edition
  * of The Rapid Fat Loss Handbook. It deliberately does not prescribe drugs,
@@ -8,7 +8,7 @@
  */
 
 const LC_RFL = Object.freeze({
-  VERSION: '2.5.0',
+  VERSION: '2.5.1',
   SOURCE_EDITION: 'The Rapid Fat Loss Handbook, first edition (2005)',
   DAYS: ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'],
   PROTEIN_FACTORS: {
@@ -277,6 +277,7 @@ function saveRflSetup(event, phaseId='') {
 function rflRegenerateEvents(phase,profile) {
   const completed=(state.rflEvents||[]).filter(event=>event.phaseId===phase.id&&event.completed);
   const custom=(state.rflEvents||[]).filter(event=>event.phaseId===phase.id&&!event.planned);
+  (state.rflEvents||[]).filter(event=>event.phaseId===phase.id).forEach(event=>recordDeletion('rflEvents',event.id,'RFL schedule regenerated'));
   state.rflEvents=(state.rflEvents||[]).filter(event=>event.phaseId!==phase.id);
   const byKey=new Map([...completed,...custom].map(event=>[`${event.date}|${event.type}`,event]));
   const add=(date,type,extra={})=>{
@@ -454,8 +455,5 @@ renderDiet=function(){rflEnsureState();if(state.settings.dietView==='rfl')return
 setActiveProgram=function(value){const program=state.programs.find(row=>row.id===value);if(!program)return;if(activeRflPhase()&&value!=='RFL2'&&!confirm('An RFL phase is active. Use this program while keeping RFL diet mode?'))return;state.settings.activeProgram=value;state.settings.lastSession=sessionKey(value,program.sessions?.[0]?.id||'');saveState();workoutDraft=null;saveDraft();render();};
 setDietMode=function(value){if(value==='RFL / PSMF'&&!activeRflPhase()){render();setTimeout(()=>openRflSetup(),0);return;}if(value!=='RFL / PSMF'&&activeRflPhase()){render();return showToast('End the active RFL phase from Diet → RFL mode first',5000);}state.settings.dietMode=value;saveState();render();};
 
-// Migrate the already-loaded phone state and support the manifest shortcut.
-rflEnsureState(DEFAULT_STATE);rflEnsureState(state);localStorage.setItem(STORAGE_KEY,JSON.stringify(state));
-const lcRflQuery=new URLSearchParams(location.search);
-if(lcRflQuery.get('rfl')==='1'){state.settings.dietView='rfl';page='diet';localStorage.setItem(PAGE_KEY,page);}
-render();
+// The async v2.5.1 boot process migrates the live phone state after all modules load.
+rflEnsureState(DEFAULT_STATE);

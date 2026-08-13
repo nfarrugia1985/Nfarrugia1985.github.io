@@ -1,62 +1,40 @@
-# Lift & Cut 2.5.0
+# Lift & Cut 2.5.1
 
-Lift & Cut is a mobile-first, local-first progressive web app for home-gym training, nutrition, recipes, body measurements, adaptive weight-loss coaching and optional Google Sheets backup.
+A mobile-first, local-first training, nutrition, recipe, adaptive weight-loss and guided RFL application.
 
-## Version 2.5.0 - Guided RFL mode and program management
+## What 2.5.1 changes
 
-This major release adds a dedicated Rapid Fat Loss (RFL / PSMF) workspace based on the category, protein, training-volume and break framework in the user-supplied first edition of *The Rapid Fat Loss Handbook* (2005). It is a planning and monitoring tool; it does not decide whether an extreme diet is suitable for a user.
+Version 2.5.1 is a maintenance and data-protection release. It adds:
 
-### RFL workspace
+- explicit migration reporting for schemas 2 through 6;
+- a redundant IndexedDB mirror of the phone database;
+- local rollback snapshots before destructive or replacement operations;
+- integrity-scanned backup review before merge or replacement;
+- verified full JSON backups containing drafts, cooking progress and progress-photo files;
+- record-level three-way cloud merging and deletion tombstones;
+- separate “last cloud revision merged” and “latest revision observed” values;
+- safer force-push and cloud-replacement confirmations;
+- SHA-256 cloud-state verification;
+- atomic Apps Script writes with one previous verified cloud snapshot;
+- structured `Deleted_Records` and `Sync_Audit` worksheets;
+- data-safety diagnostics that exclude private keys and record contents.
 
-- Guided setup using sex, body-fat estimate or directly entered lean body mass.
-- Category 1, 2 or 3 classification with manual override and a recorded calculation basis.
-- Activity-specific protein-factor range and a user-confirmed protein target.
-- Category-specific block-duration checks, planned free meals, refeeds and transition events.
-- Optional automatic switch to the built-in two-day RFL full-body program.
-- Daily protein, vegetable, water, nutrition-completeness and recovery checklist.
-- User-controlled checkboxes for their own essential-fat and clinician/book supplement plan.
-- Symptom logging with prominent escalation for concerning symptoms.
-- Weight-trend context, strength-retention review, RFL-friendly recipes and recent-day history.
-- Explicit end-of-block workflow that creates a transition or maintenance phase and can restore the prior training program.
+## Public website files
 
-The app deliberately omits medication, stimulant, electrolyte and supplement dosing. Users should apply instructions from their own clinician and legally obtained source material rather than treating Lift & Cut as medical advice.
+The GitHub Pages website remains safe to publish. It does not contain a populated personal profile, Apps Script deployment URL, private sync key, workout history, food diary, measurements or photos.
 
-### Custom-program deletion
+## Upgrade
 
-- User-created, cloned and equipment-matched programs can be deleted.
-- Built-in programs are protected.
-- Deleting a program does not delete completed workout history.
-- If the deleted program is active, Lift & Cut safely switches to the RFL program during an active RFL phase or to the normal upper/lower program otherwise.
-- Any unfinished draft tied to the deleted program is removed after confirmation.
+Read `UPDATE_TO_2.5.1.md`. Back up the phone app before uploading replacements or changing Apps Script.
 
-### Google Sheets schema 6
+## Storage model
 
-The optional spreadsheet backend adds:
+1. The phone/browser database is the working copy.
+2. A second local IndexedDB record mirrors successful saves.
+3. Google Sheets is an optional cloud backup and analysis layer.
+4. Full JSON export is the portable disaster-recovery backup.
+5. Progress-photo files remain local and in full backups; only metadata syncs to Sheets.
 
-- `RFL_Profiles`
-- `RFL_Daily_Log`
-- `RFL_Events`
-- `RFL_Dashboard`
+## Important privacy rule
 
-The `Programs` table now records whether a program is built in and how it was created. `Diet_Phases` now records planned duration and RFL category.
-
-## Files
-
-- `index.html`, `app.js`, `rfl-mode-v250.js`, `coaching-engine-v240.js`, `styles.css` - mobile app.
-- `recipe-import-v238.js` and `jszip.min.js` - website and EPUB recipe importing.
-- `sw.js`, `manifest.webmanifest`, `icons/` - installable PWA files.
-- `seed_database.json` - clean schema-6 starter state.
-- `Fitness_Database_Template.xlsx` - blank v2.5 spreadsheet template.
-- `UPDATE_TO_2.5.0.md` - upgrade instructions.
-- `CHANGELOG_2.5.0.md` - detailed release notes.
-- `Lift_Cut_2.5.0_TEST_REPORT.txt` - validation summary.
-
-## Storage and backups
-
-The phone remains the immediate working copy. Use full JSON export regularly and sync to Google Sheets. Export a backup before updating the website or Apps Script. Do not clear browser site data during an upgrade.
-
-## Safety boundary
-
-RFL / PSMF is an extreme, short-term diet phase. Current NICE guidance states that very-low-energy diets under 800 kcal/day should be used only within a specialist service, be nutritionally complete, last no more than 12 weeks, include clinical support and include plans for food reintroduction. See:
-
-https://www.nice.org.uk/guidance/ng246/chapter/Recommendations#low-energy-and-very-low-energy-diets
+Never publish a populated Google Sheet, backup, diagnostics export, Apps Script URL or private sync key in the GitHub repository.
