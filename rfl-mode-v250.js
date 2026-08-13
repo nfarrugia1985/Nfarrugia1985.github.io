@@ -1,6 +1,6 @@
 'use strict';
 
-/* Lift & Cut 2.5.2 – RFL mode
+/* Lift & Cut 2.5.3 – RFL mode
  * A user-controlled planning and monitoring workspace based on the category,
  * protein, training-volume and break schedules in the supplied first edition
  * of The Rapid Fat Loss Handbook. It deliberately does not prescribe drugs,
@@ -8,7 +8,7 @@
  */
 
 const LC_RFL = Object.freeze({
-  VERSION: '2.5.2',
+  VERSION: '2.5.3',
   SOURCE_EDITION: 'The Rapid Fat Loss Handbook, first edition (2005)',
   DAYS: ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'],
   PROTEIN_FACTORS: {
@@ -57,7 +57,7 @@ function rflEnsureState(target = state) {
     if (target.settings[key] === undefined || target.settings[key] === null) target.settings[key] = value;
   });
   (target.programs || []).forEach(program => {
-    const shipped = ['UL4','RFL2','GVS_EXTRA'].includes(program.id);
+    const shipped = ['UL4','RFL2','GVS_EXTRA','MLM6_MOD'].includes(program.id);
     if (program.builtIn === undefined) program.builtIn = shipped;
     program.sourceType ||= shipped ? 'Built-in' : 'Custom';
   });
@@ -455,5 +455,5 @@ renderDiet=function(){rflEnsureState();if(state.settings.dietView==='rfl')return
 setActiveProgram=function(value){const program=state.programs.find(row=>row.id===value);if(!program)return;if(activeRflPhase()&&value!=='RFL2'&&!confirm('An RFL phase is active. Use this program while keeping RFL diet mode?'))return;state.settings.activeProgram=value;state.settings.lastSession=sessionKey(value,program.sessions?.[0]?.id||'');saveState();workoutDraft=null;saveDraft();render();};
 setDietMode=function(value){if(value==='RFL / PSMF'&&!activeRflPhase()){render();setTimeout(()=>openRflSetup(),0);return;}if(value!=='RFL / PSMF'&&activeRflPhase()){render();return showToast('End the active RFL phase from Diet → RFL mode first',5000);}state.settings.dietMode=value;saveState();render();};
 
-// The async v2.5.2 boot process migrates the live phone state after all modules load.
+// The async v2.5.3 boot process migrates the live phone state after all modules load.
 rflEnsureState(DEFAULT_STATE);

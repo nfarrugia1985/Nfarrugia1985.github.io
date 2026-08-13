@@ -1,11 +1,11 @@
 'use strict';
 
-/* Lift & Cut 2.5.2 — stability, migration, sync and data protection.
+/* Lift & Cut 2.5.3 — stability, migration, sync and data protection.
  * Loaded after the v2.5 feature modules and before boot().
  */
 
 const LC_V251 = Object.freeze({
-  VERSION:'2.5.2',
+  VERSION:'2.5.3',
   SCHEMA:6,
   DB_NAME:'liftCut.safety.v1',
   DB_VERSION:1,
@@ -124,7 +124,7 @@ function normaliseDeletedRecords(rows){
 function applyDeletedRecords(next){
   next.deletedRecords=normaliseDeletedRecords(next.deletedRecords);
   const groups=new Map();for(const t of next.deletedRecords){if(!groups.has(t.collection))groups.set(t.collection,new Map());groups.get(t.collection).set(t.recordId,t);}
-  for(const key of LC_V251.SYNC_COLLECTIONS){const tombs=groups.get(key);if(!tombs||!Array.isArray(next[key]))continue;next[key]=next[key].filter(row=>{const t=tombs.get(String(row.id||''));if(!t)return true;if(key==='programs'&&(row.builtIn===true||['UL4','RFL2','GVS_EXTRA'].includes(row.id)))return true;return String(row.updatedAt||'')>String(t.deletedAt||'');});}
+  for(const key of LC_V251.SYNC_COLLECTIONS){const tombs=groups.get(key);if(!tombs||!Array.isArray(next[key]))continue;next[key]=next[key].filter(row=>{const t=tombs.get(String(row.id||''));if(!t)return true;if(key==='programs'&&(row.builtIn===true||['UL4','RFL2','GVS_EXTRA','MLM6_MOD'].includes(row.id)))return true;return String(row.updatedAt||'')>String(t.deletedAt||'');});}
   return next;
 }
 function recordDeletion(collection,recordId,reason='deleted'){
@@ -162,7 +162,7 @@ loadState=async function(){
   if(!audit.ok){bootNotice=`Loaded with ${audit.errors.length} integrity issue${audit.errors.length===1?'':'s'}. Open More → Safety centre.`;}
   try{localStorage.setItem(STORAGE_KEY,JSON.stringify(next));next.meta.lastSuccessfulLocalSaveAt=nowISO();localSaveError='';}catch(error){localSaveError=String(error.message||error);console.error('Primary save failed',error);}
   try{const mirror=await LiftCutSafety.putMirror(next);next.meta.lastMirrorSaveAt=mirror.savedAt;}catch(error){console.warn('Initial mirror save failed',error);}
-  if(source==='starter'&&!bootNotice)bootNotice='Lift & Cut 2.5.2 data protection is active.';
+  if(source==='starter'&&!bootNotice)bootNotice='Lift & Cut 2.5.3 data protection is active.';
   return next;
 };
 

@@ -798,7 +798,7 @@ details > summary { cursor:pointer; }
 }
 
 
-/* Lift & Cut 2.5.2 — data safety and protected sync */
+/* Lift & Cut 2.5.3 — data safety and protected sync */
 .status-dot.dirty{background:#f59e0b;box-shadow:0 0 0 4px rgba(245,158,11,.17)}
 .status-dot.conflict{background:#dc2626;box-shadow:0 0 0 4px rgba(220,38,38,.16)}
 .warn-text{color:#a16207}.danger-text{color:var(--danger,#b91c1c)}
