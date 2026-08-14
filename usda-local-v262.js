@@ -1,6 +1,6 @@
 'use strict';
 
-/* Lift & Cut 2.6.3 — local USDA FoodData Central library.
+/* Lift & Cut 2.6.4 — local USDA FoodData Central library.
  * Built from user-supplied official Foundation Foods (2026-04-30),
  * SR Legacy (2018-04), and Survey/FNDDS (2024-10-31) JSON downloads.
  * The compact static dataset stays outside the synced user state; only foods
@@ -8,7 +8,7 @@
  */
 
 const LC_USDA_V262=Object.freeze({
-  VERSION:'2.6.3',
+  VERSION:'2.6.4',
   FILE:'./usda-core-v262.json',
   MAX_RESULTS:18,
   SOURCE_LABELS:{F:'USDA Foundation',S:'USDA SR Legacy',D:'USDA FNDDS / Survey'},
@@ -166,13 +166,57 @@ async function lcUsda262Load(){
 }
 function lcUsda262Ready(){return lcUsdaLoaded262&&lcUsdaRows262.length>0;}
 function lcUsda262Count(){return lcUsdaRows262.length;}
+function lcUsda264VariantTokens(variant){return lcUsda262Query(variant?.q||'').split(' ').filter(Boolean);}
+function lcUsda264RowHasVariant(row,variant){
+  const qt=lcUsda264VariantTokens(variant),nt=new Set(lcUsda262Norm(row?.[1]||'').split(' ').filter(Boolean));
+  if(!qt.length)return false;
+  // A widened result must actually contain every token in that widened phrase.
+  // This prevents `dry white wine` from returning foods that merely contain
+  // `dry` + `white` while completely missing the food head `wine`.
+  return qt.every(t=>nt.has(t));
+}
+function lcUsda264StageVariants(query){
+  const variants=lcUsda263QueryVariants(query);if(!variants.length)return [];
+  const cleaned=(variants.find(v=>v.mode==='descriptors removed')||variants[0]);
+  const core=lcUsda264VariantTokens(cleaned),head=core[core.length-1]||'';
+  const direct=variants.filter(v=>v.mode==='full'||v.mode==='descriptors removed').map(v=>({...v,stagePenalty:Number(v.penalty||0)}));
+  // Head/suffix phrases are semantically stronger than arbitrary adjective phrases.
+  // Once a richer stage has failed, treat a phrase containing the food-head token
+  // as a credible match rather than carrying over the old global 800+ point penalty.
+  const headPhrases=variants.filter(v=>v.mode==='broader phrase'&&lcUsda264VariantTokens(v).includes(head)).map(v=>({...v,stagePenalty:90}));
+  const otherPhrases=variants.filter(v=>v.mode==='broader phrase'&&!lcUsda264VariantTokens(v).includes(head)).map(v=>({...v,stagePenalty:520}));
+  // Keyword fallbacks are tried in generated order (right-most/head word first) and
+  // keep a large confidence penalty so they are suggestions, not silent auto-matches.
+  const keywords=variants.filter(v=>v.mode==='keyword fallback').map(v=>({...v,stagePenalty:Number(v.penalty||0)}));
+  return [direct,headPhrases,otherPhrases,...keywords.map(v=>[v])].filter(stage=>stage.length);
+}
+function lcUsda264ScoreVariant(row,variant){
+  if(!lcUsda264RowHasVariant(row,variant))return -1;
+  const raw=lcUsda262Score(row,variant.q);return raw<0?raw:raw-Number(variant.stagePenalty??variant.penalty??0);
+}
 function lcUsda262Search(query,limit=LC_USDA_V262.MAX_RESULTS){
   if(!lcUsda262Ready())return [];
-  const variants=lcUsda263QueryVariants(query);if(!variants.length)return [];
-  const scored=[];for(const row of lcUsdaRows262){const hit=lcUsda263Score(row,query);if(hit.score>=145)scored.push([hit.score,row,hit.variant]);}
-  scored.sort((a,b)=>b[0]-a[0]||String(a[1][1]).length-String(b[1][1]).length||Number(a[1][0])-Number(b[1][0]));
-  const seen=new Set(),out=[];for(const [score,row,variant] of scored){const key=lcUsda262Norm(row[1]);if(seen.has(key))continue;seen.add(key);const food=lcUsda262ToFood(row,score);food.matchQuery=variant?.q||'';food.matchMode=variant?.mode||'full';out.push(food);if(out.length>=limit)break;}
-  return out;
+  const stages=lcUsda264StageVariants(query);if(!stages.length)return [];
+  // Search progressively. As soon as a meaningful stage produces credible
+  // candidates, do not pollute those results with weaker adjective/keyword hits.
+  for(const stage of stages){
+    const scored=[];
+    for(const row of lcUsdaRows262){
+      let best=-1,bestVariant=null;
+      for(const variant of stage){const score=lcUsda264ScoreVariant(row,variant);if(score>best){best=score;bestVariant=variant;}}
+      if(best>=145)scored.push([best,row,bestVariant]);
+    }
+    if(!scored.length)continue;
+    scored.sort((a,b)=>b[0]-a[0]||String(a[1][1]).length-String(b[1][1]).length||Number(a[1][0])-Number(b[1][0]));
+    const seen=new Set(),out=[];
+    for(const [score,row,variant] of scored){
+      const key=lcUsda262Norm(row[1]);if(seen.has(key))continue;seen.add(key);
+      const food=lcUsda262ToFood(row,score);food.matchQuery=variant?.q||'';food.matchMode=variant?.mode||'full';out.push(food);
+      if(out.length>=limit)break;
+    }
+    if(out.length)return out;
+  }
+  return [];
 }
 function lcUsda262SavedRecord(food,{ingredient=false,alias=''}={}){
   const common={...(food.commonMeasures||{})};
@@ -218,7 +262,7 @@ function lcUsda262UseRecipe(index,resultIndex,returnView=''){
 function lcUsda262RecipeHtml(index,query){
   if(!lcUsda262Ready())return '<div class="empty">Loading local USDA library…</div>';
   const rows=lcUsda262Search(query,12);window.lcUsdaRecipeResults262=rows;
-  return `<div class="card-title" style="margin-top:14px"><span>USDA local results</span><span class="pill good">${rows.length}</span></div><div class="list">${rows.length?rows.map((item,i)=>`<button class="food-match-card" onclick="lcUsda262UseRecipe(${index},${i},'${ingredientMatchReturnView||''}')"><span><strong>${esc(item.name)}</strong><small>${round(item.kcal,0)} kcal · ${round(item.protein,1)}P · ${round(item.carbs,1)}C · ${round(item.fat,1)}F per 100 g</small><small>${esc(item.source)}</small></span><span class="pill good">Use</span></button>`).join(''):'<div class="empty">No local USDA results.</div>'}</div>`;
+  return `<div class="card-title" style="margin-top:14px"><span>USDA local results</span><span class="pill good">${rows.length}</span></div><div class="list">${rows.length?rows.map((item,i)=>{const widened=item.matchMode&&item.matchMode!=='full'?`<small>Matched using “${esc(item.matchQuery)}” · ${esc(item.matchMode)}</small>`:'';return `<button class="food-match-card" onclick="lcUsda262UseRecipe(${index},${i},'${ingredientMatchReturnView||''}')"><span><strong>${esc(item.name)}</strong><small>${round(item.kcal,0)} kcal · ${round(item.protein,1)}P · ${round(item.carbs,1)}C · ${round(item.fat,1)}F per 100 g</small><small>${esc(item.source)}</small>${widened}</span><span class="pill good">Use</span></button>`;}).join(''):'<div class="empty">No local USDA results. Try a simpler food name or use the optional live lookup.</div>'}</div>`;
 }
 
 // Load in the background; the app remains usable while the compact file is fetched/cached.

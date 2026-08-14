@@ -1,12 +1,12 @@
 'use strict';
 
-/* Lift & Cut 2.6.3 — fast meal and nutrition logging.
+/* Lift & Cut 2.6.4 — fast meal and nutrition logging.
  * Everyday search is local-first. USDA FoodData Central and Open Food Facts
  * are optional fallbacks and successful results are saved for instant reuse.
  */
 
 const LC_NUTRITION_V260 = Object.freeze({
-  VERSION:'2.6.3',
+  VERSION:'2.6.4',
   SCHEMA:7,
   CACHE_KEY:'liftCut.foodSearchCache.v260',
   CACHE_MAX:100,
@@ -240,15 +240,15 @@ const n260BaseCloseModal=closeModal;closeModal=function(){n260StopBarcodeCamera(
 
 Object.assign(window,{openFastFoodLogger260,n260SetLoggerTab,n260UpdateLoggerQuery,n260RenderLoggerResults,n260ToggleFavourite,n260OpenPortion,n260UpdatePortion,n260CommitPortion,n260ReturnToLogger,n260RepeatRecent,n260OneTap,n260OpenQuickMacros,n260CommitQuickMacros,n260EditEntry,n260SaveEntry,n260DuplicateEntry,n260DeleteEntry,n260OpenMealLogger,n260CopyMeal,n260SaveMealTemplate,n260CommitMealTemplate,n260LogTemplate,n260EditTemplate,n260RemoveTemplateItem,n260SaveTemplateEdit,n260DeleteTemplate,n260SearchOnline,n260SaveOnline,n260OpenBarcode,n260LookupBarcode,n260StartBarcodeCamera,n260OpenLibrary,n260OpenSavedFood,n260SaveSavedFood,n260DeleteSavedFood,foodLogger260,foodPortion260});
 
-/* Lift & Cut 2.6.3 — nutrition reliability + local USDA compatibility.
+/* Lift & Cut 2.6.4 — nutrition reliability + local USDA compatibility.
  * - repairs starter-food libraries on upgraded phones
  * - prevents one slow reference source from blocking the other
  * - reports Apps Script reachability separately from source timeouts
  */
 const LC_NUTRITION_V261 = Object.freeze({
-  VERSION:'2.6.3',
+  VERSION:'2.6.4',
   SOURCE_TIMEOUT:16000,
-  HEALTH_TIMEOUT:6500
+  HEALTH_TIMEOUT:15000
 });
 
 function n261FoodKeys(row){
@@ -339,9 +339,9 @@ async function n261ProgressiveReferenceSearch(q,sources=['usda','openfoodfacts']
   return {foods,errors,health};
 }
 function n261FailureMessage(result){
-  if(result?.health&&!result.health.ok)return `Apps Script endpoint is not reachable. Cloud sync will also fail until the deployment is reachable. (${result.health.error})`;
-  if(result?.health?.ok)return `Apps Script is reachable${result.health.version?` (${result.health.version})`:''}, but the external food source request timed out or failed. Local foods still work.`;
-  const errors=(result?.errors||[]).map(x=>x.error).filter(Boolean);return errors.join(' · ')||'Reference search failed.';
+  if(result?.health&&!result.health.ok)return `Live lookup could not reach Apps Script within the timeout. The bundled USDA library above still works offline. If More → Cloud sync → Test also fails, check or redeploy the Apps Script web app. (${result.health.error})`;
+  if(result?.health?.ok)return `Apps Script is reachable${result.health.version?` (${result.health.version})`:''}, but the external food source request timed out or failed. The bundled USDA library still works offline.`;
+  const errors=(result?.errors||[]).map(x=>x.error).filter(Boolean);return errors.join(' · ')||'Live reference search failed. Local USDA results are unaffected.';
 }
 function n261ReferenceResultHtml(rows,index=null){
   return `<div class="card-title" style="margin-top:14px"><span>Reference results</span><span class="pill gray">${rows.length}</span></div><div class="list">${rows.length?rows.map((item,i)=>`<button class="food-match-card" onclick="${index===null?`saveStandaloneReferenceFood(${i})`:`selectReferenceFood(${index},${i})`}"><span><strong>${esc(item.name)}</strong>${item.brand?`<small>${esc(item.brand)}</small>`:''}<small>${round(item.kcal,0)} kcal · ${round(item.protein,1)}P · ${round(item.carbs,1)}C · ${round(item.fat,1)}F per 100 g</small><small>${esc(item.source)}</small></span><span class="pill gray">Use</span></button>`).join(''):'<div class="empty">No results. Try a simpler name or add it manually.</div>'}</div>`;
