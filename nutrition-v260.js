@@ -1,12 +1,12 @@
 'use strict';
 
-/* Lift & Cut 2.6.4 — fast meal and nutrition logging.
+/* Lift & Cut 2.6.5 — fast meal and nutrition logging.
  * Everyday search is local-first. USDA FoodData Central and Open Food Facts
  * are optional fallbacks and successful results are saved for instant reuse.
  */
 
 const LC_NUTRITION_V260 = Object.freeze({
-  VERSION:'2.6.4',
+  VERSION:'2.6.5',
   SCHEMA:7,
   CACHE_KEY:'liftCut.foodSearchCache.v260',
   CACHE_MAX:100,
@@ -240,13 +240,13 @@ const n260BaseCloseModal=closeModal;closeModal=function(){n260StopBarcodeCamera(
 
 Object.assign(window,{openFastFoodLogger260,n260SetLoggerTab,n260UpdateLoggerQuery,n260RenderLoggerResults,n260ToggleFavourite,n260OpenPortion,n260UpdatePortion,n260CommitPortion,n260ReturnToLogger,n260RepeatRecent,n260OneTap,n260OpenQuickMacros,n260CommitQuickMacros,n260EditEntry,n260SaveEntry,n260DuplicateEntry,n260DeleteEntry,n260OpenMealLogger,n260CopyMeal,n260SaveMealTemplate,n260CommitMealTemplate,n260LogTemplate,n260EditTemplate,n260RemoveTemplateItem,n260SaveTemplateEdit,n260DeleteTemplate,n260SearchOnline,n260SaveOnline,n260OpenBarcode,n260LookupBarcode,n260StartBarcodeCamera,n260OpenLibrary,n260OpenSavedFood,n260SaveSavedFood,n260DeleteSavedFood,foodLogger260,foodPortion260});
 
-/* Lift & Cut 2.6.4 — nutrition reliability + local USDA compatibility.
+/* Lift & Cut 2.6.5 — nutrition reliability + local USDA compatibility.
  * - repairs starter-food libraries on upgraded phones
  * - prevents one slow reference source from blocking the other
  * - reports Apps Script reachability separately from source timeouts
  */
 const LC_NUTRITION_V261 = Object.freeze({
-  VERSION:'2.6.4',
+  VERSION:'2.6.5',
   SOURCE_TIMEOUT:16000,
   HEALTH_TIMEOUT:15000
 });

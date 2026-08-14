@@ -1,7 +1,7 @@
-# Lift & Cut 2.6.4
+# Lift & Cut 2.6.5
 
-Lift & Cut 2.6.4 is a consolidated update for users on 2.6.0. It includes the 2.6.1 nutrition reliability fixes, the 2.6.2 bundled local USDA FoodData Central library, and improved descriptive-word / keyword fallback matching with head-term relevance gating.
+Mobile-first training, nutrition, recipe and weight-management PWA.
 
-The bundled USDA library contains 13,578 generic/reference foods derived from the user-supplied official Foundation Foods, SR Legacy and Survey/FNDDS JSON downloads. Only foods you actually choose are copied into private synced data.
+Version 2.6.5 fixes the complete recipe ingredient-matching workflow: automatic name cleaning, attached-fraction parsing, local results that refresh while typing, reliable bulk auto-match, and clearer optional live lookup.
 
-See `UPDATE_TO_2.6.4.md` and `CHANGELOG_2.6.4.md`.
+For an existing installation, follow `UPDATE_TO_2.6.5.md` and upload only the files in the update ZIP to the GitHub Pages repository root.

@@ -1,0 +1,115 @@
+Lift & Cut 2.6.5 — Ingredient Matching Workflow Fix
+Validation report
+Date: 2026-08-14
+Schema: 7 (unchanged)
+
+SCOPE
+- Ingredient-name cleaning and normalisation
+- Recipe line parsing
+- Bundled USDA search relevance
+- Recipe-level auto matching
+- Bulk-review auto matching
+- Match-screen local search refresh
+- Optional live lookup control flow
+- Packaging, cache references and privacy scan
+
+RESULTS
+
+1. JavaScript syntax
+PASS
+Checked:
+- app.js
+- coaching-engine-v240.js
+- recipe-import-v238.js
+- rfl-mode-v250.js
+- nutrition-v260.js
+- usda-local-v262.js
+- ingredient-matching-v265.js
+- stability-v260.js
+
+2. JSON validation
+PASS
+Checked:
+- manifest.webmanifest
+- seed_database.json
+- usda-core-v262.json
+
+3. Service-worker asset references
+PASS
+All 20 local assets named in the v2.6.5 core cache exist.
+
+4. Ingredient cleaning
+PASS
+Verified:
+- peeled and grated fresh ginger -> ginger
+- and fresh ginger -> ginger
+- wheat-free tamari -> tamari
+- medium-sized shrimp, peeled and deveined -> shrimp
+- freshly cracked black pepper -> black pepper
+- red pepper flakes remains red pepper flakes
+- 95% lean ground beef retains the percentage descriptor
+
+5. Attached fraction parsing
+PASS
+`1½ teaspoons wheat-free tamari` parsed as:
+- amount: 1.5
+- unit: tsp
+- food name: wheat-free tamari
+
+6. USDA relevance
+PASS
+Top results:
+- tamari -> Soy sauce made from soy (tamari)
+- peeled and grated fresh ginger -> Ginger root, raw
+- red pepper flakes -> Spices, pepper, red or cayenne
+- 95% lean ground beef -> Beef, ground, 95% lean meat / 5% fat, raw
+- small shrimp -> Shrimp, NFS
+
+7. Complete recipe auto-match
+PASS
+Test recipe rows and outcomes:
+- 2 pounds 95% lean ground beef -> exact 95/5 USDA record, 907.184 g
+- 2 teaspoons peeled and grated fresh ginger -> Ginger root, raw, 4 g
+- 1 clove garlic, minced -> Garlic, raw, estimated 3 g household measure
+- 1½ teaspoons wheat-free tamari -> tamari USDA record, 9 g
+- 1 teaspoon red pepper flakes -> red/cayenne pepper, 1.8 g
+
+Result: 5 of 5 matched; no unresolved rows.
+
+8. Recipe-builder action buttons
+PASS
+- Auto-match all opened progress, completed, updated ingredient links and returned to the recipe.
+- Auto-match all locally worked from the bulk-review screen.
+- An unresolved row produced a visible summary instead of a silent no-op.
+
+9. Match-screen search behaviour
+PASS
+- Opening the ginger row displayed local Ginger root results.
+- Editing the search box to wheat-free tamari refreshed local results automatically.
+- Ginger results disappeared and the exact tamari record appeared.
+- The explicit Search local library button refreshed red-pepper results.
+
+10. Optional live lookup flow
+PASS with mocked Apps Script response
+- Local matching was attempted first.
+- One unresolved food was sent to the live fallback.
+- The returned food was saved and linked.
+- A visible completion summary was produced.
+
+The user's private deployed Apps Script and live Google Sheet were not invoked from the build environment. No backend change is required for this release.
+
+11. Existing-data compatibility
+PASS by code review and workflow test
+- Schema remains 7.
+- Existing linked ingredients are recalculated but not automatically replaced.
+- Workouts, recipes, diary records, coaching data, RFL records and sync settings use the existing storage schema.
+
+12. Privacy scan
+PASS
+The public package contains no user name, company email, phone number, private sync key or populated Apps Script deployment URL. The generic Apps Script URL placeholder remains in the settings interface.
+
+KNOWN BOUNDARY
+The full installed-PWA startup could not be navigated through localhost in the build browser because network navigation is blocked by the execution environment's administrator policy. Core browser interaction tests were performed by loading the actual production JavaScript files into Chromium with the complete 13,578-food USDA dataset. Account-level GitHub deployment and service-worker refresh remain the final installation checks.
+
+OVERALL RESULT
+PASS — ready for GitHub Pages deployment.

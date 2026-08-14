@@ -1,6 +1,6 @@
 'use strict';
 
-/* Lift & Cut 2.6.4 — local USDA FoodData Central library.
+/* Lift & Cut 2.6.5 — local USDA FoodData Central library.
  * Built from user-supplied official Foundation Foods (2026-04-30),
  * SR Legacy (2018-04), and Survey/FNDDS (2024-10-31) JSON downloads.
  * The compact static dataset stays outside the synced user state; only foods
@@ -8,7 +8,7 @@
  */
 
 const LC_USDA_V262=Object.freeze({
-  VERSION:'2.6.4',
+  VERSION:'2.6.5',
   FILE:'./usda-core-v262.json',
   MAX_RESULTS:18,
   SOURCE_LABELS:{F:'USDA Foundation',S:'USDA SR Legacy',D:'USDA FNDDS / Survey'},
